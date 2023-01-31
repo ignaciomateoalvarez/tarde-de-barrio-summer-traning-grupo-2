@@ -92,3 +92,24 @@ line-height: 15px;
   text-decoration: none; 
   color: black;
  }
+
+
+ /* charly */
+.login-google{
+ 
+  border-radius: 3.4537px;
+  border-color: #0090AF;
+  border-style:ridge;
+  width: 233px;
+  height: 40px;
+  text-align: center;
+  
+}
+.login-google link_to{
+   font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}

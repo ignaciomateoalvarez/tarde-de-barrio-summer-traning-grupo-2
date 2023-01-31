@@ -11,9 +11,9 @@
 	<div class="container">
 
 		<div class='main-box'>
-			<div class='navbar'>
-        <%= link_to t('.login'), '/login' %>
-				<%= link_to t('.register'), '/register' %> 
+			<div class='navbar  '>
+      <%= link_to 'Login', '/login', class: "link #{current_page?('login') ? 'current-page' : ''}" %>
+				<%= link_to 'Register', '/register', class: "link" %> 
         <hr id='line'>
 			</div>
   <div class='section'>

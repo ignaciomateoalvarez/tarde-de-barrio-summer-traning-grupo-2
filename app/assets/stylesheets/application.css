@@ -1,94 +1,121 @@
-body {
-	background-color: #0090af;
-	font-family: Roboto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
 
-.main-box {
-  display: flex;
-  background-color: #ffffff;
-  margin: 198px 277px 242px 276px;
-  padding: 20px;
-  flex-direction: column;
-  min-width: 887px;
-  min-height: 584px;
-}
+  body {
+    background-color: #0090af;
+    font-family: Roboto;
+  }
 
-.section {
-  display: flex;
-  justify-content: space-around;
-}
+  .main-box {
+    display: flex;
+    background-color: #ffffff;
+    margin: 198px 277px 242px 276px;
+    padding: 20px;
+    flex-direction: column;
+    min-width: 887px;
+    min-height: 584px;
+  }
 
-.login-form{
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-}
-
-.globe-photo {
-  margin-top: 108px;
-}
-
-.title {
-  margin:50px 0px ;
+  .section {
+    display: flex;
+    justify-content: space-around;
+  }
   
-  font-style: normal;
-  font-weight: 300;
-  font-size: 24.1759px;
-  line-height: 29px;
-  text-align: center;
+  .login-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .globe-photo {
+    margin-top: 108px;
+  }
+  
+  .title {
+    margin:50px 0px ;
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24.1759px;
+    line-height: 29px;
+    text-align: center;
+  }
+  
+  .remember-me{
+    align-self: flex-start;
+  }
+
+  .email-label, .password-label {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  
+  .email-text, .password-text {
+    width: 359px;
+    height: 30px;
+    background: #FAFAFA;
+    border: 1.29514px solid #CCCCCC;
+    border-radius: 7.06992px;
+  }
+  
+  .login-button {
+    width: 233px;
+    height: 40px;
+    background: #0090AF;
+    border-radius: 3.4537px;  
+    color: rgb(254, 254, 254);
+    font-size: 16px; 
+    line-height: 18px;
+  }
+  
+  
+  .navbar {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    
+    color: black;
+    }
+    
+  .link{
+    text-decoration: none;
+  } 
+
+.link:visited {
+  color: inherit;
+  
 }
 
-.remember-me{
-  align-self: flex-start;
+.recover-password  {
+  color: rgb(13, 210, 240);
+  text-decoration-line: none;
 }
 
-.email-label, .password-label {
-  font-style: normal;
-font-weight: 300;
-font-size: 13px;
-line-height: 15px;
-}
 
-.email-text, .password-text {
-  width: 359px;
-  height: 30px;
-  background: #FAFAFA;
-  border: 1.29514px solid #CCCCCC;
-  border-radius: 7.06992px;
-}
 
-.login-button {
+.google-sign-in {
+  display: inline-block;
+  background-color: #fff;
   width: 233px;
   height: 40px;
-  background: #0090AF;
-  border-radius: 3.4537px;  
-  color: rgb(254, 254, 254);
-  font-size: 16px; 
-  line-height: 18px;
- }
-
- .recover-password {
-  font-style: normal; 
-  font-weight: 500; 
-  font-size: 13px; 
-  line-height: 29px;
-  color: #0090AF; 
-  text-decoration: none;
- }
-
- .navbar {
   text-align: center;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 29px;
-  text-decoration: none; 
-  color: black;
- }
+  text-decoration-line: none;
+  font-size: 14px;
+  text-decoration: none;
+  padding-top: 10px;
+  border: 2px solid #0090AF;
+}
+
+.current-page {
+  color: red;
+}

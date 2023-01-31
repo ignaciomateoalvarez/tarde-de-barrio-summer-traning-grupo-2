@@ -30,4 +30,13 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  home:
+    login:
+      title: App
+      login: Login
+      register: Register
+      email: Email
+      password: Password
+      remember-me: Remember me
+      recover-password: Forgot your password?
+      google-login: Login with Google Account

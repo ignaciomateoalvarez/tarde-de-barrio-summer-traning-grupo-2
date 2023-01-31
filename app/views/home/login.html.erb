@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><%= t('.') %></title>
+	<title><%= t('.title') %></title>
 </head>
 <body>
    
@@ -40,11 +40,13 @@
               <%= form.label :remember_me, t('.remember-me'), class: 'remember-me-label' %>
             </div>
 
-
-
               <%= form.submit :value => t('.login'), class: 'login-button'%> <br>
               <%= link_to t('.recover-password'), class: 'recover-password' %> <br>
-              <%= link_to t('.google-login'), class: 'google-login' %> 
+
+              <div class="login-google">
+                <%= image_tag 'google.png'%>
+              <%= link_to t('.google-login') %>
+            </div>
             
           </div>
         <% end %> 

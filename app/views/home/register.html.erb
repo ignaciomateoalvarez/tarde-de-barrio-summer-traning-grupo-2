@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login</title>
+	<title> <%= t('.title') %> </title>
 </head>
 <body>
    
@@ -12,18 +12,18 @@
 
 		<div class='main-box'>
 			<div class="navbar">
-				<%= link_to 'Login', '/login'%>
-				<%= link_to 'Register', '/register'%>
+				<%= link_to t('.login'), '/login'%>
+				<%= link_to t('.register'), '/register'%>
         <hr id='line'>
 			</div>
 
       <div class='section'>
         <div class='globe-photo'>
-        <%= image_tag 'Frame.png', class: 'globe-photo'%>
+        <%= image_tag 'Frame.png', class: 'globe-photo-register'%>
         </div>
 
         <div>
-          <h1 class='title'>Registro</h1>
+          <h1 class='title'><%= t('.register') %></h1>
           <%= form_with  do |form| %>
           <div class="login-form">
             <div class="item">
@@ -31,24 +31,24 @@
             <%= form.text_field :name, class: 'email-text'%>
           </div>
           <div class="item">
-            <%= form.label :email,  class: 'email-label'%>
+            <%= form.label :email, t('.email'),  class: 'email-label'%>
             <%= form.text_field :age, class: 'password-text' %>
           </div>
-          <div class='remember-me'>
-            <%= form.label :password, class: 'email-label'%>
+          <div class='item'>
+            <%= form.label :password, t('.password'), class: 'email-label'%>
             <%= form.text_field :password,class: 'password-text' %>
           </div>
-          <div class='remember-me'>
+          <div class='item'>
             <%= form.label :confirm_password,class: 'email-label' %>
             <%= form.text_field :confirm_password,class: 'password-text' %>
           </div>
           <div>
-            <%= form.submit :Registrarme, class: 'login-button'%>
+            <%= form.submit :value => t('.register'), class: 'login-button'%>
           </div>
          
             <div class="login-google">
               <%= image_tag 'google.png'%>
-              <%= link_to 'register with google'%>
+              <%= link_to t('.google-login')%>
             </div>
                  
           <% end %> 

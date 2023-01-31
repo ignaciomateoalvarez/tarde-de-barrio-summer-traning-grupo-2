@@ -8,4 +8,14 @@ es:
       password: Contraseña
       remember-me: Recuerdame
       recover-password: Olvido su contraseña?
-      google-login: Ingresar con mi cuenta de Google
+      google-login: Ingresar con Google
+
+    register:
+      title: App
+      login: Ingresar
+      register: Registrarse
+      email: Correo
+      password: Contraseña
+      remember-me: Recuerdame
+      recover-password: Olvidó su contraseña?
+      google-login: Ingresar con Google

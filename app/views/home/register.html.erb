@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+</head>
+<body>
+   
+	<div class="container">
+
+		<div class='form-box'>
+			<div>
+				<%= link_to 'Register', '/register', class: 'register'%>
+				<%= link_to 'Login', '/login', class: 'login'%>
+			</div>
+
+			<hr id='line'>
+
+      <%= image_tag 'Frame.png', class: 'globe-photo'%>
+
+      <div class='register-form'>
+        <h1 class='title'>Registro</h1>
+        <%= form_with  do |form| %>
+        <div>
+          <%= form.label :name_user %><br>
+          <%= form.text_field :name %>
+        </div>
+        <div>
+          <%= form.label :email %><br>
+          <%= form.number_field :age %><br>
+        </div>
+        <div>
+          <%= form.label :password %><br>
+          <%= form.number_field :password %><br>
+        </div>
+        <div>
+          <%= form.label :confirm_password %><br>
+          <%= form.number_field :confirm_password%><br>
+        </div>
+        <div>
+          <%= form.submit%> 
+        </div>
+      
+        <% end %> 
+        <%= link_to "register with google" %>
+
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

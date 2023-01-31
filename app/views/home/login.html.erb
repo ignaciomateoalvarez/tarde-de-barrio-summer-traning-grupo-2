@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+</head>
+<body>
+   
+	<div class="container">
+
+		<div class='form-box'>
+			<div>
+				<%= link_to 'Register', '/register', class: 'register'%>
+				<%= link_to 'Login', '/login', class: 'login'%>
+			</div>
+
+			<hr id='line'>
+
+			<%= image_tag 'Frame.png', class: 'globe-photo'%>
+
+      <div class='login-form'>
+        <h1 class='title'>Ingresar a mi cuenta</h1>
+        <%= form_with  do |form| %>
+            <%= form.label :email, class: 'email-label' %>
+            <%= form.text_field :email, class: 'email-text', placeholder: 'admin@admin.com' %>
+
+            <%= form.label :password, class: 'password-label' %>
+            <%= form.number_field :password, class: 'password-text' %>
+
+            <%= form.check_box :remember_me, class: 'remember-me' %>
+            <%= form.label :remember_me, 'Recordame', class: 'remember-me-label' %>
+
+            <%= form.submit :Ingresar , class: 'login-button'%> 
+            <%= link_to "Forgot my password", class: 'recover-password' %>
+            <%= link_to "Login with my google account", class: 'google-login'  %>
+        <% end %> 
+      </div>
+
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

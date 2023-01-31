@@ -40,7 +40,7 @@ body {
 	padding: 20px;
 }
 
-#login {
+.login {
 	position: absolute;
 	height: 29px;
 	width: 88px;
@@ -52,14 +52,10 @@ body {
 	letter-spacing: 0px;
 	text-align: center;
 	border-radius: 0px;
+	text-decoration: none;
 }
 
-button {
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-}
-#register {
+.register {
 	position: absolute;
 	height: 29px;
 	width: 145px;
@@ -71,6 +67,11 @@ button {
 	letter-spacing: 0px;
 	text-align: center;
 	border-radius: 0px;
+	text-decoration: none;
+}
+
+a:visited {
+	color: inherit;
 }
 
 #line {
@@ -80,4 +81,130 @@ button {
 	left: 320px;
 	top: 301px;
 	border: 1px solid #bec2c4;
+}
+
+.globe-photo {
+	position: absolute;
+	width: 302px;
+	height: 337px;
+	left: 390px;
+	top: 409px;
+}
+
+.title {
+	position: absolute;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 29px;
+	letter-spacing: 0px;
+	text-align: center;
+	height: 29px;
+	width: 218px;
+	left: 832px;
+	top: 350px;
+}
+
+.login:hover,
+.register:hover {
+	color: #0090af;
+}
+
+.email-label {
+	position: absolute;
+	height: 15px;
+	width: 32px;
+	left: 766px;
+	top: 419px;
+}
+
+.email-text {
+	box-sizing: border-box;
+	position: absolute;
+	left: 52.85%;
+	right: 22.22%;
+	top: 42.68%;
+	bottom: 54.1%;
+	background: #fafafa;
+	border: 1.29514px solid #cccccc;
+	border-radius: 7.06992px;
+	box-sizing: border-box;
+
+	position: absolute;
+	left: 52.85%;
+	right: 22.22%;
+	top: 42.68%;
+	bottom: 54.1%;
+
+	background: #fafafa;
+	border: 1.29514px solid #cccccc;
+	border-radius: 7.06992px;
+}
+
+.password-label {
+	position: absolute;
+	height: 15px;
+	width: 66px;
+	left: 766px;
+	top: 489px;
+}
+
+.password-text {
+	position: absolute;
+	height: 32px;
+	width: 359px;
+	left: 761.0634765625px;
+	top: 507px;
+	border-radius: 7.069916725158691px;
+	border: 1.3px solid #cccccc;
+}
+
+.remember-me {
+}
+
+.remember-me-label {
+}
+
+.password-group {
+}
+
+.login-button {
+	position: absolute;
+	width: 233.11px;
+	height: 40px;
+	left: 823.89px;
+	top: 603px;
+
+	background: #0090af;
+	border: none;
+	border-radius: 3.4537px;
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	/* or 113% */
+
+	text-align: center;
+
+	color: #ffffff;
+}
+
+.recover-password {
+	position: absolute;
+	width: 123px;
+	height: 30px;
+	left: 879px;
+	top: 649px;
+
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 29px;
+	/* identical to box height, or 226% */
+
+	color: #0090af;
+}
+
+.google-login {
 }

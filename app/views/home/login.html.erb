@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login</title>
+	<title><%= t('.') %></title>
 </head>
 <body>
    
@@ -12,8 +12,8 @@
 
 		<div class='main-box'>
 			<div class='navbar'>
-      <%= link_to 'Login', '/login' %>
-				<%= link_to 'Register', '/register' %> 
+        <%= link_to t('.login'), '/login' %>
+				<%= link_to t('.register'), '/register' %> 
         <hr id='line'>
 			</div>
   <div class='section'>
@@ -22,28 +22,29 @@
       </div>
 
       <div>
-        <h1 class='title'>Ingresar a mi cuenta</h1>
+        <h1 class='title'><%= t('.login') %></h1>
         <%= form_with  do |form| %>
           <div class='login-form'>
             <div class="item">
-              <%= form.label :email, class: 'email-label' %>
+              <%= form.label :email, t('.email'), class: 'email-label' %>
               <%= form.text_field :email, class: 'email-text', placeholder: 'admin@admin.com' %>
             </div>
 
             <div class="item">
-              <%= form.label :password, class: 'password-label' %>
+              <%= form.label :password, t('.password'), class: 'password-label' %>
               <%= form.number_field :password, class: 'password-text' %>
             </div>
 
             <div class='remember-me'>
               <%= form.check_box :remember_me, class: 'remember-me' %>
-              <%= form.label :remember_me, 'Recordame', class: 'remember-me-label' %>
+              <%= form.label :remember_me, t('.remember-me'), class: 'remember-me-label' %>
             </div>
 
-            
-              <%= form.submit :Ingresar , class: 'login-button'%> <br>
-              <%= link_to "Forgot my password", class: 'recover-password' %> <br>
-              <%= link_to "Login with my google account", class: 'google-login' %> 
+
+
+              <%= form.submit :value => t('.login'), class: 'login-button'%> <br>
+              <%= link_to t('.recover-password'), class: 'recover-password' %> <br>
+              <%= link_to t('.google-login'), class: 'google-login' %> 
             
           </div>
         <% end %> 

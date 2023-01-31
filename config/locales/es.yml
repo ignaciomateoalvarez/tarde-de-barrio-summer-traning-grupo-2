@@ -1,21 +1,22 @@
 es:
   home:
     login:
-      title: App
-      login: Ingresar
-      register: Registrarse
+      title: Ingresar a mi cuenta
+      session: Sesión
+      register: Registro
       email: Correo
+      login: Ingresar
       password: Contraseña
       remember-me: Recuerdame
-      recover-password: Olvido su contraseña?
+      recover-password: ¿Olvidó su contraseña?
       google-login: Ingresar con Google
 
     register:
       title: App
-      login: Ingresar
-      register: Registrarse
+      login: Sesión
+      register: Registro
       email: Correo
       password: Contraseña
       remember-me: Recuerdame
-      recover-password: Olvidó su contraseña?
+      recover-password: ¿Olvidó su contraseña?
       google-login: Ingresar con Google

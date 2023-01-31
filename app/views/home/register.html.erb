@@ -12,8 +12,8 @@
 
 		<div class='main-box'>
 			<div class="navbar">
-				<%= link_to t('.login'), '/login'%>
-				<%= link_to t('.register'), '/register'%>
+        <%= link_to t('.login'), '/login', class: "link #{current_page?('login') ? 'current-page' : ''}" %>	
+        <%= link_to t('.register'), '/register', class: "link" %> 
         <hr id='line'>
 			</div>
 
@@ -53,6 +53,9 @@
                  
           <% end %> 
         
+
+
+          
 
 		    </div>
 	    </div>

@@ -56,6 +56,7 @@
     font-weight: 300;
     font-size: 13px;
     line-height: 15px;
+    color: black;
   }
   
   .email-text, .password-text {
@@ -97,8 +98,8 @@
 }
 
 .recover-password  {
-  color: rgb(13, 210, 240);
-  text-decoration-line: none;
+  color: #0090AF !important;
+  text-decoration: none !important;
 }
 
 
@@ -118,4 +119,26 @@
 
 .current-page {
   color: red;
+}
+
+ /* charly */
+ .login-google {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 3.4537px;
+	border: 1px solid #0090AF;
+	width: 233px;
+	height: 40px;
+	text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.link:active {
+  color: #0090AF
 }

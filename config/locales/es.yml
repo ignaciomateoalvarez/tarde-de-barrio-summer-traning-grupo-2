@@ -4,19 +4,20 @@ es:
       title: Ingresar a mi cuenta
       session: Sesión
       register: Registro
-      email: Correo
-      login: Ingresar
+      email: Email
       password: Contraseña
-      remember-me: Recuerdame
-      recover-password: ¿Olvidó su contraseña?
+      login: Ingresar
+      remember-me: Recordame
+      recover-password: Olvidé mi contraseña
       google-login: Ingresar con Google
 
     register:
       title: App
       login: Sesión
-      register: Registro
-      email: Correo
+      registernav: Registro
+      name-user: Nombre de usuario
+      email: Email
       password: Contraseña
-      remember-me: Recuerdame
-      recover-password: ¿Olvidó su contraseña?
-      google-login: Ingresar con Google
+      confirm-password: Confirmar contraseña
+      register: Registrarme
+      google-login: Registrarme con Google

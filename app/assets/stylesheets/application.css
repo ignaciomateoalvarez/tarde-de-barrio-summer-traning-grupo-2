@@ -13,3 +13,71 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	font-family: Roboto;
+	background: #0090af;
+}
+
+.container {
+	position: absolute;
+	width: 1440px;
+	height: 1024px;
+	left: 0px;
+	top: 0px;
+	border-radius: 0px;
+}
+
+.form-box {
+	margin: 252px 276px 198px 277px;
+	height: 584px;
+	width: 887px;
+	left: 277px;
+	top: 242px;
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: -7px 7px 30px 0px #004c5c33;
+	padding: 20px;
+}
+
+#login {
+	position: absolute;
+	height: 29px;
+	width: 88px;
+	left: 622px;
+	top: 266px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 29px;
+	letter-spacing: 0px;
+	text-align: center;
+	border-radius: 0px;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+#register {
+	position: absolute;
+	height: 29px;
+	width: 145px;
+	left: 722px;
+	top: 266px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 29px;
+	letter-spacing: 0px;
+	text-align: center;
+	border-radius: 0px;
+}
+
+#line {
+	position: absolute;
+	width: 800px;
+	height: 0px;
+	left: 320px;
+	top: 301px;
+	border: 1px solid #bec2c4;
+}

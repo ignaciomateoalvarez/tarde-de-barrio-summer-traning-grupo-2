@@ -11,39 +11,40 @@
 	<div class="container">
 
 		<div class='main-box'>
-			<div class='navbar'>
-      <%= link_to 'Login', '/login' %>
-				<%= link_to 'Register', '/register' %> 
+			<div class="navbar">
+        <%= link_to t('.login'), '/login', class: "link #{current_page?('/login') ? 'current-page' : ''}" %>	
+        <%= link_to t('.register'), '/register', class: "link" %> 
         <hr id='line'>
-			</div>
-  <div class='section'>
+      </div>
+    <div class='section'>
       <div class='globe-photo'>
-			<%= image_tag 'Frame.png'%>
+			  <%= image_tag 'Frame.png'%>
       </div>
 
       <div>
-        <h1 class='title'>Ingresar a mi cuenta</h1>
+        <h1 class='title'><%= t('.title') %></h1>
         <%= form_with  do |form| %>
           <div class='login-form'>
             <div class="item">
-              <%= form.label :email, class: 'email-label' %>
-              <%= form.text_field :email, class: 'email-text', placeholder: 'admin@admin.com' %>
+              <%= form.label :email,t('.email'), class: 'label-form' %>
+              <%= form.text_field :email, class: 'input-form', placeholder: 'admin@admin.com' %>
             </div>
 
             <div class="item">
-              <%= form.label :password, class: 'password-label' %>
-              <%= form.number_field :password, class: 'password-text' %>
+              <%= form.label :password,t('.password'),  class: 'label-form'%>
+              <%= form.password_field :password, class: 'input-form' %>
             </div>
 
             <div class='remember-me'>
               <%= form.check_box :remember_me, class: 'remember-me' %>
-              <%= form.label :remember_me, 'Recordame', class: 'remember-me-label' %>
+              <%= form.label :remember_me, t('.remember-me'),  class: 'remember-me-label' %>
             </div>
-
-            
-              <%= form.submit :Ingresar , class: 'login-button'%> <br>
-              <%= link_to "Forgot my password", class: 'recover-password' %> <br>
-              <%= link_to "Login with my google account", class: 'google-login' %> 
+            <%= form.submit :Ingresar , class: 'login-button'%> 
+            <%= link_to t('.recover-password'),'/#', class:'recover-password' %> 
+            <div class="login-google">
+              <%= image_tag 'google.png'%>
+              <%= link_to t('.google-login')%>
+            </div>
             
           </div>
         <% end %> 
@@ -52,9 +53,6 @@
 
 		</div>
 	</div>
-
-
-
 
 </body>
 </html>

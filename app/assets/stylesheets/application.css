@@ -118,6 +118,18 @@ a {
   text-decoration: none;
   color: black;
 }
+
+
 .link:active {
-  color: #0090AF
+  color: #0090AF;
+  box-shadow: 0rem .3005rem #0090AF;
+
+}
+
+#line {
+  margin-top: -0.2rem;
+}
+
+.recover-password {
+  color:#0090AF
 }

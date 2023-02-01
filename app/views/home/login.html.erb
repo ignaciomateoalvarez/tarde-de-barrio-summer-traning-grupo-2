@@ -12,10 +12,10 @@
 
 		<div class='main-box'>
 				<div class="navbar">
-        <%= link_to t('.session'), '/login', class: "link #{current_page?('login') ? 'current-page' : ''}" %>	
+        <%= link_to t('.session'), '/login', class: "link #{current_page?('/login') ? 'current-page' : ''}" %>	
         <%= link_to t('.register'), '/register', class: "link" %> 
         <hr id='line'>
-			</div>
+        </div>
   <div class='section'>
       <div class='globe-photo'>
 			<%= image_tag 'Frame.png'%>
@@ -40,7 +40,7 @@
               <%= form.label :remember_me, t('.remember-me'),  class: 'remember-me-label' %>
             </div>
               <%= form.submit :Ingresar , class: 'login-button'%> 
-              <%= link_to t('.recover-password'), class: 'recover-password' %> 
+              <%= link_to t('.recover-password'),'/#', class:'recover-password' %> 
               <div class="login-google">
               <%= image_tag 'google.png'%>
               <%= link_to t('.google-login')%>

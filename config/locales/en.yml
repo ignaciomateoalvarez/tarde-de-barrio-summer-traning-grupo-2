@@ -32,7 +32,7 @@
 en:
   home:
     login:
-      title: App
+      title: Login in my account
       login: Login
       register: Register
       email: Email
@@ -40,3 +40,14 @@ en:
       remember-me: Remember me
       recover-password: Forgot your password?
       google-login: Login with Google Account
+
+    register:
+      title: Register my account
+      login: Login
+      registernav: Register
+      name-user: Username
+      email: Email
+      password: Password
+      confirm-password: Confirm your password
+      register: Register
+      google-login: Register with Google

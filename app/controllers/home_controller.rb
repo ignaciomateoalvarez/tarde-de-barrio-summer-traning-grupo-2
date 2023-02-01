@@ -8,6 +8,6 @@ class  HomeController< ApplicationController
   private
 
   def use_locale(&block)
-    I18n.with_locale(:es, &block)
+    I18n.with_locale(:en, &block)
   end
 end

@@ -1,5 +1,13 @@
 class  HomeController< ApplicationController
+    around_action :use_locale
 
-    def index
-    end
+  def login
+    flash[:notice] = t(:hello)
+  end
+
+  private
+
+  def use_locale(&block)
+    I18n.with_locale(:en, &block)
+  end
 end

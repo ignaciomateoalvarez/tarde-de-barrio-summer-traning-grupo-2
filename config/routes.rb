@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
    root "home#login"
    get '/register', to: 'home#register'
-   get '/login', to: 'home#login'
 end

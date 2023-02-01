@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> <%= t('.title') %> </title>
-</head>
-<body>
-  <div class="container">
-    <div class='main-box'>
-      <div class="navbar">
-        <%= link_to t('.login'), '/login', class: "link #{current_page?('login') ? 'current-page' : ''}" %>	
-        <%= link_to t('.registernav'), '/register', class: "link" %> 
-        <hr id='line'>
+<div class="container">
+  <div class='main-box'>
+    <div class="navbar">
+      <%= link_to t('.login'), '/', class: "link #{current_page?(root_url) ? 'link-active' : ''}" %>
+      <%= link_to t('.registernav'), '/register', class: "link #{current_page?(action: 'register') ? 'link-active' : ''}" %> 
+      <hr id='line'>
+    </div>
+    <div class='section'>
+      <div class='globe-photo'>
+        <%= image_tag 'Frame.png'%>
       </div>
-      <div class='section'>
-        <div class='globe-photo'>
-          <%= image_tag 'Frame.png'%>
-        </div>
       <div>
         <h1 class='title'><%= t('.title') %></h1>
         <%= form_with do |form| %>
@@ -52,5 +43,3 @@
     </div>
   </div>
 </div>
-</body>
-</html>

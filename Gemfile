@@ -13,7 +13,16 @@ gem "rubocop", "1.44.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+#faker
 
+#rspec
+group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
 
 
 # Use postgresql as the database for Active Record

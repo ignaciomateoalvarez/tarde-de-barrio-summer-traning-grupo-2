@@ -30,6 +30,12 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  model:
+    user:
+      name-validation: Only alphabetic characters are allowed.
+      email-validation: Enter a valid email.
+
+  
   home:
     login:
       title: Login in my account

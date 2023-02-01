@@ -1,0 +1,10 @@
+es: 
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes: 
+            first_name: 
+              presence: Solo se permiten caracteres alfabéticos.
+            email:
+              presence: Ingrese un mail valido.

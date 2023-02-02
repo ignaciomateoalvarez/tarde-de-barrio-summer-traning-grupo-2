@@ -1,5 +1,7 @@
-class  HomeController< ApplicationController
-    around_action :use_locale
+# frozen_string_literal: true
+
+class HomeController < ApplicationController
+  around_action :use_locale
 
   def login
     flash[:notice] = t(:hello)

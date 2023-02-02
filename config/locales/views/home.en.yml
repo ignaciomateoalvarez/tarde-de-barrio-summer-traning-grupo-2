@@ -1,19 +1,20 @@
 en:
   home:
     login:
-      title: Login in my account
       login: Login
-      register: Register
+      registernav: Register
+      title: Login in my account
       email: Email
       password: Password
       remember-me: Remember me
       recover-password: Forgot your password?
+      sign-in: Sign in
       google-login: Login with Google Account
 
     register:
-      title: Register my account
       login: Login
       registernav: Register
+      title: Register my account
       name-user: Username
       email: Email
       password: Password

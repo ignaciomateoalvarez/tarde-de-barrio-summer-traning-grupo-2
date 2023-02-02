@@ -1,0 +1,17 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              invalid: Solo se permiten caracteres alfabéticos.
+              blank: El nombre es obligatorio.
+            last_name:
+              invalid: Solo se permiten caracteres alfabéticos.
+              blank: El apellido es obligatorio.
+
+            email:
+              invalid: El formato ingresado es incorrecto.
+              blank: El mail es obligatorio.
+              taken: El mail ya se encuentra registrado.

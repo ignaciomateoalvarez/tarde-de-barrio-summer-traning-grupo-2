@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  root 'home#login'
+  root 'user_sessions#new'
+  get '/home', to: 'home#index'
   get '/register', to: 'home#register'
+
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'login' => "user_sessions#create"
+  delete 'logout' => 'user_sessions#destroy', :as => :logout
 end

@@ -1,0 +1,23 @@
+es:
+  user_sessions:
+    new:
+      login: Sesión
+      registernav: Registro
+      title: Ingresar a mi cuenta
+      email: Email
+      password: Contraseña
+      remember-me: Recordarme
+      sign-in: Ingresar
+      recover-password: Olvidé mi contraseña
+      google-login: Ingresar con Google
+
+    register:
+      login: Sesión
+      registernav: Registro
+      title: Registro
+      name-user: Nombre de usuario
+      email: Email
+      password: Contraseña
+      confirm-password: Confirmar contraseña
+      register: Registrarme
+      google-login: Regristrarme con Google

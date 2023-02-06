@@ -8,15 +8,13 @@ ruby '3.0.0'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 
-# Rubocop
 gem 'rubocop', '1.44.1'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-# faker
+gem 'sorcery'
 
-# rspec
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'

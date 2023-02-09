@@ -1,16 +1,22 @@
 class UserSessionsController < ApplicationController
+  def new; end
+
   def create
-    @user = login(params[:email], params[:password])
-
-    if @user
-      redirect_to users_path, notice: 'Welcome!'
-
+    @user = User.find_by(email: params[:email])
+    if @user.present?
+      if @user.active?
+        if login(params[:email], params[:password])
+          redirect_to users_path, notice: "Welcome! #{@user.email}"
+        else
+          redirect_to login_path, alert: 'Password or email is incorrect'
+        end
+      else
+        redirect_to login_path, alert: 'User is disabled'
+      end
     else
-      redirect_to root_path, alert: 'User not found'
+      redirect_to login_path, alert: 'User not found'
     end
   end
-
-  def register; end
 
   def destroy
     logout

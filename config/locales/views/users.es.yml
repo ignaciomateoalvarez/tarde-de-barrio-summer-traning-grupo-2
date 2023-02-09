@@ -1,5 +1,16 @@
 es:
   users:
+    new:
+      login: Sesión
+      registernav: Registro
+      title: Registro
+      name-user: Nombre de usuario
+      email: Email
+      password: Contraseña
+      confirm-password: Confirmar contraseña
+      register: Registrarme
+      google-login: Registrarme con Google
+
     index:
       log-out: Cerrar sesión
       first_name: Nombre
@@ -7,3 +18,21 @@ es:
       last_name: Apellido
       email: Email
       search: Buscar
+
+    edit:
+      title: Editar
+      first_name: Nombre
+      last_name: Apellido
+      email: Email
+      search: Buscar
+
+    register:
+      login: Sesión
+      registernav: Registro
+      title: Registro
+      name-user: Nombre de usuario
+      email: Email
+      password: Contraseña
+      confirm-password: Confirmar contraseña
+      register: Registrarme
+      google-login: Registrarme con Google

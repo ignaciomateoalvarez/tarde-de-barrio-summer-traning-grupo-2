@@ -1,14 +1,6 @@
 en:
-  users:
-    index:
-      log-out: Log out
-      students: STUDENTS
-      first_name: First Name
-      last_name: Last Name
-      email: Email
-      search: Search
-
-    register:
+  user_registrations:
+    new:
       login: Login
       registernav: Register
       title: Register my account
@@ -18,4 +10,3 @@ en:
       confirm-password: Confirm your password
       register: Register
       google-login: Register with Google
-

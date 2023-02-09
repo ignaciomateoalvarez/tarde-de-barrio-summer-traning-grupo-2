@@ -1,0 +1,12 @@
+es:
+  user_registrations:
+    new:
+      login: Sesión
+      registernav: Registro
+      title: Registro
+      name-user: Nombre de usuario
+      email: Email
+      password: Contraseña
+      confirm-password: Confirmar contraseña
+      register: Registrarme
+      google-login: Registrarme con Google

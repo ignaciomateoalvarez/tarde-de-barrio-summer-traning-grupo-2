@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
   context 'Uniqueness validations' do
     it { is_expected.to validate_presence_of(:email) }
     before(:each) do
-      User.create(:user)
+      create(:user)
     end
     it { is_expected.to validate_uniqueness_of(:email) }
   end

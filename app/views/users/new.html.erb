@@ -1,0 +1,41 @@
+<%= turbo_frame_tag "modal" do %>
+  <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "modal", action: 
+    "turbo:submit-end->turbo-modal#submitEnd 
+    keyup@window->turbo-modal#closeWithKeyboard 
+    click@window->turbo-modal#closeBackground" } do %>
+    <h1 class='title'><%= t('.title') %></h1>
+    <%= form_with url: users_path, scope: :user, method: :post do |form| %>
+      <div class="login-form">
+        <div class="item">
+          <%= form.label :name_user,t('.first_name'), class: 'label-form'%>
+          <%= form.text_field :first_name, class: 'input-form'%>
+        </div>
+        <div class="item">
+          <%= form.label :name_user,t('.last_name'), class: 'label-form'%>
+          <%= form.text_field :last_name, class: 'input-form'%>
+        </div>
+        <div class="item">
+          <%= form.label :email, t('.email'), class: 'label-form' %>
+          <%= form.text_field :email, class: 'input-form'%>
+        </div>
+        <div class='item'>
+          <%= form.label :password, t('.password'), class: 'label-form'%>
+          <%= form.password_field :password,class: 'input-form'%>
+          <% if @user.errors.include?(:password)%>
+            <% @user.errors.full_messages_for(:password) do |error| %>
+            <p><%= error %> </p>
+            <% end %>
+          <% end %>
+        </div>
+        <div class='item'>
+          <%= form.label :confirm_password, t('.confirm-password'), class: 'label-form'%>
+          <%= form.password_field :password_confirmation ,class: 'input-form' %>
+        </div>
+        <div>
+          <%= form.submit :value => t('.title'), class: 'login-button'%>
+          <%= button_tag 'X', data: { action: "turbo-modal#closeModal" }, type: "button"%>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

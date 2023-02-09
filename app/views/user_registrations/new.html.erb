@@ -2,7 +2,7 @@
   <div class='main-box'>
     <div class="navbar">
       <%= link_to t('.login'), '/', class: "link #{current_page?(root_url) ? 'link-active' : ''}" %>
-      <%= link_to t('.registernav'), '/register', class: "link #{current_page?(action: 'register') ? 'link-active' : ''}" %> 
+      <%= link_to t('.registernav'), '/register', class: "link #{current_page?(action: 'new') ? 'link-active' : ''}" %> 
       <hr id='line'>
     </div>
     <div class='section'>
@@ -10,23 +10,32 @@
       </div>
       <div>
         <h1 class='title'><%= t('.title') %></h1>
-        <%= form_with do |form| %>
+        <%= form_with url: register_path, scope: :user, method: :post do |form| %>
           <div class="login-form">
             <div class="item">
               <%= form.label :name_user,t('.name-user'), class: 'label-form'%>
-              <%= form.text_field :name, class: 'input-form'%>
+              <%= form.text_field :first_name, class: 'input-form'%>
+            </div>
+            <div class="item">
+              <%= form.label :name_user,t('.name-user'), class: 'label-form'%>
+              <%= form.text_field :last_name, class: 'input-form'%>
             </div>
             <div class="item">
               <%= form.label :email, t('.email'), class: 'label-form'%>
-              <%= form.text_field :age, class: 'input-form'%>
+              <%= form.text_field :email, class: 'input-form'%>
             </div>
             <div class='item'>
               <%= form.label :password, t('.password'), class: 'label-form'%>
               <%= form.password_field :password,class: 'input-form'%>
+              <% if @user.errors.include?(:password)%>
+                <% @user.errors.full_messages_for(:password) do |error| %>
+                <p><%= error %> </p>
+               <% end %>
+              <% end %>
             </div>
             <div class='item'>
               <%= form.label :confirm_password, t('.confirm-password'), class: 'label-form'%>
-              <%= form.password_field :confirm_password,class: 'input-form' %>
+              <%= form.password_field :password_confirmation ,class: 'input-form' %>
             </div>
             <div>
               <%= form.submit :value => t('.register'), class: 'login-button'%>

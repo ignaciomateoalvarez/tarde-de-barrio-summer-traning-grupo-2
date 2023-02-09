@@ -4,23 +4,23 @@ class UserFilter
 
   attribute :full_name, :string
 
-  attr_reader :user
+  attr_reader :users
 
   def initialize(scope, params)
     super(params)
-    @user = scope
+    @users = scope
   end
 
   def call
     by_name!
-    @user
+    @users
   end
 
   def by_name!
     return if full_name.blank?
 
-    @user = user.where('first_name ILIKE :name OR last_name ILIKE :name', name: "%#{full_name}%")
-                .or(user.where("first_name || ' ' || last_name ILIKE :name", name: "%#{full_name}%"))
-                .or(user.where("last_name || ' ' || first_name ILIKE :name", name: "%#{full_name}%"))
+    @users = users.where('first_name ILIKE :name OR last_name ILIKE :name', name: "%#{full_name}%")
+                  .or(users.where("first_name || ' ' || last_name ILIKE :name", name: "%#{full_name}%"))
+                  .or(users.where("last_name || ' ' || first_name ILIKE :name", name: "%#{full_name}%"))
   end
 end

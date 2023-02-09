@@ -10,15 +10,16 @@
       </div>
       <div>
         <h1 class='title'><%= t('.title') %></h1>
+        <%= render partial: '/errors/errors' %>
         <%= form_with url: login_path, method: :post do |form| %>
           <div class='login-form'>
             <div class="item">
               <%= form.label :email,t('.email'), class: 'label-form' %>
-              <%= form.text_field :email, class: 'input-form', placeholder: 'admin@admin.com' %>
+              <%= form.email_field :email, class: 'input-form', placeholder: 'admin@admin.com' %>
             </div>
             <div class="item">
               <%= form.label :password,t('.password'),  class: 'label-form'%>
-              <%= form.password_field :password, class: 'input-form' %>
+              <%= form.password_field :password, class: 'input-form', minlength: 3 %>
             </div>
             <div class='remember-me'>
               <%= form.check_box :remember_me, class: 'remember-me' %>

@@ -1,6 +1,6 @@
 en:
   user_sessions:
-    new:
+    login:
       login: Login
       registernav: Register
       title: Login in my account

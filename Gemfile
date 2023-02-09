@@ -15,6 +15,8 @@ gem 'sprockets-rails'
 
 gem 'sorcery'
 
+gem 'pagy', '~> 6.0', '>= 6.0.1'
+
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'

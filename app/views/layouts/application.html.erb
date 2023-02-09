@@ -10,11 +10,6 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-     <% flash.each do |type, msg| %>
-      <div class='login-error'>
-        <%= msg %>
-      </div>
-    <% end %>
     <%= yield %>
   </body>
 </html>

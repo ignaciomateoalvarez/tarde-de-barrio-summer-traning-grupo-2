@@ -1,0 +1,36 @@
+<div class='home-container'>
+  <div class='top-navbar'>
+      <%= render partial: '/errors/errors' %>
+      <%= form_with(url: users_path, method: :get, scope: :user_filter) do |f| %>
+        <%= f.text_field :full_name %>
+        <%= f.submit t('.search') %>
+      <% end %>
+      <%= button_to t('.log-out'), logout_path, method: :delete %>
+    <h1 class='username'> <%= current_user.email %> </h1>
+  </div>
+    <div class= 'user-container'>
+      <table>
+        <thead>
+          <tr>
+            <th class='student-names'> <%= t('.students')%> </th> <th class='email-names'> <%= t('.email')%> </th>
+          <tr>
+        </thead>
+        <% @users.each do |user| %>
+        <tbody>
+          <tr>
+            <td colspan="2">
+              <tr class='user'>
+                <td class='name'> <%= user.first_name %> <%= user.last_name %> </td>
+                <td class='email-users'> <%= user.email %> </td>
+              </tr>
+            </td>
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
+     <div class='pagination-var'>
+      <%== pagy_nav(@pagy) %>
+     </div>
+</div>
+

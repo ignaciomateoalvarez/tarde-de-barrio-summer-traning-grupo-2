@@ -1,0 +1,9 @@
+en:
+  users:
+    index:
+      log-out: Log out
+      students: STUDENTS
+      first_name: First Name
+      last_name: Last Name
+      email: Email
+      search: Search

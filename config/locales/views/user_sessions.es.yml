@@ -1,6 +1,6 @@
 es:
   user_sessions:
-    new:
+    login:
       login: Sesión
       registernav: Registro
       title: Ingresar a mi cuenta
@@ -20,4 +20,4 @@ es:
       password: Contraseña
       confirm-password: Confirmar contraseña
       register: Registrarme
-      google-login: Regristrarme con Google
+      google-login: Registrarme con Google

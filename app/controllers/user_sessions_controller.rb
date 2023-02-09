@@ -3,12 +3,14 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_to home_path, notice: 'Welcome!'
+      redirect_to users_path, notice: 'Welcome!'
 
     else
-      redirect_to root_path, notice: 'User not found'
+      redirect_to root_path, alert: 'User not found'
     end
   end
+
+  def register; end
 
   def destroy
     logout

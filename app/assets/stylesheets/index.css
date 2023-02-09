@@ -1,0 +1,61 @@
+body {}
+
+table {
+  text-align: left;
+  width: 100%;
+}
+
+.home-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #0090af;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10.25rem;
+}
+
+.user {
+  display: flex;
+  gap: 30rem;
+  border-radius: 5px;
+  border: 1px solid #dadada;
+  padding: 15px;
+}
+
+.user:hover {
+  border: 1px solid #0090af;
+}
+
+.pagination-var {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+a {
+  color: inherit;
+}
+
+.username {
+  align-self: flex-end;
+  font-size: 1.25rem;
+  margin: 0.625rem;
+}
+
+.email-users {
+  text-align: center;
+  margin-left: 5tas00px;
+}

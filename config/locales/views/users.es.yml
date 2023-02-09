@@ -1,0 +1,9 @@
+es:
+  users:
+    index:
+      log-out: Cerrar sesión
+      first_name: Nombre
+      students: ESTUDIANTES
+      last_name: Apellido
+      email: Email
+      search: Buscar

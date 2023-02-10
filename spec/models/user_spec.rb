@@ -1,25 +1,34 @@
 # frozen_string_literal: true
 
+require 'pundit/rspec'
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let(:user) { build(:user) }
+  let(:colaborador) { build(:user, :colaborador) }
+  let(:administrador) { build(:user, :administrador) }
 
-  context 'Uniqueness validations' do
-    it { is_expected.to validate_presence_of(:email) }
-    before(:each) do
-      create(:user)
+  describe 'Validations' do
+    context 'Uniqueness' do
+      before(:each) do
+        create(:user)
+      end
+
+      it { is_expected.to validate_presence_of(:email) }
+      it { is_expected.to validate_uniqueness_of(:email) }
     end
-    it { is_expected.to validate_uniqueness_of(:email) }
+
+    context 'Presence' do
+      it { is_expected.to validate_presence_of(:first_name) }
+      it { is_expected.to validate_presence_of(:last_name) }
+    end
+
+    context 'Length' do
+      it { is_expected.to validate_length_of(:password).is_at_least(3) }
+    end
   end
 
-  context 'Validation' do
-    it { is_expected.to validate_presence_of(:first_name) }
-    it { is_expected.to validate_presence_of(:last_name) }
-    it { is_expected.to validate_length_of(:password).is_at_least(3) }
-  end
-
-  context 'Format' do
+  describe 'Format' do
     it { is_expected.not_to allow_value('nicolas123').for(:first_name) }
     it { is_expected.to allow_value('nicolas').for(:first_name) }
     it { is_expected.not_to allow_value('gar123').for(:last_name) }
@@ -29,7 +38,13 @@ RSpec.describe User, type: :model do
     it { is_expected.not_to allow_value('not_an_email').for(:email) }
   end
 
-  context 'Factory' do
+  describe 'Factory' do
     it { expect(create(:user)).to be_persisted }
+  end
+
+  describe 'Policy' do
+    it 'permite a un administrador actualizar un usuario' do
+      expect { UserPolicy.new(administrador, colaborador).update? }.not_to raise_error
+    end
   end
 end

@@ -6,5 +6,10 @@ FactoryBot.define do
     last_name { Faker::Name.last_name }
     email { Faker::Internet.unique.email }
     password { Faker::Internet.password(min_length: 3) }
+    role { 'colaborador' }
+
+    trait :admin do
+      role { 'administrador' }
+    end
   end
 end

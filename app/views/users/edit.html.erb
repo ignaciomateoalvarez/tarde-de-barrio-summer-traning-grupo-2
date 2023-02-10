@@ -3,24 +3,24 @@
     "turbo:submit-end->turbo-modal#submitEnd 
     keyup@window->turbo-modal#closeWithKeyboard 
     click@window->turbo-modal#closeBackground" } do %>
-    <h1 class='title'><%= t('.title') %></h1>
+    <%= button_tag 'X', class: 'close', data: { action: "turbo-modal#closeModal" }, type: "button"%>
+    <h1 class='m-title'><%= t('.title-edit') %></h1>
     <%= form_with url: user_path(@user), scope: :user, method: :put do |form| %>
-      <div class="login-form">
-        <div class="item">
-          <%= form.label :name_user,t('.first_name'), class: 'label-form'%>
+      <div class="m-login-form">
+        <div class="m-item">
+          <%= form.label :name_user,t('.first_name_edit'), class: 'label-form'%>
           <%= form.text_field :first_name, class: 'input-form'%>
         </div>
-        <div class="item">
-          <%= form.label :name_user,t('.last_name'), class: 'label-form'%>
+        <div class="m-item">
+          <%= form.label :name_user,t('.last_name_edit'), class: 'label-form'%>
           <%= form.text_field :last_name, class: 'input-form'%>
         </div>
-        <div class="item">
-          <%= form.label :email, t('.email'), class: 'label-form' %>
+        <div class="m-item">
+          <%= form.label :email, t('.email_edit'), class: 'label-form' %>
           <%= form.text_field :email, class: 'input-form', :readonly => true %>
         </div>
         <div>
-          <%= form.submit :value => t('.title'), class: 'login-button'%>
-          <%= button_tag 'X', data: { action: "turbo-modal#closeModal" }, type: "button"%>
+          <%= form.submit :value => t('.search_edit'), class: 'm-login-button'%>
         </div>
       </div>
     <% end %>

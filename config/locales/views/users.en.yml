@@ -1,21 +1,26 @@
 en:
   users:
-    index:
-      log-out: Log out
-      students: STUDENTS
-      first_name: First Name
-      last_name: Last Name
-      email: Email
-      search: Search
-
-    register:
-      login: Login
-      registernav: Register
-      title: Register my account
-      name-user: Username
-      email: Email
+    new:
+      title_new: New user
+      first_name_new: First name
+      last_name_new: Last name
+      email_new: Email
       password: Password
-      confirm-password: Confirm your password
-      register: Register
-      google-login: Register with Google
+      confirm-password: Confirm password
+      search_new: Create user
 
+    index:
+      log-out: log out
+      student: Students
+      students: STUDENTS
+      active: ACTIVE
+      edit: EDIT
+      email: EMAIL
+      new-user: New user
+
+    edit:
+      title-edit: Modify user
+      first_name_edit: Name
+      last_name_edit: Last name
+      email_edit: Email
+      search_edit: Save

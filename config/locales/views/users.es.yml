@@ -1,38 +1,26 @@
 es:
   users:
     new:
-      login: Sesión
-      registernav: Registro
-      title: Registro
-      name-user: Nombre de usuario
-      email: Email
+      title_new: Nuevo usuario
+      first_name_new: Nombre
+      last_name_new: Apellido
+      email_new: Email
       password: Contraseña
       confirm-password: Confirmar contraseña
-      register: Registrarme
-      google-login: Registrarme con Google
+      search_new: Registrar usuario
 
     index:
       log-out: Cerrar sesión
-      first_name: Nombre
+      student: Estudiantes
       students: ESTUDIANTES
-      last_name: Apellido
-      email: Email
-      search: Buscar
+      active: ACTIVAR
+      edit: EDITAR
+      email: EMAIL
+      new-user: Nuevo usuario
 
     edit:
-      title: Editar
-      first_name: Nombre
-      last_name: Apellido
-      email: Email
-      search: Buscar
-
-    register:
-      login: Sesión
-      registernav: Registro
-      title: Registro
-      name-user: Nombre de usuario
-      email: Email
-      password: Contraseña
-      confirm-password: Confirmar contraseña
-      register: Registrarme
-      google-login: Registrarme con Google
+      title-edit: Modificar usuario
+      first_name_edit: Nombre
+      last_name_edit: Apellido
+      email_edit: Email
+      search_edit: Guardar cambios

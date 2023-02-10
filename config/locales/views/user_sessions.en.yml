@@ -1,12 +1,13 @@
 en:
   user_sessions:
-    login:
+    new:
       login: Login
       registernav: Register
-      title: Login in my account
+      title: Login
       email: Email
       password: Password
       remember-me: Remember me
-      recover-password: Forgot your password?
-      sign-in: Sign in
-      google-login: Login with Google Account
+      sign-in: sign in
+      recover-password: Forget my password
+      google-login: Login with Google
+

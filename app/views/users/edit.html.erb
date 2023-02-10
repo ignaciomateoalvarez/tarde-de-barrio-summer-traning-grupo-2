@@ -19,6 +19,10 @@
           <%= form.label :email, t('.email_edit'), class: 'label-form' %>
           <%= form.text_field :email, class: 'input-form', :readonly => true %>
         </div>
+         <div class='items'>
+           <%= form.label :role, 'rol', class: 'label-form' %>
+            <%= form.select :role, options_for_select(User.roles.keys, selected: @user.role), {}, { class: "form-control" } %>
+          </div>
         <div>
           <%= form.submit :value => t('.search_edit'), class: 'm-login-button'%>
         </div>

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserSessionsController < ApplicationController
   def new; end
 
@@ -15,7 +17,7 @@ class UserSessionsController < ApplicationController
         redirect_to login_path, alert: 'User is disabled'
       end
     else
-      redirect_to login_path, alert: 'User not found'
+      redirect_to login_path, alert: 'Password or email is incorrect'
     end
   end
 

@@ -9,5 +9,13 @@ class User < ApplicationRecord
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d-]+(\.[a-z\d-]+)*\.[a-z]+\z/i }
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true
+  enum role: %i[administrador colaborador]
+  before_validation :set_default_role, on: :create
+  attr_accessor :created_by
+
+  private
+
+  def set_default_role
+    self.role ||= :colaborador
+  end
 end
- 

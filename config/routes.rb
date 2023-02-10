@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   resources :users do
     put 'toggle_active' => 'users#toggle_active'
+    put 'update_role' => 'users#update_role', on: :member
   end
 end

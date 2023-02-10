@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
+  include Pundit
+
   def index
     @filter = UserFilter.new(User.all, filter_params)
     @user = @filter.call.order(:first_name)
@@ -27,9 +31,11 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    authorize User
   end
 
   def update
+    authorize User
     @user = User.find(params[:id])
     if @user.update(register_params)
       flash[:notice] = 'User was successfully updated.'
@@ -50,9 +56,22 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_role
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to users_path, notice: 'Rol actualizado'
+    else
+      redirect_to users_path, notice: 'hubo un problema'
+    end
+  end
+
   private
 
+  def user_params
+    params.require(:user).permit(:role)
+  end
+
   def register_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :role)
   end
 end

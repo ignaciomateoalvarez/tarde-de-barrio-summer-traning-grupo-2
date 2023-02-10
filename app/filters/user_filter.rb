@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserFilter
   include ActiveModel::API
   include ActiveModel::Attributes

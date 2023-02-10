@@ -16,6 +16,7 @@ class User < ApplicationRecord
   private
 
   def set_default_role
-    self.role ||= :colaborador
+    #Hacemos a todos admin para el deploy
+    self.role ||= :administrador
   end
 end

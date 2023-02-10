@@ -107,7 +107,6 @@
 
 .user-th {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 	color: #0090af;
 	padding: 0.3125rem;
@@ -128,11 +127,11 @@
 }
 
 .name {
-	min-width: 10%;
+	max-width: 0;
 }
 
 .email-users {
-	min-width: 15%;
+	max-width: 3%;
 }
 
 .filter {
@@ -150,7 +149,9 @@
 	height: 1.125rem;
 	width: 1.125rem;
 	padding: 0.625rem;
+	margin-right: 15px;
 }
+
 .edit-icon:hover {
 	opacity: 0.5;
 }
@@ -187,6 +188,7 @@ a {
 	background-size: cover;
 	height: 1.25rem;
 	width: 0.3125rem;
+	margin-right: 15px;
 }
 .menu-modal-icon:hover {
 	cursor: pointer;
@@ -203,6 +205,10 @@ a {
 	border-radius: 0.5rem;
 }
 
+.role {
+	max-width: 0;
+	margin-right: 2%;
+}
 /* Toggle */
 .toggle-button {
 	margin-bottom: 0.5rem;
@@ -212,6 +218,7 @@ a {
 	height: 0;
 	width: 0;
 	visibility: hidden;
+	max-width: 0;
 }
 
 .toggle-button label {

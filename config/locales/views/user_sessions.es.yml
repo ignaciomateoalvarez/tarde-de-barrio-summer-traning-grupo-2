@@ -1,6 +1,6 @@
 es:
   user_sessions:
-    login:
+    new:
       login: Sesión
       registernav: Registro
       title: Ingresar a mi cuenta

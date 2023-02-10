@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # Register from modal
   def create
     @user = User.new(register_params)
     if @user.save
@@ -41,8 +42,12 @@ class UsersController < ApplicationController
 
   def toggle_active
     @user = User.find(params[:user_id])
-    @user.toggle!(:active)
-    redirect_to users_path
+    @user.active = params[:user][:active]
+    if @user.save
+      flash[:notice] = 'Estado modificado'
+    else
+      flash[:alert] = 'No pudo ser modificado'
+    end
   end
 
   private

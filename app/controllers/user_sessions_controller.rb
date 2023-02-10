@@ -1,6 +1,7 @@
 class UserSessionsController < ApplicationController
   def new; end
 
+  #User login
   def create
     @user = User.find_by(email: params[:email])
     if @user.present?

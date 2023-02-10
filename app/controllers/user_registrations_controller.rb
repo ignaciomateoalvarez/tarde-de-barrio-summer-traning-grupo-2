@@ -3,6 +3,7 @@ class UserRegistrationsController < ApplicationController
     @user = User.new
   end
 
+  # Register a new user
   def create
     @user = User.new(register_params)
     if @user.save

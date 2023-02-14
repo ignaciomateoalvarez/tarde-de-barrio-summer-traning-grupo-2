@@ -44,11 +44,11 @@
     <tbody>
       <tr>
         <td colspan="2">
-          <% @students.each do |student| %>
+          <% @presenter.paginate each do |student| %>
             <tr class='user'>
               <td class='name'> <%= student.full_name  %> </td>
               <td class='name'> <%= student.age %> </td>
-              <td class='name'> <%= student.school_grade  %> </td>
+              <td class='name'> <%= student.grade  %> </td>
               <td class='name'> <%= student.attendance  %> </td>
               
                     

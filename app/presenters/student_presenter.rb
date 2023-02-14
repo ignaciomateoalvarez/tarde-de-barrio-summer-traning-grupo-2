@@ -7,7 +7,7 @@ class StudentPresenter
   end
 
   def students
-    @students ||= Student.all
+    @students ||= StudentDecorator.decorate_collection(Student.all)
   end
 
   def paginate

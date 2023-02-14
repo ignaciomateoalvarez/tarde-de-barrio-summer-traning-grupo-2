@@ -2,8 +2,7 @@ class StudentsController < ApplicationController
   include Pundit
 
   def index
-    @students = StudentPresenter.new(params)
-    debugger
+    @students = StudentPresenter.new(params).students
   end
 
   def show

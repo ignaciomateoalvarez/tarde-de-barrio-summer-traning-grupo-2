@@ -19,6 +19,8 @@ gem 'sorcery'
 
 gem 'pagy', '~> 6.0', '>= 6.0.1'
 
+gem 'draper'
+
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'

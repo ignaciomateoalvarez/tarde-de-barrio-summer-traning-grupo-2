@@ -1,4 +1,4 @@
-class StudentDecorator < ApplicationDecorator
+class StudentDecorator <  Draper::Decorator
   delegate_all
 
   # Define presentation-specific methods here. Helpers are accessed through
@@ -10,13 +10,24 @@ class StudentDecorator < ApplicationDecorator
   #     end
   #   end
 
-    def initialize (student)
+  def initialize (student)
     @student = student
   end
 
   def full_name
-    "#{student.first_name.first.capitalize} #{student.last_name.first.capitalize}"
+    "#{student.first_name.capitalize} #{@student.last_name.capitalize}"
   end
 
+  def age
+    real_age = (Date.today - @student.birth_date.to_date).years
+  end
+
+  def attendance 
+    @student.attends ? 'Sí' : 'No' 
+  end
+
+  def school_grade
+    @student.school_grade.capitalize
+  end
 
 end

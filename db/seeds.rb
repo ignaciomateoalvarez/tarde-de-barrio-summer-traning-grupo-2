@@ -13,6 +13,7 @@ require 'faker'
 User.create(first_name: "Gianlucas", last_name: "Galati", email: "gianlucas@gmail.com",password:'123', active: true, role: 0)
 User.create(first_name: "Carla", last_name: "Ibel", email: "carla@gmail.com",password:'123', active: true, role: 0)
 User.create(first_name: "Juan", last_name: "Bottassi", email: "juan@gmail.com",password:'123', active: true, role: 0)
+
 30.times do
   User.create(
     first_name: Faker::Name.first_name,

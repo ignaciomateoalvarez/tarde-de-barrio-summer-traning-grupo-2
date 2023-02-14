@@ -3,6 +3,7 @@ class StudentsController < ApplicationController
 
   def index
     @students = StudentPresenter.new(params)
+    debugger
   end
 
   def show

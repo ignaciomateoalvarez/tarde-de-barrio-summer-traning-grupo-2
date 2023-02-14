@@ -1,9 +1,4 @@
-<% @students.each do |student| %>
-  <%= student.full_name %>
-  <%= student.age %>
-  <%= student.attendance %>
-  <%= student.school_grade %>
-<% end %>
+
 <div class='home-container' id='modal-background'>
   <div class='top-navbar'>
     <div class='burger-menu'>
@@ -40,42 +35,31 @@
       <tr class='user-th'>
         <th> <%= t('.students')%> </th> 
      
-        <th> <%= 'ROL' %> </th>
-        <th> <%= t('.active') %> </th>
+        <th> <%= 'EDAD' %> </th>
+        <th> <%= "ESCOLARIDAD ALCANZADA" %> </th>
+        <th> <%= 'ESCOLARIZADO' %> </th>
         <th> <%= t('.edit') %> </th>
-        <th> <%= 'MENU' %> </th>
         <th> <%= 'DELETE' %> </th>
       <tr>
     </thead>
     <tbody>
       <tr>
         <td colspan="2">
-          <% @student.each do |student| %>
+          <% @students.each do |student| %>
             <tr class='user'>
-              <td class='name'> <%= student.first_name %> <%= student.last_name %> </td>
+              <td class='name'> <%= student.full_name  %> </td>
+              <td class='name'> <%= student.age %> </td>
+              <td class='name'> <%= student.school_grade  %> </td>
+              <td class='name'> <%= student.attendance  %> </td>
               
-              <td class='role'>
-                  <%= form_for student, url: update_role_user_path(student), method: :put do |f| %>
-                  <%= f.select :role, options_for_select(User.roles.keys, selected: student.role), {}, { class: "form-control" } %>
-                <% end %>
-              </td>         
-              <%# Activate switch %>  
-              <td class='toggle-button'>
-                <%= form_with(model: student, url: user_toggle_active_path(student), method: :put) do |form| %>
-                <div class="toggle-button" data-controller="users">
-                  <%= form.check_box :active, data:{users_target:"checkbox", action:"users#toggleActive"} ,id:student.id   %>
-                  <label class="" for=<%=user.id%>><%= form.submit %></label>
-                </div>
-                <% end %>
-              </td>
+                    
+              
               <td> <%= link_to edit_user_path(student), data: { turbo_frame: 'modal' } do%>
                 <div class="edit-icon">
                 </div>
               <% end %> 
               </td>
-              <td>
-                <div class="menu-modal-icon"></div>
-              </td>
+              
               <td>
                 <div class="delete-icon"></div>
               </td>
@@ -85,8 +69,9 @@
       </tr>
     </tbody>
   </table>
-
+    
   <div class='pagination-var'>
     <%== pagy_nav(@pagy) %>
   </div>
+
 </div>

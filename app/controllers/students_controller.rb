@@ -6,6 +6,10 @@ class StudentsController < ApplicationController
     @pagy, @students = pagy(@presenter.students)
   end
 
+  def show
+    @students = Student.find(params[:id]).decorate
+  end
+
   def new; end
 
   def create; end

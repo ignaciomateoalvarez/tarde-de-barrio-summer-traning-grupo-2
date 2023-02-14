@@ -11,10 +11,19 @@
 require 'faker'
 
 30.times do
-  users = User.create(
+  User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.unique.email,
     password: 'asdasd'
+  )
+end
+30.times do
+  Student.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    birth_date: Faker::Date.birthday(min_age: 2, max_age: 30),
+    address: Faker::Address.full_address,
+    attends: Faker::Boolean.boolean
   )
 end

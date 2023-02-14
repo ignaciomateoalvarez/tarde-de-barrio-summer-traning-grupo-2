@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def index
     @filter = UserFilter.new(User.all, filter_params)
     @user = @filter.call.order(:first_name)
-    @pagy, @users = pagy(@user, items: 10)
+    @pagy, @users = pagy(@user)
   end
 
   def filter_params

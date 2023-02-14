@@ -6,6 +6,10 @@ class StudentPresenter
     @params = params
   end
 
+  def student
+    @student = Student.find(params[:id]).decorate
+  end
+
   def students
     @students ||= StudentDecorator.decorate_collection(Student.all)
   end

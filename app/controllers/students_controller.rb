@@ -6,7 +6,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @students = Student.find(params[:id]).decorate
+    @student = StudentPresenter.new(params).student
   end
 
   def new; end

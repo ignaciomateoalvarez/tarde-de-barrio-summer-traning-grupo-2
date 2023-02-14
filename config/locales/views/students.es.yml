@@ -1,0 +1,21 @@
+en:
+  students:
+    index:
+      students: 'Estudiantes'
+      student: 'Estudiante'
+      fullname: 'Nombre Completo'
+      name: 'Nombre'
+      lastname: 'Apellido'
+      age: 'Edad'
+      school_grade: 'Escolaridad Alcanzada'
+      address: 'Domicilio'
+      attendance: 'Escolarizado'
+      new_student: 'Nuevo Estudiante'
+      yess: 'Sí'
+      noo: 'No'
+      primary_school: 'Inicial'
+      elementary_school: 'Primaria'
+      high_school: 'Secundaria'
+      delete: 'Eliminar'
+      edit: 'Editar'
+      

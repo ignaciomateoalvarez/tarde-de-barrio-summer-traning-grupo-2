@@ -1,0 +1,22 @@
+en:
+  students:
+    index:
+      students: 'Students'
+      student: 'Student'
+      fullname: 'Full Name'
+      name: 'Name'
+      lastname: 'Last Name'
+      age: 'Age'
+      school_grade: 'School Grade'
+      address: 'Address'
+      attendance: 'Attendance'
+      new_student: 'New Student'
+      yess: 'Yes'
+      noo: 'No'
+      primary_school: 'Primary School'
+      elementary_school: 'Elementary School'
+      high_school: 'High School'
+      delete: 'Delete'
+      edit: 'Edit'
+
+

@@ -15,6 +15,6 @@ class StudentPresenter
   end
 
   def paginate
-    @pagy, @record = pagy(students)
+    pagy(students)
   end
 end

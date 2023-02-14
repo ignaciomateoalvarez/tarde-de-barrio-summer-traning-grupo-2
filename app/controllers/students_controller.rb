@@ -2,7 +2,9 @@ class StudentsController < ApplicationController
   include Pundit
 
   def index
-    @students = StudentPresenter.new(params).students
+    @presenter = StudentPresenter.new(params)
+    @pagy, @students = @presenter.paginate
+
   end
 
   def show

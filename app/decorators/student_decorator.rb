@@ -27,5 +27,4 @@ class StudentDecorator <  Draper::Decorator
   def school_grade
     student.school_grade.capitalize
   end
-
 end

@@ -13,7 +13,14 @@ class StudentsController < ApplicationController
 
   def new; end
 
-  def create; end
+  def create
+    @student = User.new(student_params)
+    if @student.save
+      redirect_to users_path, notice: 'Created Student successfully'
+    else
+      redirect_to users_path, alert: 'Could not create Student'
+    end
+  end
 
   def edit; end
 

@@ -19,6 +19,7 @@ es:
       high_school: 'Secundaria'
       delete: 'Eliminar'
       edit: 'Editar'
+      log-out: 'Cerrar Sesión'
     new:
       name: 'Nombre'
       last_name: 'Apellido'
@@ -28,5 +29,5 @@ es:
       attendance: '¿Va a la escuela?'
       student_new: 'Registrar estudiante'
       new_student: 'Nuevo estudiante'
-
-
+      yes_: 'Sí'
+      no_: 'No'

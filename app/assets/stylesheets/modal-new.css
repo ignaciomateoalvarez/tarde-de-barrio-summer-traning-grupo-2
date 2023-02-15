@@ -37,6 +37,7 @@
 .m-item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3px;
 }
 
@@ -55,4 +56,32 @@
 
 .m-login-button:hover {
   opacity: 0.5;
+}
+
+.school-attendance-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  width: 22.4375rem;
+}
+
+
+.school-grade-form {
+  font-weight: 300;
+	font-size: 0.8125rem;
+	line-height: 0.9375rem;
+  width: 22.4375rem;
+}
+
+.prueba { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0px;
+  gap: 10px;
 }

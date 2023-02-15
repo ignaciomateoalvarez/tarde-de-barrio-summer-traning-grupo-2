@@ -19,6 +19,7 @@ en:
       high_school: 'High School'
       delete: 'Delete'
       edit: 'Edit'
+      log-out: 'Log Out'
     new:
       name: 'Name'
       last_name: 'Last name'
@@ -28,3 +29,5 @@ en:
       attendance: '¿Goes to school?'
       student_new: 'Register student'
       new_student: 'New Student'
+      yes_: 'Yes'
+      no_: 'No'

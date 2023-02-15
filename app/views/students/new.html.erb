@@ -17,24 +17,28 @@
         </div>
         <div class="m-item">
           <%= form.label :birth_date,t('.birth_date'), class: 'label-form'%>
-          <%= form.date_field :birth_date, class: 'label-form' %>
+          <%= form.date_field :birth_date, class: 'input-form' %>
         </div>
         <div class="m-item">
           <%= form.label :address, t('.address'), class: 'label-form' %>
           <%= form.text_field :address, class: 'input-form'%>
         </div>
-        <div class='m-items'>
-          <%= form.label :school_grade, t('.school_grade'), class: 'label-form' %>
-          <%= form.select :school_grade, Student.school_grades.keys %>
+        <div class='m-item'>
+          <%= form.label :school_grade, t('.school_grade'), class: 'school-grade-form' %>
+          <%= form.select :school_grade, Student.school_grades.keys, class: 'input-form' %>
         </div>
-        <div class="m-item">
+        <div class="school-attendance-form">
           <%= form.label :attends, t('.attendance'), class: 'label-form' %>
-
-          <%= form.radio_button :attends, true, class: 'label-form' %>
-          <%= form.label :attends, t('.yes_') %>
-
-          <%= form.radio_button :attends, false, class: 'label-form' %>
-          <%= form.label :attends, t('.no_') %>
+          <div class ="prueba">
+          <div>
+          <%= form.radio_button :attends, true %>
+          <%= form.label :attends, t('.yes_'), class: 'radio-button-form' %>
+          </div>
+          <div>
+          <%= form.radio_button :attends, false %>
+          <%= form.label :attends, t('.no_'), class: 'radio-button-form' %>
+          </div>
+          </div>
         </div>
         <div>
           <%= form.submit :value => t('.student_new'), class: 'm-login-button'%>

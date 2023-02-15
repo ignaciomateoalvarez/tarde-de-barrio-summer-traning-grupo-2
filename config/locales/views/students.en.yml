@@ -6,6 +6,7 @@ en:
       fullname: 'Full Name'
       name: 'Name'
       lastname: 'Last Name'
+      birth_date: 'Birth Date'
       age: 'Age'
       school_grade: 'School Grade'
       address: 'Address'
@@ -18,5 +19,12 @@ en:
       high_school: 'High School'
       delete: 'Delete'
       edit: 'Edit'
-
-
+    new:
+      name: 'Name'
+      last_name: 'Last name'
+      birth_date: 'Birthdate'
+      address: 'Address'
+      school_grade: 'School grade'
+      attendance: '¿Goes to school?'
+      student_new: 'Register student'
+      new_student: 'New Student'

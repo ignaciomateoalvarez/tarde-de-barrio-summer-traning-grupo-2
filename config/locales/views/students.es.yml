@@ -1,4 +1,4 @@
-en:
+es:
   students:
     index:
       students: 'Estudiantes'
@@ -6,6 +6,7 @@ en:
       fullname: 'Nombre Completo'
       name: 'Nombre'
       lastname: 'Apellido'
+      birth_date: 'Fecha de Nacimiento'
       age: 'Edad'
       school_grade: 'Escolaridad Alcanzada'
       address: 'Domicilio'
@@ -18,4 +19,14 @@ en:
       high_school: 'Secundaria'
       delete: 'Eliminar'
       edit: 'Editar'
-      
+    new:
+      name: 'Nombre'
+      last_name: 'Apellido'
+      birth_date: 'Fecha de nacimiento'
+      address: 'Domicilio'
+      school_grade: 'Escolaridad alcanzada'
+      attendance: '¿Va a la escuela?'
+      student_new: 'Registrar estudiante'
+      new_student: 'Nuevo estudiante'
+
+

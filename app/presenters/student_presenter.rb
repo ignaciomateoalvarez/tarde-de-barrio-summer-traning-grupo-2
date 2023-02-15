@@ -11,10 +11,16 @@ class StudentPresenter
   end
 
   def students
-    @students ||= StudentDecorator.decorate_collection(Student.all)
+    paginate unless @pagy.present?
+    @students.decorate
+  end
+
+  def pagynate 
+    paginate unless @pagy.present?
+    @pagy
   end
 
   def paginate
-    pagy(students)
+    @pagy, @students = pagy(Student.all)
   end
 end

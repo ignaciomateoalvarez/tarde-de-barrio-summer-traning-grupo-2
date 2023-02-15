@@ -4,15 +4,8 @@ class UsersController < ApplicationController
   include Pundit
 
   def index
-    @filter = UserFilter.new(User.all, filter_params)
-    @user = @filter.call.order(:first_name)
-    @pagy, @users = pagy(@user, items: 10)
-  end
-
-  def filter_params
-    params
-      .fetch(:user_filter, {})
-      .permit(:full_name)
+    @presenter = UserPresenter.new(params)
+    @pagy, @users = pagy(@presenter.users)
   end
 
   def new

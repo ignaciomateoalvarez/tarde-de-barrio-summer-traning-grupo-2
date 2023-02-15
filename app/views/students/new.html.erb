@@ -1,0 +1,45 @@
+<%= turbo_frame_tag "modal" do %>
+  <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "modal", action: 
+    "turbo:submit-end->turbo-modal#submitEnd 
+    keyup@window->turbo-modal#closeWithKeyboard 
+    click@window->turbo-modal#closeBackground" } do %>
+    <%= button_tag 'X', class: 'close', data: { action: "turbo-modal#closeModal" }, type: "button"%>
+    <h1 class='m-title'><%= t('.new_student') %></h1>
+    <%= form_with url: students_path, scope: :student, method: :post do |form| %>
+      <div class="m-login-form">
+        <div class="m-item">
+          <%= form.label :name_user,t('.name'), class: 'label-form'%>
+          <%= form.text_field :first_name, class: 'input-form'%>
+        </div>
+        <div class="m-item">
+          <%= form.label :last_name,t('.last_name'), class: 'label-form'%>
+          <%= form.text_field :last_name, class: 'input-form'%>
+        </div>
+        <div class="m-item">
+          <%= form.label :birth_date,t('.birth_date'), class: 'label-form'%>
+          <%= form.date_field :birth_date, class: 'label-form' %>
+        </div>
+        <div class="m-item">
+          <%= form.label :address, t('.address'), class: 'label-form' %>
+          <%= form.text_field :address, class: 'input-form'%>
+        </div>
+        <div class='m-items'>
+          <%= form.label :school_grade, t('.school_grade'), class: 'label-form' %>
+          <%= form.select :school_grade, Student.school_grades.keys %>
+        </div>
+        <div class="m-item">
+          <%= form.label :attends, t('.attendance'), class: 'label-form' %>
+
+          <%= form.radio_button :attends, true, class: 'label-form' %>
+          <%= form.label :attends, t('.yes_') %>
+
+          <%= form.radio_button :attends, false, class: 'label-form' %>
+          <%= form.label :attends, t('.no_') %>
+        </div>
+        <div>
+          <%= form.submit :value => t('.student_new'), class: 'm-login-button'%>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

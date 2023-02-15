@@ -21,6 +21,6 @@ class StudentPresenter
   end
 
   def paginate
-    @pagy, @students = pagy(Student.all)
+    @pagy, @students = pagy(Student.all.order(created_at: :desc))
   end
 end

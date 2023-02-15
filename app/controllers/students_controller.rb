@@ -4,7 +4,6 @@ class StudentsController < ApplicationController
   def index
     @presenter = StudentPresenter.new(params)
     @pagy, @students = @presenter.paginate
-
   end
 
   def show
@@ -14,11 +13,11 @@ class StudentsController < ApplicationController
   def new; end
 
   def create
-    @student = User.new(student_params)
+    @student = Student.new(student_params)
     if @student.save
-      redirect_to users_path, notice: 'Created Student successfully'
+      redirect_to students_path, notice: 'Created Student successfully'
     else
-      redirect_to users_path, alert: 'Could not create Student'
+      redirect_to students_path, alert: 'Could not create Student'
     end
   end
 

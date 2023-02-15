@@ -1,5 +1,6 @@
 class StudentDecorator <  Draper::Decorator
   delegate_all
+  include Draper::LazyHelpers
   def full_name
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
@@ -9,7 +10,7 @@ class StudentDecorator <  Draper::Decorator
   end
 
   def attendance
-    attends ? 'Sí' : 'No'
+    attends ? t('.yes_') : t('.no_')
   end
 
   def grade

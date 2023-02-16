@@ -1,0 +1,51 @@
+<div class='home-container' id='modal-background'>
+  <div class='top-navbar'>
+    <div class='burger-menu'>
+      <%= image_tag( "bars-solid.svg", class: 'menu-icon') %>
+      <%= button_to t('.log-out'), logout_path, method: :delete  %>
+    </div>
+    <div class="home-student">
+      <div>
+        <%= image_tag("house-solid.svg", class: 'home-icon')%>
+      </div>
+      <h1 class='student'><%= t('.student') %></h1>
+    </div>
+    <h1 class='username'> <%= current_user.first_name %> </h1>
+  </div>
+  <div class='bread-crum-nav'>
+    <%= link_to "Estudiantes->", students_path %>
+    <%= link_to "#{@student.full_name}", students_path(@student.id) %>
+  </div>
+  <aside left class='side-bar'>
+  <section class='student-info'>
+    <h1><%= @student.full_name %></h1>
+    <div class='student-description'>
+      <h2>Datos estudiante</h2>
+      <h3>Fecha de nacimiento</h3>
+      <p><%= @student.birth_date %></p>
+      <h3>Domicilio</h3>
+      <p><%= @student.address %></p>
+      <h3>Grado de escolaridad</h3>
+      <p><%= @student.grade %></p>
+      <h3>Escolarizado</h3>
+      <p><%= @student.attendance %></p>
+      <h3>Materia preferida</h3>
+      <p>Programacion</p>
+      <h3>Materia con mayor dificultad</h3>
+      <p>DBD</p>
+    </div>
+    <div class='student-objectives'>
+     <h2>Objetivos</h2>
+     <%=form_with url: students_path, scope: :student, method: :post do |form|%>
+      <%= form.check_box :remember_me, class: 'remember-me'%>
+      <%= form.label :remember_me, "Aprender las tablas" %>
+      <%= form.check_box :remember_me %>
+      <%= form.label :remember_me, "Aprender el abecedario"  %>
+    <%end%>
+    </div>
+  </section>
+  </aside>
+  <section class='comments-container'>
+  </section>
+</div>
+

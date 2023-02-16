@@ -9,15 +9,15 @@ class UserSessionsController < ApplicationController
     if @user.present?
       if @user.active?
         if login(params[:email], params[:password])
-          redirect_to users_path, notice: "Welcome! #{@user.email}"
+          redirect_to users_path, notice: "#{t('welcome')} #{@user.first_name}"
         else
-          redirect_to login_path, alert: 'Password or email is incorrect'
+          redirect_to login_path, alert: t('.incorrect_info')
         end
       else
-        redirect_to login_path, alert: 'User is disabled'
+        redirect_to login_path, alert: t('.user_disabled')
       end
     else
-      redirect_to login_path, alert: 'Password or email is incorrect'
+      redirect_to login_path, alert: t('.incorrect_info')
     end
   end
 

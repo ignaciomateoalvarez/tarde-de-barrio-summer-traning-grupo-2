@@ -13,4 +13,9 @@ module ApplicationHelper
       ''
     end
   end
+
+  def translate_enum(student, school_grade) 
+    student.school_grade(school_grade)
+  end
+
 end

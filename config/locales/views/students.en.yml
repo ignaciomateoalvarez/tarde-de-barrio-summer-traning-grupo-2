@@ -20,6 +20,7 @@ en:
       delete: 'Delete'
       edit: 'Edit'
       log-out: 'Log Out'
+      student_attends: ''
     new:
       name: 'Name'
       last_name: 'Last name'
@@ -31,3 +32,13 @@ en:
       new_student: 'New Student'
       yes_: 'Yes'
       no_: 'No'
+    create:
+      created: Created Student successfully
+      not_created: Could not create Student
+
+    activerecord:
+      attributes:
+        student/school_grade:
+          inicial: Elementary School
+          primaria: Primary School
+          secundaria: High School

@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    attributes:
+      student/school_grade:
+        inicial: Elementary School
+        primaria: Primary School
+        secundaria: High School
+

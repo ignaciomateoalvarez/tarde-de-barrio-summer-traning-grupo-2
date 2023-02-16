@@ -13,12 +13,13 @@
     <h1 class='username'> <%= current_user.first_name %> </h1>
   </div>
   <div class='bread-crum-nav'>
-    <%= link_to "Estudiantes->", students_path, class: 'student-links' %>
+    <%= link_to "Estudiantes", students_path, class: 'student-links' %>
+    <h1 class= 'student-links'> > </h1>
     <%= link_to "#{@student.full_name}", student_path(@student.id), class: 'student-links'  %>
   </div>
   <div class='show-container'>
     <aside left class='side-bar'>
-    <section class='student-info'>
+    <section class='student-info vl'>
       <h1><%= @student.full_name %></h1>
       <div class='student-description'>
         <h2 class= "show-h2">Datos del estudiante</h2>

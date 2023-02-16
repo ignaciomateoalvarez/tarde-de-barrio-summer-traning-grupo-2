@@ -8,7 +8,7 @@
       <div>
         <%= image_tag("house-solid.svg", class: 'home-icon')%>
       </div>
-      <h1 class='student'><%= t('.student') %></h1>
+      <h1 class='student'><%= t('.user') %></h1>
     </div>
     <h1 class='username'> <%= current_user.first_name %> </h1>
   </div>
@@ -32,13 +32,13 @@
   <table class= 'user-container'>
     <thead>
       <tr class='user-th'>
-        <th> <%= t('.students')%> </th> 
+        <th> <%= t('.users')%> </th> 
         <th> <%= t('.email')%> </th>
-        <th> <%= 'ROL' %> </th>
+        <th> <%= t('.role') %> </th>
         <th> <%= t('.active') %> </th>
         <th> <%= t('.edit') %> </th>
-        <th> <%= 'MENU' %> </th>
-        <th> <%= 'DELETE' %> </th>
+        <th> <%= t('.menu') %> </th>
+        <th> <%= t('.delete') %> </th>
       <tr>
     </thead>
     <tbody>

@@ -31,3 +31,13 @@ es:
       new_student: 'Nuevo estudiante'
       yes_: 'Sí'
       no_: 'No'
+    create:
+      created: Created Student successfully
+      not_created: Could not create Student
+
+    activerecord:
+      attributes:
+        student/school_grade:
+          inicial: Inicial
+          primaria: Primaria
+          secundara: Secundaria

@@ -11,12 +11,15 @@ en:
 
     index:
       log-out: log out
-      student: Students
-      students: STUDENTS
-      active: ACTIVE
-      edit: EDIT
-      email: EMAIL
+      student: Student
+      students: Students
+      active: Active
+      edit: Edit
+      email: Email
       new-user: New user
+      rol: Role
+      menu: Menu
+      delete: Delete
 
     edit:
       title-edit: Modify user
@@ -24,3 +27,18 @@ en:
       last_name_edit: Last name
       email_edit: Email
       search_edit: Save
+    
+    create: 
+      created: Created user successfully
+      not_created: Could not create user
+
+    update:
+      updated: User was successfully updated
+
+    toggle_active:
+      modified: Updated
+      not_modified: Can't be modified
+
+    update_role:
+      updated: Role Updated 
+      not_updated: There was an error. Couldn't update 

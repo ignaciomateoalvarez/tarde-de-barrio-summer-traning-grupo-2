@@ -17,10 +17,10 @@
     <div class='button-filter'>
       <%= form_with(url: students_path, method: :get, scope: :user_filter) do |f| %> 
       <%= f.text_field :full_name , class: "filter"%>
-      <div class="lupa-icon">
-        <%= image_submit_tag("magnifying-glass-solid.svg")%>
-      </div>
       <% end %> 
+    </div>
+    <div class="lupa-icon">
+      <%= image_submit_tag("magnifying-glass-solid.svg")%>
     </div>
     <div class="create-user">  
       <div class="user-icon"></div>

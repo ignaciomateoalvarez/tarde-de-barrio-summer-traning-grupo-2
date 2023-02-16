@@ -13,37 +13,46 @@
     <h1 class='username'> <%= current_user.first_name %> </h1>
   </div>
   <div class='bread-crum-nav'>
-    <%= link_to "Estudiantes->", students_path %>
-    <%= link_to "#{@student.full_name}", students_path(@student.id) %>
+    <%= link_to "Estudiantes->", students_path, class: 'student-links' %>
+    <%= link_to "#{@student.full_name}", student_path(@student.id), class: 'student-links'  %>
   </div>
   <aside left class='side-bar'>
-  <section class='student-info'>
-    <h1><%= @student.full_name %></h1>
-    <div class='student-description'>
-      <h2>Datos estudiante</h2>
-      <h3>Fecha de nacimiento</h3>
-      <p><%= @student.birth_date %></p>
-      <h3>Domicilio</h3>
-      <p><%= @student.address %></p>
-      <h3>Grado de escolaridad</h3>
-      <p><%= @student.grade %></p>
-      <h3>Escolarizado</h3>
-      <p><%= @student.attendance %></p>
-      <h3>Materia preferida</h3>
-      <p>Programacion</p>
-      <h3>Materia con mayor dificultad</h3>
-      <p>DBD</p>
-    </div>
-    <div class='student-objectives'>
-     <h2>Objetivos</h2>
-     <%=form_with url: students_path, scope: :student, method: :post do |form|%>
-      <%= form.check_box :remember_me, class: 'remember-me'%>
-      <%= form.label :remember_me, "Aprender las tablas" %>
-      <%= form.check_box :remember_me %>
-      <%= form.label :remember_me, "Aprender el abecedario"  %>
-    <%end%>
-    </div>
-  </section>
+    <section class='student-info'>
+      <h1><%= @student.full_name %></h1>
+      <div class='student-description'>
+        <h2>Datos estudiante</h2>
+        <h3>Fecha de nacimiento</h3>
+        <p><%= @student.birth_date %></p>
+        <h3>Domicilio</h3>
+        <p><%= @student.address %></p>
+        <h3>Grado de escolaridad</h3>
+        <p><%= @student.grade %></p>
+        <h3>Escolarizado</h3>
+        <p><%= @student.attendance %></p>
+        <h3>Materia preferida</h3>
+        <p>Programacion</p>
+        <h3>Materia con mayor dificultad</h3>
+        <p>DBD</p>
+      </div>
+      <div class='student-objectives'>
+        <div class="obj-title">
+          <h2>Objetivos</h2>
+          <div class="image">
+            <%= image_tag 'plus-circle.png' %>
+          </div>
+        </div>
+        <%=form_with url: students_path, scope: :student, method: :post do |form|%>
+          <div class= "student-show-label"> 
+            <%= form.check_box :tables, class: 'remember-me'%>
+            <%= form.label :tables, "Aprender las tablas" %>
+          </div>
+          <div class= "student-show-label"> 
+            <%= form.check_box :alphabet %>
+            <%= form.label :alphabet, "Aprender el abecedario"  %>
+          </div>
+        <%end%>
+      </div>
+    </section>
   </aside>
   <section class='comments-container'>
   </section>

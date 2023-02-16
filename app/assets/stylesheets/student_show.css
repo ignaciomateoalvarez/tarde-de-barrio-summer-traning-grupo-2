@@ -1,7 +1,39 @@
 .side-bar {
   float: left;
   height: 100%;
-  width: 30%;
+  width: 20%;
   margin: auto;
   margin-left: 0px;
+}
+.student-links{
+	color: black;
+}
+
+.bread-crum-nav {
+  margin: 3% 3% 0% 3%;
+}
+
+.student-info {
+
+  margin: 5%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.obj-title {
+
+  display: flex;
+  justify-content: space-between;
+}
+.student-description {
+
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.student-show-label {
+  padding: 5px;
+  margin: 5px;
 }

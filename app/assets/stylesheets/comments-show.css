@@ -6,6 +6,7 @@
   resize: none;
   border-radius: 0.2159rem;
   border: none;
+  font-family: 'Roboto';
 }
 
 
@@ -19,36 +20,54 @@
 .title-comments{
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
+  font-size: 1.2rem;
+  font-family: 'Roboto';
+}
+
+.highlight-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.highlight-text {
+  font-size: 1rem;
+  font-family: 'Roboto';
+  align-self: center;
+  margin-left: 15px;
 }
 
 .comment-container-bottom {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 2rem;
 }
 .post-comment-svg {
-  height: 35px;
-  width: 35px;
+  height: 2.1875rem;
+  width: 2.1875rem;
 }
 
 .post-comment-button {
   background-color: #0090af;
   color: white;
-  width: 150px;
-  height: 35px;
+  width: 9.375rem;
+  height: 2.1875rem;
   display: flex;
   align-self: end;
   border-radius: 0.2159rem;
   border: none;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Roboto';
 }
 
 .left-bottom-comment {
   display: flex;
   justify-content: space-around;
-  width: 15%;
+  width: 20%;
 }
 .highlight-comment {
+  display: flex;
   align-self: center;
 
 }

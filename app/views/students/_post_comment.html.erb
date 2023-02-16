@@ -7,8 +7,8 @@
         <%= image_submit_tag("smile.svg", class: 'post-comment-svg')%>
         <%= image_submit_tag("image.svg", class: 'post-comment-svg')%>
         <div class= "highlight-comment">
-          <%= form.check_box :remember_me %>
-          <%= form.label :remember_me, "Destacar" %>
+          <%= form.check_box :highlight , class: 'highlight-checkbox' %>
+          <%= form.label :highlight, "Destacar", class: 'highlight-text' %>
         </div>
       </div>
       <%= form.submit "Publicar", class:'post-comment-button '%>

@@ -1,3 +1,8 @@
+.vl {
+  border-right: 3px solid lightgray;
+  height: 90%;
+}
+
 .side-bar {
   float: left;
   height: 100%;
@@ -7,10 +12,16 @@
 }
 .student-links{
 	color: black;
+  font-size: 20px;
+}
+.student-links:nth-child(3){
+  color: #0090AF;
+  font-size: 20px;
 }
 
 .bread-crum-nav {
-  margin: 3% 3% 0% 3%;
+  margin-left: 1.7%;
+  display: flex;
 }
 
 .student-info {
@@ -20,6 +31,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-top: 0%;
 }
 .obj-title {
 
@@ -34,13 +46,29 @@
 }
 
 .student-show-label {
+  gap: 10px;
+  display: flex;
   padding: 5px;
   margin: 5px;
-  width: 20%;
+  width: 100%;
   margin-left: 0px;
 }
 
 .show-container {
   display: flex;
   height: 100%;
+}
+
+.school-subjects {
+  background-color: #9729EE;
+  color: white;
+  border-radius: 18px;
+  width: fit-content;
+  padding: 3px;
+
+}
+
+.show-h2 {
+
+  color: #0090AF;
 }

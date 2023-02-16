@@ -16,36 +16,39 @@
     <%= link_to "Estudiantes->", students_path %>
     <%= link_to "#{@student.full_name}", students_path(@student.id) %>
   </div>
-  <aside left class='side-bar'>
-  <section class='student-info'>
-    <h1><%= @student.full_name %></h1>
-    <div class='student-description'>
-      <h2>Datos estudiante</h2>
-      <h3>Fecha de nacimiento</h3>
-      <p><%= @student.birth_date %></p>
-      <h3>Domicilio</h3>
-      <p><%= @student.address %></p>
-      <h3>Grado de escolaridad</h3>
-      <p><%= @student.grade %></p>
-      <h3>Escolarizado</h3>
-      <p><%= @student.attendance %></p>
-      <h3>Materia preferida</h3>
-      <p>Programacion</p>
-      <h3>Materia con mayor dificultad</h3>
-      <p>DBD</p>
-    </div>
-    <div class='student-objectives'>
-     <h2>Objetivos</h2>
-     <%=form_with url: students_path, scope: :student, method: :post do |form|%>
-      <%= form.check_box :remember_me, class: 'remember-me'%>
-      <%= form.label :remember_me, "Aprender las tablas" %>
-      <%= form.check_box :remember_me %>
-      <%= form.label :remember_me, "Aprender el abecedario"  %>
-    <%end%>
-    </div>
-  </section>
-  </aside>
-  <section class='comments-container'>
-  </section>
+  <div class='show-container'>
+    <aside left class='side-bar'>
+    <section class='student-info'>
+      <h1><%= @student.full_name %></h1>
+      <div class='student-description'>
+        <h2>Datos estudiante</h2>
+        <h3>Fecha de nacimiento</h3>
+        <p><%= @student.birth_date %></p>
+        <h3>Domicilio</h3>
+        <p><%= @student.address %></p>
+        <h3>Grado de escolaridad</h3>
+        <p><%= @student.grade %></p>
+        <h3>Escolarizado</h3>
+        <p><%= @student.attendance %></p>
+        <h3>Materia preferida</h3>
+        <p>Programacion</p>
+        <h3>Materia con mayor dificultad</h3>
+        <p>DBD</p>
+      </div>
+      <div class='student-objectives'>
+      <h2>Objetivos</h2>
+      <%=form_with url: students_path, scope: :student, method: :post do |form|%>
+        <%= form.check_box :remember_me, class: 'remember-me'%>
+        <%= form.label :remember_me, "Aprender las tablas" %>
+        <%= form.check_box :remember_me %>
+        <%= form.label :remember_me, "Aprender el abecedario"  %>
+      <%end%>
+      </div>
+    </section>
+    </aside>
+    <section class='comments-container'>
+      <%= render partial: "post_comment"%>
+    </section>
+  </div>
 </div>
 

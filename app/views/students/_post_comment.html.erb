@@ -1,0 +1,17 @@
+<%= form_with url: '/#', method: :post do |form| %>
+  <div class="post-comment-container">
+    <%= form.label :comment, "Comentarios", class: 'title-comments' %>
+    <%= form.text_area :comment, size: "70x10", class:'comment-area', placeholder: "¿Qué deseas publicar?. Puedes utilizar '@' para mencionar personas."%>
+    <div class='comment-container-bottom'>
+      <div class='left-bottom-comment'>
+        <%= image_submit_tag("smile.svg", class: 'post-comment-svg')%>
+        <%= image_submit_tag("image.svg", class: 'post-comment-svg')%>
+        <div class= "highlight-comment">
+          <%= form.check_box :remember_me %>
+          <%= form.label :remember_me, "Destacar" %>
+        </div>
+      </div>
+      <%= form.submit "Publicar", class:'post-comment-button '%>
+    </div>
+  </div>
+<% end %>

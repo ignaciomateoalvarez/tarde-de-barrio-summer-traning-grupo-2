@@ -1,0 +1,42 @@
+* {
+  font-family: 'Roboto';
+}
+
+.comments-main-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+.today-comments {
+  box-sizing: border-box;
+  width: 70%;
+  height: 100px;
+  left: 360px;
+  top: 396px;
+  border: 1px solid #DADADA;
+  border-radius: 8px;
+}
+
+.comment-nd {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 70%;
+}
+
+.comment-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #0090AF;
+}
+
+
+

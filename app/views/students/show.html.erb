@@ -16,7 +16,8 @@
     <%= link_to "Estudiantes->", students_path, class: 'student-links' %>
     <%= link_to "#{@student.full_name}", student_path(@student.id), class: 'student-links'  %>
   </div>
-  <aside left class='side-bar'>
+  <div class='show-container'>
+    <aside left class='side-bar'>
     <section class='student-info'>
       <h1><%= @student.full_name %></h1>
       <div class='student-description'>
@@ -55,6 +56,7 @@
     </section>
   </aside>
   <section class='comments-container'>
+    <%= render partial: "post_comment"%>
   </section>
 </div>
 

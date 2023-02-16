@@ -36,4 +36,11 @@
 .student-show-label {
   padding: 5px;
   margin: 5px;
+  width: 20%;
+  margin-left: 0px;
+}
+
+.show-container {
+  display: flex;
+  height: 100%;
 }

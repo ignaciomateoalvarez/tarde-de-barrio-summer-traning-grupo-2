@@ -21,7 +21,7 @@
     <section class='student-info'>
       <h1><%= @student.full_name %></h1>
       <div class='student-description'>
-        <h2>Datos estudiante</h2>
+        <h2 class= "show-h2">Datos del estudiante</h2>
         <h3>Fecha de nacimiento</h3>
         <p><%= @student.birth_date %></p>
         <h3>Domicilio</h3>
@@ -31,9 +31,9 @@
         <h3>Escolarizado</h3>
         <p><%= @student.attendance %></p>
         <h3>Materia preferida</h3>
-        <p>Programacion</p>
+        <p class= "school-subjects">Programacion</p>
         <h3>Materia con mayor dificultad</h3>
-        <p>DBD</p>
+        <p class= "school-subjects">DBD</p>
       </div>
       <div class='student-objectives'>
         <div class="obj-title">
@@ -44,12 +44,12 @@
         </div>
         <%=form_with url: students_path, scope: :student, method: :post do |form|%>
           <div class= "student-show-label"> 
-            <%= form.check_box :tables, class: 'remember-me'%>
-            <%= form.label :tables, "Aprender las tablas" %>
-          </div>
-          <div class= "student-show-label"> 
             <%= form.check_box :alphabet %>
             <%= form.label :alphabet, "Aprender el abecedario"  %>
+          </div>
+          <div class= "student-show-label"> 
+            <%= form.check_box :tables, class: 'remember-me'%>
+            <%= form.label :tables, "Aprender las tablas" %>
           </div>
         <%end%>
       </div>

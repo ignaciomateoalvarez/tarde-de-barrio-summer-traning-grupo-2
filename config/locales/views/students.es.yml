@@ -35,6 +35,17 @@ es:
     create:
       created: Created Student successfully
       not_created: Could not create Student
+    edit:
+      name: 'Nombre'
+      last_name: 'Apellido'
+      birth_date: 'Fecha de nacimiento'
+      address: 'Domicilio'
+      school_grade: 'Escolaridad alcanzada'
+      attendance: '¿Va a la escuela?'
+      edit_student: 'Modificar Estudiante'
+      favourite_subjects: 'Materia Favorita'
+      subject_difficulty: 'Materia con mayor dificultad'
+      save_changes: Guardar Cambios
 
     activerecord:
       attributes:

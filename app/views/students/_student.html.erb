@@ -4,7 +4,7 @@
   <td class='name'> <%= student.age %> </td>
   <td class='name'> <%= student.grade  %> </td>
   <td class='name'> <%= student.attendance  %> </td>
-  <td> <%= link_to edit_user_path(student), data: { turbo_frame: 'modal' } do%>
+  <td> <%= link_to edit_student_path(student), data: { turbo_frame: 'modal' } do%>
     <div class="edit-icon">
     </div>
   <% end %> 

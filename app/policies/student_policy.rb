@@ -25,7 +25,7 @@ class StudentPolicy
   end
 
   def update?
-    user.set_validation_options && record.user_id == user.id
+    @record.created_collab(user)
   end
 
   def edit?

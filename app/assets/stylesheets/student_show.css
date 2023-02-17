@@ -68,6 +68,11 @@
 
 }
 
+.school-subjects-edit {
+  display: flex;
+  gap: 10px
+}
+
 .show-h2 {
 
   color: #0090AF;

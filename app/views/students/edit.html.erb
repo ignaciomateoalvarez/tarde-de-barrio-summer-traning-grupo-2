@@ -1,0 +1,68 @@
+<%= turbo_frame_tag "modal" do %>
+  <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "modal", action: 
+    "turbo:submit-end->turbo-modal#submitEnd 
+    keyup@window->turbo-modal#closeWithKeyboard 
+    click@window->turbo-modal#closeBackground" } do %>
+    <%= button_tag 'X', class: 'close', data: { action: "turbo-modal#closeModal" }, type: "button"%>
+    <h1 class='m-title'><%= t('.edit_student') %></h1>
+    <%= form_with url: student_path(@student), scope: :student, method: :put do |form| %>
+      <div class="m-login-form">
+        <div class="m-item">
+          <%= form.label :first_name,t('.name'), class: 'label-form'%>
+          <%= form.text_field :first_name, class: 'input-form', value: @student.first_name%>
+        </div>
+        <div class="m-item">
+          <%= form.label :last_name,t('.last_name'), class: 'label-form'%>
+          <%= form.text_field :last_name, class: 'input-form'%>
+        </div>
+        <div class="m-item">
+          <%= form.label :birth_date,t('.birth_date'), class: 'label-form'%>
+          <%= form.date_field :birth_date, class: 'input-form' %>
+        </div>
+        <div class="m-item">
+          <%= form.label :address, t('.address'), class: 'label-form' %>
+          <%= form.text_field :address, class: 'input-form'%>
+        </div>
+        <div class='m-item'>
+          <%= form.label :school_grade, t('.school_grade'), class: 'school-grade-form' %>
+          <%= form.select :school_grade, Student.school_grades.keys, class: 'input-form' %>
+        </div>
+        <div class="school-attendance-form">
+          <%= form.label :attends, t('.attendance'), class: 'label-form' %>
+          <div class ="prueba">
+            <div>
+              <%= form.radio_button :attends, true %>
+              <%= form.label :attends, t('.yes_'), class: 'radio-button-form' %>
+            </div>
+            <div>
+              <%= form.radio_button :attends, false %>
+              <%= form.label :attends, t('.no_'), class: 'radio-button-form' %>
+            </div>
+          </div>
+        </div>
+
+        <div class='m-item'>
+          <%= form.label :favourite_subjects, t('.favourite_subjects'), class: 'school-grade-form' %>
+          <%= form.text_field :favourite_subjects, class: 'input-form' %>
+          <div class="school-subjects-edit">
+            <p class= "school-subjects">Lengua x </p>
+            <p class= "school-subjects">Historia x </p>
+          </div>
+        </div>
+
+        <div class='m-item'>
+          <%= form.label :subject_difficulty, t('.subject_difficulty'), class: 'school-grade-form' %>
+          <%= form.text_field :subject_difficulty, class: 'input-form' %>
+          <div class="school-subjects-edit">
+            <p class= "school-subjects">Matemática x </p>
+          </div>
+        </div>
+
+
+        <div>
+          <%= form.submit :value => t('.save_changes'), class: 'm-login-button'%>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

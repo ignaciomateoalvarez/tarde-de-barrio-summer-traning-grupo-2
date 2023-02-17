@@ -16,6 +16,15 @@ class Student < ApplicationRecord
 
   enum school_grade: %i[inicial primaria secundaria]
 
+  def created_collab(user_param)
+    if user_param.administrador?
+      return true
+    else
+      user == user_param
+    end
+  end
+
+
   def age
     (Date.today - birth_date.to_date).years
   end

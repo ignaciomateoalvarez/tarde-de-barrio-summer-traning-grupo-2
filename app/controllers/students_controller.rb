@@ -31,7 +31,6 @@ class StudentsController < ApplicationController
 
   def update
     @student = Student.find(params[:id])
-    debugger
     authorize @student
     if @student.update(student_params.merge(user: current_user))
       flash[:notice] = t('.updated')

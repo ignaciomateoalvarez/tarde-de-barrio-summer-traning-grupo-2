@@ -8,10 +8,6 @@
   flex-direction: column;
   width: 100%;
 }
-
-h1 {
-  text-align: center;
-}
 .today-comments {
   box-sizing: border-box;
   width: 70%;

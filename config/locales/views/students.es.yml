@@ -12,14 +12,15 @@ es:
       address: 'Domicilio'
       attendance: 'Escolarizado'
       new_student: 'Nuevo Estudiante'
-      yes_: 'Sí'
-      no_: 'No'
       primary_school: 'Inicial'
       elementary_school: 'Primaria'
       high_school: 'Secundaria'
       delete: 'Eliminar'
       edit: 'Editar'
       log-out: 'Cerrar Sesión'
+    student: 
+      yes_: 'Sí'
+      no_: 'No'
     new:
       name: 'Nombre'
       last_name: 'Apellido'

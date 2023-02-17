@@ -33,7 +33,7 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
     debugger
     authorize @student
-    if @student.update(student_params)
+    if @student.update(student_params.merge(user: current_user))
       flash[:notice] = t('.updated')
     else
       render :edit
@@ -45,7 +45,8 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    @student = params.require(:student)
+    params.require(:student)
+          .except(:favourite_subjects, :subject_difficulty)
           .permit(:first_name, :last_name, :birth_date,
                   :address, :school_grade, :attends)
   end

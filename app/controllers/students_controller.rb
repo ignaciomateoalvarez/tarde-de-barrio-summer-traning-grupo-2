@@ -26,7 +26,7 @@ class StudentsController < ApplicationController
 
   def edit
     @student = Student.find(params[:id])
-    authorize Student
+    authorize @student
   end
 
   def update

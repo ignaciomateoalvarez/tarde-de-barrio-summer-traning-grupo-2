@@ -2,17 +2,20 @@ class StudentsController < ApplicationController
   include Pundit
 
   def index
+    authorize Student
     @presenter = StudentPresenter.new(params)
     @pagy, @students = @presenter.paginate
   end
 
   def show
+    authorize Student
     @student = StudentPresenter.new(params).student
   end
 
   def new; end
 
   def create
+    authorize Student
     @student = Student.new(student_params.merge(user: current_user))
     if @student.save
       redirect_to students_path, notice: t('.created')
@@ -21,9 +24,20 @@ class StudentsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @student = Student.find(params[:id])
+    authorize Student
+  end
 
-  def update; end
+  def update
+    authorize Student
+    @student = Student.find(params[:id])
+    if @student.update(student_params)
+      flash[:notice] = t('.updated')
+    else
+      render :edit
+    end
+  end
 
   def destroy; end
 

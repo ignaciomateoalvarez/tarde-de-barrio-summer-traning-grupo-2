@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+
+  has_many :students 
+
   authenticates_with_sorcery!
   validates :first_name, :last_name, presence: true
   validates :first_name, :last_name, format: { with: /\A[a-zA-Z]+\z/ }

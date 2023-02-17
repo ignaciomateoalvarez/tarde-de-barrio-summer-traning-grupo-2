@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
   def new; end
 
   def create
-    @student = Student.new(student_params)
+    @student = Student.new(student_params.merge(user: current_user))
     if @student.save
       redirect_to students_path, notice: t('.created')
     else
@@ -30,7 +30,7 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student)
+    @student = params.require(:student)
           .permit(:first_name, :last_name, :birth_date,
                   :address, :school_grade, :attends)
   end

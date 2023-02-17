@@ -25,11 +25,7 @@ class StudentPolicy
   end
 
   def update?
-    if user.administrador?
-      return true
-    else
-      record.user == user
-    end
+    user.administrador? || record.user == user
   end
 
   def edit?

@@ -26,12 +26,12 @@ class StudentsController < ApplicationController
 
   def edit
     @student = Student.find(params[:id])
-    authorize Student
+    authorize @student
   end
 
   def update
-    authorize Student
     @student = Student.find(params[:id])
+    authorize @student
     if @student.update(student_params)
       flash[:notice] = t('.updated')
     else

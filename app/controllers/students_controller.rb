@@ -47,12 +47,8 @@ class StudentsController < ApplicationController
   end
 
   def student_params
-<<<<<<< HEAD
     params.require(:student)
           .except(:favourite_subjects, :subject_difficulty)
-=======
-    @student = params.require(:student)
->>>>>>> 0beec08 (Asociaciones User y Students)
           .permit(:first_name, :last_name, :birth_date,
                   :address, :school_grade, :attends)
   end

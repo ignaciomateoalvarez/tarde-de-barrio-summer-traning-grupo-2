@@ -9,15 +9,15 @@ class StudentPolicy
   end
 
   def index?
-    user.administrador? || user.colaborador?
+    user.set_validation_options
   end
 
   def show?
-    user.administrador? || user.colaborador?
+    user.set_validation_options
   end
 
   def create?
-    user.administrador? || user.colaborador?
+    user.set_validation_options
   end
 
   def new?

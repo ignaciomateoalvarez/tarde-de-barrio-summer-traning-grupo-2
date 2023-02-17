@@ -16,6 +16,10 @@ class User < ApplicationRecord
   before_validation :set_default_role, on: :create
   attr_accessor :created_by
 
+  def set_validation_options
+    administrador? || colaborador?
+  end
+
   private
 
   def set_default_role

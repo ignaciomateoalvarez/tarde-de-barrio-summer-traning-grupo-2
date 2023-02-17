@@ -12,15 +12,15 @@ en:
       address: 'Address'
       attendance: 'Attendance'
       new_student: 'New Student'
-      yes_: 'Yes'
-      no_: 'No'
       primary_school: 'Primary School'
       elementary_school: 'Elementary School'
       high_school: 'High School'
       delete: 'Delete'
       edit: 'Edit'
       log-out: 'Log Out'
-      student_attends: ''
+    student: 
+      yes_: 'Yes'
+      no_: 'No'
     new:
       name: 'Name'
       last_name: 'Last name'

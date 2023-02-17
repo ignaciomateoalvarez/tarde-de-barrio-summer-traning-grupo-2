@@ -18,7 +18,6 @@ en:
       delete: 'Delete'
       edit: 'Edit'
       log-out: 'Log Out'
-      student_attends: ''
     student: 
       yes_: 'Yes'
       no_: 'No'

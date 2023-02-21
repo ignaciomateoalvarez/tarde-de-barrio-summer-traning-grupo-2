@@ -14,7 +14,7 @@ class UserRegistrationsController < ApplicationController
       auto_login(@user)
       redirect_to users_path, notice: t('.welcome')
     else
-      redirect_to register_path
+      redirect_to register_path, warning: t('.error')
     end
   end
 

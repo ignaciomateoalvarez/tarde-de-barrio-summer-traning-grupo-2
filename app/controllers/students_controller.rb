@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
   include Pundit
+  before_action :set_user, only: [:edit, :update]
 
   def index
     authorize Student
@@ -18,22 +19,20 @@ class StudentsController < ApplicationController
     authorize Student
     @student = Student.new(student_params.merge(user: current_user))
     if @student.save
-      redirect_to students_path, notice: t('.created')
+      redirect_to students_path, success: t('.created')
     else
-      redirect_to students_path, alert: t('.not_created')
+      redirect_to students_path, warning: t('.not_created')
     end
   end
 
   def edit
-    @student = Student.find(params[:id])
     authorize @student
   end
 
   def update
-    @student = Student.find(params[:id])
     authorize @student
     if @student.update(student_params.merge(user: current_user))
-      flash[:notice] = t('.updated')
+      redirect_to students_path, notice: t('.updated')
     else
       render :edit
     end
@@ -42,6 +41,10 @@ class StudentsController < ApplicationController
   def destroy; end
 
   private
+
+  def set_user
+    @student = Student.find(params[:id])
+  end
 
   def student_params
     params.require(:student)

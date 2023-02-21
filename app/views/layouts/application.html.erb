@@ -10,6 +10,21 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <% flash.each do |type, msg| %>
+    <% case type when "warning" %>
+    <div class="warning">
+      <%= msg %>
+    </div>
+    <% when "success" %>
+      <div class="success">
+        <%= msg %>
+      </div>
+    <% when "notice" %>
+      <div class="notice">
+        <%= msg %>
+      </div>
+    <% end %>
+    <% end %>
     <%= turbo_frame_tag "modal" %>
     <%= yield %>
   </body>

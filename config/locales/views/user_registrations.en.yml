@@ -4,7 +4,8 @@ en:
       login: Login
       registernav: Register
       title: Register my account
-      name-user: Username
+      first-name: First Name
+      last-name: Last Name
       email: Email
       password: Password
       confirm-password: Confirm your password
@@ -12,3 +13,4 @@ en:
       google-login: Register with Google
     create:
       welcome: Welcome    
+      error: An error occurred while registering

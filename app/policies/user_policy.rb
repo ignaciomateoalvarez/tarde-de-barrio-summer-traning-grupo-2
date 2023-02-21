@@ -9,7 +9,7 @@ class UserPolicy
   end
 
   def index?
-    false
+    user.administrador?
   end
 
   def show?
@@ -17,7 +17,7 @@ class UserPolicy
   end
 
   def create?
-    false
+    user.administrador?
   end
 
   def new?
@@ -25,11 +25,11 @@ class UserPolicy
   end
 
   def update?
-    user.administrador? # || record.created_by == user.id (Este policy hace que un colaborador solo pueda editar a un usuario creado por el)
+    user.administrador?
   end
 
   def toggle_active?
-    # user.admin? && !record.admin? (Lo pedia el ejercicio, pero no tenemos la creada la relacion de administradores a colaboradores.) Lo que hace este Policy es permitir que solo los administradores puedan deshabilitar a los colaboradores.
+    user.administrador?
   end
 
   def edit?

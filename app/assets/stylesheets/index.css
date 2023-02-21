@@ -260,3 +260,7 @@ a {
 .toggle-button label:active:after {
 	width: 2.1875rem;
 }
+
+.button-new > a{
+  color:white
+}

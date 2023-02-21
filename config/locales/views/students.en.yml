@@ -46,6 +46,8 @@ en:
       favourite_subjects: 'Favourite Subject'
       subject_difficulty: 'Most difficult Subject'
       save_changes: 'Save Changes'
+    update:
+      updated: Student successfully updated
 
     activerecord:
       attributes:

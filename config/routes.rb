@@ -14,5 +14,7 @@ Rails.application.routes.draw do
     put 'update_role' => 'users#update_role', on: :member
   end
 
-  resources :students
+  resources :students do
+    get 'delete_modal', to: 'students#delete_modal'
+  end
 end

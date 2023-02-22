@@ -35,6 +35,24 @@ en:
     create:
       created: Created Student successfully
       not_created: Could not create Student
+    show:
+      students: Students
+      student-data: Student details
+      birth_date: Birth Date
+      address: Address
+      grade: Grade
+      attendance: Attendance
+      favorite-subjects: Favourite Subject
+      subject1: Subject 1
+      most-dificult-subject: Most Dificult Subject
+      subject2: Subject 2
+      objectives: Objectives
+      learn-alfabet: Learn Alfaabet
+      learn-tables: Learn Tables
+    post_comment:
+      stand-out: Highlight
+      post-comment: Post
+      comments: Comments
 
     activerecord:
       attributes:

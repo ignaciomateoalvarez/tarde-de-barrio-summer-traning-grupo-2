@@ -35,6 +35,24 @@ es:
     create:
       created: Created Student successfully
       not_created: Could not create Student
+    show:
+      students: Estudiantes
+      student-data: Detalle de estudiante
+      birth_date: Fecha de nacimiento
+      address: Direccion
+      grade: Grado
+      attendance: Asiste
+      favorite-subjects: Materia favorita
+      subject1: Materia 1
+      most-dificult-subject: Materia mas dificil
+      subject2: Materia 2
+      objectives: Objetivos
+      learn-alfabet: Aprender el alfabeto
+      learn-tables: Aprender las tablas
+    post_comment:
+      stand-out: Destacar
+      post-comment: Publicar
+      comments: Comentarios
 
     activerecord:
       attributes:

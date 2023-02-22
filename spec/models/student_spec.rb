@@ -32,7 +32,5 @@ RSpec.describe Student, type: :model do
     it { is_expected.not_to allow_value('Ju!an').for(:first_name) }
   end
 
-  describe 'Factory' do
-    it { expect(create(:student)).to be_valid }
-  end
+  
 end

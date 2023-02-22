@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/svenfuchs/rails-i18n.git
+  revision: 9ce4df23a2a6b10ee1de86f5205ff13324a680a4
+  branch: master
+  specs:
+    rails-i18n (7.0.6)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -315,6 +324,7 @@ DEPENDENCIES
   pundit (~> 2.3)
   rails (~> 7.0.4, >= 7.0.4.2)
   rails-controller-testing
+  rails-i18n!
   rspec-rails
   rubocop (= 1.44.1)
   selenium-webdriver

@@ -5,13 +5,13 @@ en:
         user:
           attributes:
             first_name:
-              invalid: Only alphabates caracters are allowed.
-              blank: Name cannot be blank.
+              blank: "Name is a required field"
             last_name:
-              invalid: Only alfabetic caracters are allowed.
-              blank: Last name cannot be blank.
-
+              blank: "Last name is a required field"
             email:
-              invalid: Incorrect format of email address.
-              blank: Email is required.
-              taken: Email already taken.
+              blank: "Email is a required field"
+              taken: "Email has already been registered"
+            first_name_format:
+              invalid: "Name can only contain letters"
+            last_name_format:
+              invalid: "Last name can only contain letters"

@@ -5,13 +5,13 @@ es:
         user:
           attributes:
             first_name:
-              invalid: Solo se permiten caracteres alfabéticos.
-              blank: El nombre es obligatorio.
+              blank: "El nombre es un campo requerido"
             last_name:
-              invalid: Solo se permiten caracteres alfabéticos.
-              blank: El apellido es obligatorio.
-
-            email:
-              invalid: El formato ingresado es incorrecto.
-              blank: El mail es obligatorio.
-              taken: El mail ya se encuentra registrado.
+              blank: "El apellido es un campo requerido"
+            mail:
+              blank: "El correo electrónico es un campo requerido"
+              taken: "El correo electrónico ya ha sido registrado"
+            first_name_format:
+              invalid: "El nombre solo puede contener letras"
+            last_name_format:
+              invalid: "El apellido solo puede contener letras"

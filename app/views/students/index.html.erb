@@ -21,12 +21,14 @@
     <div class="lupa-icon">
       <%= image_submit_tag("magnifying-glass-solid.svg")%>
     </div>
-    <div class="create-user">  
-      <div class="user-icon"></div>
-        <div class="button-new">
-          <%= link_to t('.new_student'), new_student_path, data: { turbo_frame: 'modal' }%>
-        </div>
-    </div>
+    <%= link_to new_student_path, data: { turbo_frame: 'modal' } do%>
+      <div class="create-user">  
+        <div class="user-icon"></div>
+          <p class= "button-new"><%=t('.new_student')%></p>
+          <div class="button-new">
+          </div>
+      </div>
+    <% end %>
   </div> 
   <table class= 'user-container'>
     <thead>

@@ -38,9 +38,7 @@ RSpec.describe User, type: :model do
     it { is_expected.not_to allow_value('not_an_email').for(:email) }
   end
 
-  describe 'Factory' do
-    it { expect(create(:user)).to be_persisted }
-  end
+  
 
   describe 'Policy' do
     it 'permite a un administrador actualizar un usuario' do

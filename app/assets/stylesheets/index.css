@@ -68,7 +68,7 @@
 }
 
 .create-user:hover {
-	border: 3px solid #dadada;
+	border: 3px solid #0a6b81;
 }
 
 .user-icon {
@@ -261,6 +261,6 @@ a {
 	width: 2.1875rem;
 }
 
-.button-new > a{
+.button-new{
   color:white
 }

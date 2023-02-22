@@ -12,7 +12,7 @@
 }
 .student-links{
 	color: black;
-  font-size: 20px;
+  font-size: 1rem;
 }
 .student-links:nth-child(3){
   color: #0090AF;

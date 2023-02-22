@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   include Pundit
-  before_action :set_user, only: [:edit, :update]
+  before_action :set_user, only: [:edit, :update, :destroy]
 
   def index
     authorize Student
@@ -38,7 +38,14 @@ class StudentsController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    authorize @student
+    if @student.destroy!
+      redirect_to students_path, success: t('.deleted')
+    else
+      redirect_to students_path, warning: t('.not_deleted')
+    end
+  end
 
   private
 

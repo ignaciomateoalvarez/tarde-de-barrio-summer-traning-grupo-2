@@ -1,53 +1,56 @@
 en:
   students:
     index:
-      students: 'Students'
-      student: 'Student'
-      fullname: 'Full Name'
-      name: 'Name'
-      lastname: 'Last Name'
-      birth_date: 'Birth Date'
-      age: 'Age'
-      school_grade: 'School Grade'
-      address: 'Address'
-      attendance: 'Attendance'
-      new_student: 'New Student'
-      primary_school: 'Primary School'
-      elementary_school: 'Elementary School'
-      high_school: 'High School'
-      delete: 'Delete'
-      edit: 'Edit'
-      log-out: 'Log Out'
+      students: Students
+      student: Student
+      fullname: Full Name
+      name: Name
+      lastname: Last Name
+      birth_date: Birth Date
+      age: Age
+      school_grade: School Grade
+      address: Address
+      attendance: Attendance
+      new_student: New Student
+      primary_school: Primary School
+      elementary_school: Elementary School
+      high_school: High School
+      delete: Delete
+      edit: Edit
+      log-out: Log Out
     student: 
-      yes_: 'Yes'
-      no_: 'No'
+      yes_: Yes
+      no_: No
     new:
-      name: 'Name'
-      last_name: 'Last name'
-      birth_date: 'Birthdate'
-      address: 'Address'
-      school_grade: 'School grade'
-      attendance: '¿Goes to school?'
-      student_new: 'Register student'
-      new_student: 'New Student'
-      yes_: 'Yes'
-      no_: 'No'
+      name: Name
+      last_name: Last name
+      birth_date: Birthdate
+      address: Address
+      school_grade: School grade
+      attendance: ¿Goes to school?
+      student_new: Register student
+      new_student: New Student
+      yes_: Yes
+      no_: No
     create:
       created: Created Student successfully
       not_created: Could not create student
     edit:
-      name: 'Name'
-      last_name: 'Lastname'
-      birth_date: 'Birthdate'
-      address: 'Address'
-      school_grade: 'School Grade'
-      attendance: '¿Goes to school?'
-      edit_student: 'Modify Student'
-      favourite_subjects: 'Favourite Subject'
-      subject_difficulty: 'Most difficult Subject'
-      save_changes: 'Save Changes'
+      name: Name
+      last_name: Lastname
+      birth_date: Birthdate
+      address: Address
+      school_grade: School Grade
+      attendance: ¿Goes to school?
+      edit_student: Modify Student
+      favourite_subjects: Favourite Subject
+      subject_difficulty: Most difficult Subject
+      save_changes: Save Changes
     update:
       updated: Student successfully updated
+    destroy:  
+      delete: Student deleted successfully
+      not_deleted: Student cant be deleted  
 
     activerecord:
       attributes:

@@ -1,53 +1,56 @@
 es:
   students:
     index:
-      students: 'Estudiantes'
-      student: 'Estudiante'
-      fullname: 'Nombre Completo'
-      name: 'Nombre'
-      lastname: 'Apellido'
-      birth_date: 'Fecha de Nacimiento'
-      age: 'Edad'
-      school_grade: 'Escolaridad Alcanzada'
-      address: 'Domicilio'
-      attendance: 'Escolarizado'
-      new_student: 'Nuevo Estudiante'
-      primary_school: 'Inicial'
-      elementary_school: 'Primaria'
-      high_school: 'Secundaria'
-      delete: 'Eliminar'
-      edit: 'Editar'
-      log-out: 'Cerrar Sesión'
+      students: Estudiantes
+      student: Estudiante
+      fullname: Nombre Completo
+      name: Nombre
+      lastname: Apellido
+      birth_date: Fecha de Nacimiento
+      age: Edad
+      school_grade: Escolaridad Alcanzada
+      address: Domicilio
+      attendance: Escolarizado
+      new_student: Nuevo Estudiante
+      primary_school: Inicial
+      elementary_school: Primaria
+      high_school: Secundaria
+      delete: Eliminar
+      edit: Editar
+      log-out: Cerrar Sesión
     student: 
-      yes_: 'Sí'
-      no_: 'No'
+      yes_: Sí
+      no_: No
     new:
-      name: 'Nombre'
-      last_name: 'Apellido'
-      birth_date: 'Fecha de nacimiento'
-      address: 'Domicilio'
-      school_grade: 'Escolaridad alcanzada'
-      attendance: '¿Va a la escuela?'
-      student_new: 'Registrar estudiante'
-      new_student: 'Nuevo estudiante'
-      yes_: 'Sí'
-      no_: 'No'
+      name: Nombre
+      last_name: Apellido
+      birth_date: Fecha de nacimiento
+      address: Domicilio
+      school_grade: Escolaridad alcanzada
+      attendance: ¿Va a la escuela?
+      student_new: Registrar estudiante
+      new_student: Nuevo estudiante
+      yes_: Sí
+      no_: No
     create:
       created: Estudiante creado con exito
       not_created: No se pudo crear el estudiante
     edit:
-      name: 'Nombre'
-      last_name: 'Apellido'
-      birth_date: 'Fecha de nacimiento'
-      address: 'Domicilio'
-      school_grade: 'Escolaridad alcanzada'
-      attendance: '¿Va a la escuela?'
-      edit_student: 'Modificar Estudiante'
-      favourite_subjects: 'Materia Favorita'
-      subject_difficulty: 'Materia con mayor dificultad'
+      name: Nombre
+      last_name: Apellido
+      birth_date: Fecha de nacimiento
+      address: Domicilio
+      school_grade: Escolaridad alcanzada
+      attendance: ¿Va a la escuela?
+      edit_student: Modificar Estudiante
+      favourite_subjects: Materia Favorita
+      subject_difficulty: Materia con mayor dificultad
       save_changes: Guardar Cambios
     update:
       updated: Estudiante modificado con exito
+    destroy:  
+      delete: Estudiante borrado correctamente
+      not_deleted: No se pudo borrar correctamente al estudiante 
 
     activerecord:
       attributes:

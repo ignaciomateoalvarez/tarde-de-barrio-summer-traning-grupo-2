@@ -22,6 +22,12 @@ RSpec.describe Student, type: :model do
     describe 'Associations' do
       it { should belong_to(:user) }
     end
+      
+    #revisar
+    describe 'Associations' do
+      it { is_expected.to belong_to(:user) }
+    end
+    #hasta acá 
 
     describe 'Length' do
       it { is_expected.to validate_length_of(:first_name).is_at_least(3) }

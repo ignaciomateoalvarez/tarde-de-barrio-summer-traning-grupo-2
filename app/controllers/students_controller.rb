@@ -15,6 +15,10 @@ class StudentsController < ApplicationController
 
   def new; end
 
+  def delete_modal
+    @student = Student.find(params[:student_id])
+  end
+
   def create
     authorize Student
     @student = Student.new(student_params.merge(user: current_user))

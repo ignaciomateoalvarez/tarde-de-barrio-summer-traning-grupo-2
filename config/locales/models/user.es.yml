@@ -5,7 +5,7 @@ es:
         user:
           attributes:
             first_name:
-              blank: "El nombre es un campo requerido"
+              blank: El nombre es un campo requerido
             last_name:
               invalid: Solo se permiten caracteres alfabéticos.
               blank: El apellido es obligatorio.

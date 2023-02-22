@@ -1,10 +1,14 @@
-<div class= "delete_modal">
 <%= turbo_frame_tag "delete-modal" do %>
   <%= tag.div data: { controller: "turbo-delete-modal", turbo_delete_modal_target: "delete-modal", action: 
     "turbo:submit-end->turbo-delete-modal#submitEnd" } do %>
-    <%= button_tag 'X', class: 'close', data: { action: "turbo-delete-modal#closeModal" }, type: "button"%>
-      <h2 class = "h2_delete_modal">¿ Seguro que quieres eliminar ?</h2>
-        <%= button_to "Delete",student_path(@student.id),method: :delete,  class:"button-delete-student"%>
+    <div class= 'close-delete-student'>
+      <%= button_tag 'X', data: { action: "turbo-delete-modal#closeModal" }, type: "button"%>
+    </div>
+    
+    <div class = "buttons-delete-modal">
+    <h2 class = "h2_delete_modal">¿Seguro que deseas eliminar este estudiante?</h2>
+    <%= button_to "Eliminar",student_path(@student.id),method: :delete,  class:"button-delete-student"%>
+    </div>
+
   <% end %>
 <% end %>
-</div>

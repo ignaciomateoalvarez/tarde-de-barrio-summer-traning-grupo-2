@@ -34,7 +34,7 @@ en:
       no_: 'No'
     create:
       created: Created Student successfully
-      not_created: Could not create Student
+      not_created: Could not create student
     edit:
       name: 'Name'
       last_name: 'Lastname'

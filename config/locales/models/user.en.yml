@@ -7,11 +7,11 @@ en:
             first_name:
               blank: "Name is a required field"
             last_name:
-              blank: "Last name is a required field"
+              invalid: Only alfabetic caracters are allowed.
+              blank: Last name cannot be blank.
             email:
-              blank: "Email is a required field"
-              taken: "Email has already been registered"
-            first_name_format:
-              invalid: "Name can only contain letters"
-            last_name_format:
-              invalid: "Last name can only contain letters"
+              invalid: Incorrect format of email address.
+              blank: Email is required.
+              taken: Email already taken.
+      messages:
+        record_invalid: Record Invalid

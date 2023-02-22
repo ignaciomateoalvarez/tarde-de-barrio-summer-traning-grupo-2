@@ -1,0 +1,5 @@
+en:
+  models:
+    student:
+      errors:
+        error_date: Could not create Student

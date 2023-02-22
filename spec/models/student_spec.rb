@@ -11,7 +11,20 @@ RSpec.describe Student, type: :model do
       it { is_expected.to validate_presence_of(:last_name) }
       it { is_expected.to validate_presence_of(:birth_date) }
       it { is_expected.to validate_presence_of(:address) }
+
+      it { should define_enum_for(:school_grade).with_values([:inicial, :primaria, :secundaria]) }
+      it "Doesn't allow future dates" do
+        student = build(:student, birth_date: Date.tomorrow)
+        expect(student).to_not be_valid
+        expect(student.errors[:birth_date]).to include("No se pudo crear el estudiante")
+      end
     end
+      
+    #revisar
+    describe 'Associations' do
+      it { is_expected.to belong_to(:user) }
+    end
+    #hasta acá 
 
     context 'Length' do
       it { is_expected.to validate_length_of(:first_name).is_at_least(3) }
@@ -31,6 +44,4 @@ RSpec.describe Student, type: :model do
     it { is_expected.not_to allow_value('Juan!').for(:first_name) }
     it { is_expected.not_to allow_value('Ju!an').for(:first_name) }
   end
-
-  
 end

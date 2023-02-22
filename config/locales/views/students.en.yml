@@ -12,14 +12,15 @@ en:
       address: 'Address'
       attendance: 'Attendance'
       new_student: 'New Student'
-      yes_: 'Yes'
-      no_: 'No'
       primary_school: 'Primary School'
       elementary_school: 'Elementary School'
       high_school: 'High School'
       delete: 'Delete'
       edit: 'Edit'
       log-out: 'Log Out'
+    student: 
+      yes_: 'Yes'
+      no_: 'No'
     new:
       name: 'Name'
       last_name: 'Last name'
@@ -31,3 +32,31 @@ en:
       new_student: 'New Student'
       yes_: 'Yes'
       no_: 'No'
+    create:
+      created: Created Student successfully
+      not_created: Could not create Student
+    show:
+      students: Students
+      student-data: Student details
+      birth_date: Birth Date
+      address: Address
+      grade: Grade
+      attendance: Attendance
+      favorite-subjects: Favourite Subject
+      subject1: Subject 1
+      most-dificult-subject: Most Dificult Subject
+      subject2: Subject 2
+      objectives: Objectives
+      learn-alfabet: Learn Alfaabet
+      learn-tables: Learn Tables
+    post_comment:
+      stand-out: Highlight
+      post-comment: Post
+      comments: Comments
+
+    activerecord:
+      attributes:
+        student/school_grade:
+          inicial: Elementary School
+          primaria: Primary School
+          secundaria: High School

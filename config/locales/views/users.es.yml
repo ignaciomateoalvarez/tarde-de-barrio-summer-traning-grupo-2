@@ -11,12 +11,15 @@ es:
 
     index:
       log-out: Cerrar sesión
-      student: Estudiantes
-      students: ESTUDIANTES
-      active: ACTIVAR
-      edit: EDITAR
-      email: EMAIL
+      student: Estudiante
+      students: Estudiantes
+      active: Activar
+      edit: Editar
+      email: Email
       new-user: Nuevo usuario
+      rol: Rol
+      menu: Menú
+      delete: Eliminar
 
     edit:
       title-edit: Modificar usuario
@@ -24,3 +27,18 @@ es:
       last_name_edit: Apellido
       email_edit: Email
       search_edit: Guardar cambios
+    
+    create: 
+      created: Usuario creado satisfactoriamente
+      not_created: No se pudo crear el usuario
+
+    update:
+      updated: Usuario actualizado satisfactoriamente
+
+    toggle_active:
+      modified: Estado modificado
+      not_modified: No pudo ser modificado 
+
+    update_role:
+      updated: Rol Actualizado 
+      not_updated: No se pudo actualizar el rol 

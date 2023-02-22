@@ -15,9 +15,9 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     if @student.save
-      redirect_to students_path, notice: 'Created Student successfully'
+      redirect_to students_path, notice: t('.created')
     else
-      redirect_to students_path, alert: 'Could not create Student'
+      redirect_to students_path, alert: t('.not_created')
     end
   end
 

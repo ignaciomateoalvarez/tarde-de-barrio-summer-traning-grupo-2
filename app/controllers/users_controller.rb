@@ -16,9 +16,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(register_params)
     if @user.save
-      redirect_to users_path, notice: 'Created user successfully'
+      redirect_to users_path, notice: t('.created')
     else
-      redirect_to users_path, alert: 'Could not create user'
+      redirect_to users_path, alert: t('.not_created')
     end
   end
 
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     authorize User
     @user = User.find(params[:id])
     if @user.update(register_params)
-      flash[:notice] = 'User was successfully updated.'
+      flash[:notice] = t('.updated')
     else
       render :edit
     end
@@ -43,18 +43,18 @@ class UsersController < ApplicationController
     @user = User.find(params[:user_id])
     @user.active = params[:user][:active]
     if @user.save
-      flash[:notice] = 'Estado modificado'
+      flash[:notice] = t('.modified')
     else
-      flash[:alert] = 'No pudo ser modificado'
+      flash[:alert] = t('.not_modified')
     end
   end
 
   def update_role
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to users_path, notice: 'Rol actualizado'
+      redirect_to users_path, notice: t('.updated')
     else
-      redirect_to users_path, notice: 'hubo un problema'
+      redirect_to users_path, notice: t('.not_updated')
     end
   end
 

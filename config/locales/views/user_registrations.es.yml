@@ -10,3 +10,5 @@ es:
       confirm-password: Confirmar contraseña
       register: Registrarme
       google-login: Registrarme con Google
+  create:
+    welcome: Bienvenido

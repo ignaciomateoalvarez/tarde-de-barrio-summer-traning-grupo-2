@@ -10,3 +10,5 @@ en:
       confirm-password: Confirm your password
       register: Register
       google-login: Register with Google
+    create:
+      welcome: Welcome    

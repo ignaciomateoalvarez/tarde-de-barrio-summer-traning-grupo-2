@@ -180,8 +180,12 @@
 }
 
 a {
-	color: white;
+
+	text-decoration: none;
+	color : black;
 }
+
+
 
 .menu-modal-icon {
 	background: url("ellipsis-vertical-solid.svg");

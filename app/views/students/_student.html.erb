@@ -12,7 +12,7 @@
     </td>
   <% end %> 
   <td>
-    <%= link_to student_delete_modal_path(student.id), data: { turbo_frame: 'modal' } do%>
+    <%= link_to student_delete_modal_path(student.id), data: { turbo_frame: 'delete-modal' } do%>
       <div class="delete-icon">
       </div>
     <% end %>

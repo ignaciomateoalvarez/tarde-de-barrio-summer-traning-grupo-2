@@ -33,6 +33,6 @@ class StudentPolicy
   end
 
   def destroy?
-    false
+    user.administrador? || record.user == user
   end
 end

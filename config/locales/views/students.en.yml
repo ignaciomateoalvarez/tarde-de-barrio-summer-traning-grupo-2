@@ -66,6 +66,9 @@ en:
       save_changes: Save Changes
     update:
       updated: Student successfully updated
+    destroy:  
+      delete: Student deleted successfully
+      not_deleted: Student cant be deleted  
 
     activerecord:
       attributes:

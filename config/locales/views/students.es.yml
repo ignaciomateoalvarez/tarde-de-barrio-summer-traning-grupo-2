@@ -66,6 +66,9 @@ es:
       save_changes: Guardar Cambios
     update:
       updated: Estudiante modificado con exito
+    destroy:  
+      delete: Estudiante borrado correctamente
+      not_deleted: No se pudo borrar correctamente al estudiante 
 
     activerecord:
       attributes:

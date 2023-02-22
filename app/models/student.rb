@@ -11,9 +11,21 @@ class Student < ApplicationRecord
   validates :address, presence: true
   validates :school_grade, presence: true
 
+  validate :cant_be_future
+  #validates :active_student, inclusion: { in: [true, false] }
+
   enum school_grade: %i[inicial primaria secundaria]
 
   def age
     (Date.today - birth_date.to_date).years
   end
+
+  def cant_be_future
+    unless (birth_date.present? && !birth_date.future?)
+      errors.add(:birth_date, I18n.t('models.student.error_date'))
+    else
+      true
+    end
+  end
+
 end

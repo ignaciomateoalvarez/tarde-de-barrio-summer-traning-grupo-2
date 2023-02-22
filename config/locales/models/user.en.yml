@@ -10,8 +10,9 @@ en:
             last_name:
               invalid: Only alfabetic caracters are allowed.
               blank: Last name cannot be blank.
-
             email:
               invalid: Incorrect format of email address.
               blank: Email is required.
               taken: Email already taken.
+      messages:
+        record_invalid: Record Invalid

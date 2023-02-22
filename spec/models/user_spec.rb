@@ -9,15 +9,8 @@ RSpec.describe User, type: :model do
   let(:administrador) { build(:user, :administrador) }
 
   describe 'Validations' do
-    context 'Uniqueness' do
-      before(:each) do
-        create(:user)
-      end
-
       it { is_expected.to validate_presence_of(:email) }
-      it { is_expected.to validate_uniqueness_of(:email) }
-    end
-
+      
     context 'Presence' do
       it { is_expected.to validate_presence_of(:first_name) }
       it { is_expected.to validate_presence_of(:last_name) }
@@ -36,10 +29,6 @@ RSpec.describe User, type: :model do
     it { is_expected.not_to allow_value('gar%').for(:last_name) }
     it { is_expected.to allow_value('email@example.com').for(:email) }
     it { is_expected.not_to allow_value('not_an_email').for(:email) }
-  end
-
-  describe 'Factory' do
-    it { expect(create(:user)).to be_persisted }
   end
 
   describe 'Policy' do

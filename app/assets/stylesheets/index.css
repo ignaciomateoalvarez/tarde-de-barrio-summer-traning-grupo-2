@@ -68,7 +68,7 @@
 }
 
 .create-user:hover {
-	border: 3px solid #dadada;
+	border: 3px solid #0a6b81;
 }
 
 .user-icon {
@@ -259,4 +259,8 @@ a {
 
 .toggle-button label:active:after {
 	width: 2.1875rem;
+}
+
+.button-new{
+  color:white
 }

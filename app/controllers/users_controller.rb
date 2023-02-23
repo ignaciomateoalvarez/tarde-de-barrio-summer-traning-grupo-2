@@ -2,36 +2,38 @@
 
 class UsersController < ApplicationController
   include Pundit
+  before_action :set_user, only: [:edit, :update, :update_role]
 
   def index
+    authorize User
     @presenter = UserPresenter.new(params)
     @pagy, @users = pagy(@presenter.users)
   end
 
   def new
+    authorize User
     @user = User.new
   end
 
   # Register from modal
   def create
+    authorize User
     @user = User.new(register_params)
     if @user.save
-      redirect_to users_path, notice: t('.created')
+      redirect_to users_path, success: t('.created')
     else
-      redirect_to users_path, alert: t('.not_created')
+      redirect_to users_path, warning: t('.not_created')
     end
   end
 
   def edit
-    @user = User.find(params[:id])
     authorize User
   end
 
   def update
     authorize User
-    @user = User.find(params[:id])
     if @user.update(register_params)
-      flash[:notice] = t('.updated')
+      redirect_to users_path, notice: t('.updated')
     else
       render :edit
     end
@@ -40,17 +42,18 @@ class UsersController < ApplicationController
   def destroy; end
 
   def toggle_active
+    authorize User
     @user = User.find(params[:user_id])
     @user.active = params[:user][:active]
     if @user.save
-      flash[:notice] = t('.modified')
+      flash[:success] = t('.modified')
     else
-      flash[:alert] = t('.not_modified')
+      flash[:warning] = t('.not_modified')
     end
   end
 
   def update_role
-    @user = User.find(params[:id])
+    authorize User
     if @user.update(user_params)
       redirect_to users_path, notice: t('.updated')
     else
@@ -59,6 +62,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def set_user
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:role)

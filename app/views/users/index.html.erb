@@ -13,7 +13,6 @@
     <h1 class='username'> <%= current_user.first_name %> </h1>
   </div>
   <div class="search-bar">
-    <%= render partial: '/errors/errors' %>
     <div class='button-filter'>
       <%= form_with(url: users_path, method: :get, scope: :user_filter) do |f| %> 
       <%= f.text_field :full_name , class: "filter"%>
@@ -22,12 +21,14 @@
     <div class="lupa-icon">
       <%= image_submit_tag("magnifying-glass-solid.svg")%>
     </div>
-    <div class="create-user">  
-      <div class="user-icon"></div>
-        <div>
-          <%= link_to t('.new-user'), new_user_path, data: { turbo_frame: 'modal' }%>
-        </div>
-    </div>
+    <%= link_to  new_user_path, data: { turbo_frame: 'modal' } do %>
+      <div class="create-user">  
+        <div class="user-icon"></div>
+        <p class= "button-new"><%= t('.new-user') %> </p>
+          <div class="button-new">
+          </div>
+      </div>
+    <%end%>
   </div> 
   <table class= 'user-container'>
     <thead>
@@ -49,9 +50,7 @@
               <td class='name'> <%= user.first_name %> <%= user.last_name %> </td>
               <td class='email-users'> <%= user.email %> </td>
               <td class='role'>
-                  <%= form_for user, url: update_role_user_path(user), method: :put do |f| %>
-                  <%= f.select :role, options_for_select(User.roles.keys, selected: user.role), {}, { class: "form-control" } %>
-                <% end %>
+                <%= user.role %>
               </td>         
               <%# Activate switch %>  
               <td class='toggle-button'>

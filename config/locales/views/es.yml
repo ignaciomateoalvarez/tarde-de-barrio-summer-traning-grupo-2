@@ -2,9 +2,9 @@ es:
   activerecord:
     attributes:
       student/school_grade:
-        inicial: Elementary School
-        primaria: Primary School
-        secundaria: High School
+        inicial: Inicial
+        primaria: Primaria
+        secundaria: Secundario
   home:
     login:
       title: Ingresar a mi cuenta

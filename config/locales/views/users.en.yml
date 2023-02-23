@@ -20,6 +20,7 @@ en:
       rol: Role
       menu: Menu
       delete: Delete
+      notice: "Permission Denied"
 
     edit:
       title-edit: Modify user

@@ -1,0 +1,6 @@
+es:
+  models:
+    student:
+      error_date: No se pudo crear el estudiante
+      errors:
+        error_date: No se pudo crear el estudiante

@@ -10,6 +10,7 @@ export default class extends Controller {
 	closeModal() {
 		this.element.parentElement.removeAttribute("src");
 		this.element.remove();
+		document.getElementById("modal-background").style.pointerEvents = "all";
 	}
 
 	submitEnd(e) {

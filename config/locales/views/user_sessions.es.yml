@@ -11,6 +11,7 @@ es:
       recover-password: Olvidé mi contraseña
       google-login: Ingresar con Google
     create:
+      welcome: "Bienvenido/a"
       incorrect_info: Contraseña o email incorrecto
       user_disabled: Usuario deshabilitado 
 

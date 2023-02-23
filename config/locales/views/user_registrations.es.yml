@@ -4,11 +4,13 @@ es:
       login: Sesión
       registernav: Registro
       title: Registro
-      name-user: Nombre de usuario
+      first-name: Nombre
+      last-name: Apellido
       email: Email
       password: Contraseña
       confirm-password: Confirmar contraseña
       register: Registrarme
       google-login: Registrarme con Google
-  create:
-    welcome: Bienvenido
+    create:
+      welcome: Bienvenido
+      error: Surgio un error al registrarse

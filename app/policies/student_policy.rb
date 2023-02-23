@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UserPolicy
+class StudentPolicy
   attr_reader :user, :record
 
   def initialize(user, record)
@@ -9,15 +9,15 @@ class UserPolicy
   end
 
   def index?
-    user.administrador?
+    user.administrador? || user.colaborador?
   end
 
   def show?
-    false
+    user.administrador? || user.colaborador?
   end
 
   def create?
-    user.administrador?
+    user.administrador? || user.colaborador?
   end
 
   def new?
@@ -25,11 +25,7 @@ class UserPolicy
   end
 
   def update?
-    user.administrador?
-  end
-
-  def toggle_active?
-    user.administrador?
+    user.administrador? || record.user == user
   end
 
   def edit?

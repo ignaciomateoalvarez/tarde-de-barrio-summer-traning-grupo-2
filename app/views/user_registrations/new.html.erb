@@ -13,11 +13,11 @@
         <%= form_with url: register_path, scope: :user, method: :post do |form| %>
           <div class="login-form">
             <div class="item">
-              <%= form.label :name_user,t('.name-user'), class: 'label-form'%>
+              <%= form.label :name_user,t('.first-name'), class: 'label-form'%>
               <%= form.text_field :first_name, class: 'input-form'%>
             </div>
             <div class="item">
-              <%= form.label :name_user,t('.name-user'), class: 'label-form'%>
+              <%= form.label :name_user,t('.last-name'), class: 'label-form'%>
               <%= form.text_field :last_name, class: 'input-form'%>
             </div>
             <div class="item">

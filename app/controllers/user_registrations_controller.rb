@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class UserRegistrationsController < ApplicationController
+
+  skip_before_action :require_login, only: [:new, :create]
   def new
     @user = User.new
   end
@@ -12,7 +14,7 @@ class UserRegistrationsController < ApplicationController
       auto_login(@user)
       redirect_to users_path, notice: t('.welcome')
     else
-      redirect_to register_path
+      redirect_to register_path, warning: t('.error')
     end
   end
 

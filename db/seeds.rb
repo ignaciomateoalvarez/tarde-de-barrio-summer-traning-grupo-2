@@ -28,6 +28,7 @@ end
     last_name: Faker::Name.last_name,
     birth_date: Faker::Date.birthday(min_age: 2, max_age: 30),
     address: Faker::Address.full_address,
-    attends: Faker::Boolean.boolean
+    attends: Faker::Boolean.boolean,
+    user: User.create(first_name: "ignacio", last_name: "Bottassi", email: "juanb@gmail.com",password:'123', active: true, role: 0)
   )
 end

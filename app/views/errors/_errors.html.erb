@@ -1,9 +1,0 @@
-<% flash.each do |type, msg| %>
-   <div class="alert <%= get_alert_class(type )%>">
-      <p> <%= msg %> </p>
-      <div class='close-container'>
-        <label for='alert-checkbox'> X </label>
-        <input type="checkbox" id="alert-checkbox" autocomplete="off" />
-      </div>
-  </div>
-<% end %>

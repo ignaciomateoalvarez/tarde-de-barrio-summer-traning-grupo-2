@@ -5,7 +5,7 @@ en:
         user:
           attributes:
             first_name:
-              blank: "Name is a required field"
+              blank: Name is a required field
             last_name:
               invalid: Only alfabetic caracters are allowed.
               blank: Last name cannot be blank.
@@ -13,5 +13,10 @@ en:
               invalid: Incorrect format of email address.
               blank: Email is required.
               taken: Email already taken.
+            first_name_format:
+              invalid: Name can only contain letters
+            last_name_format:
+              invalid: Only alfabetic caracters are allowed.
+              blank: Last name cannot be blank.
       messages:
         record_invalid: Record Invalid

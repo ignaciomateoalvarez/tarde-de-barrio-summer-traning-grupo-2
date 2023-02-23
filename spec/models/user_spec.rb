@@ -21,6 +21,10 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe 'Associations' do
+    it { should have_many (:students) }
+  end
+
   describe 'Format' do
     it { is_expected.not_to allow_value('nicolas123').for(:first_name) }
     it { is_expected.to allow_value('nicolas').for(:first_name) }

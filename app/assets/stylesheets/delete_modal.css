@@ -1,0 +1,63 @@
+* {
+  font-family: 'Roboto';
+}
+
+#delete-modal {
+	position: absolute;
+	z-index: 3;
+	word-break: break-word;
+	border-radius: 0.5rem;
+  background: #DADADA;
+  box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 175px;
+  left: 852px;
+  color: #474747;
+
+}
+
+#delete-modal > div {
+  height: 100%;
+}
+
+.button-delete-student {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background: #0090AF;
+  border-radius: 4px;
+  gap: 10px;
+  width: 117px;
+  height: 33px;
+}
+
+.h2_delete_modal {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #474747;
+}
+
+.buttons-delete-modal { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 90%;
+}
+
+.close-delete-student {
+  text-align: right;
+  align-self: flex-end;
+}

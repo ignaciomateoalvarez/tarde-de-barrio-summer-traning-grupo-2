@@ -53,6 +53,9 @@ es:
       stand-out: Destacar
       post-comment: Publicar
       comments: Comentarios
+    delete_modal:
+      delete_modal: ¿Seguro que deseas eliminar este estudiante?
+      delete: Eliminar
     edit:
       name: Nombre
       last_name: Apellido
@@ -66,6 +69,9 @@ es:
       save_changes: Guardar Cambios
     update:
       updated: Estudiante modificado con exito
+    destroy:  
+      deleted: Estudiante borrado correctamente
+      not_deleted: No se pudo borrar correctamente al estudiante 
 
     activerecord:
       attributes:

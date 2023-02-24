@@ -11,7 +11,7 @@ en:
       recover-password: Forget my password
       google-login: Login with Google
     create:
-      welcome: "Welcome"
+      welcome: Welcome
       incorrect_info: Password or email is incorrect
       user_disabled: User disabled
 

@@ -20,7 +20,7 @@ es:
       rol: Rol
       menu: Menú
       delete: Eliminar
-      notice: "Permiso Denegado"
+      notice: Permiso Denegado
 
     edit:
       title-edit: Modificar usuario

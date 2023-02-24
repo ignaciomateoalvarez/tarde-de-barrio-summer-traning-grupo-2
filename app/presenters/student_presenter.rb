@@ -9,7 +9,7 @@ class StudentPresenter
   def student
     @student = Student.find(params[:id]).decorate
   end
-
+  
   def students
     paginate unless @pagy.present?
     @students.decorate

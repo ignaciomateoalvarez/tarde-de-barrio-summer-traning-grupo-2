@@ -1,7 +1,6 @@
 .notice, .warning, .success {
   position: absolute;
-  top: 4rem;
-  margin: auto;
+  top: 3.1rem;
   background-color: white;
   padding: 0.5rem;
   border-radius: 0.625rem;

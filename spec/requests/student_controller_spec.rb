@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe StudentsController, type: :controller do
   before(:each) do
     @user = build(:user)
+    #@student = build(:student)
     login_user
   end
 
@@ -15,8 +16,9 @@ RSpec.describe StudentsController, type: :controller do
   end
 
   describe 'GET edit' do
-    let(:student) { create(:student) }
-    before { get edit_student_path(student.id) }
-    it { expect(response).to have_http_status(:ok) }
+    let(:student) { FactoryBot.create(:student) }
+    #before { get edit_student_path(id: @student.id) }
+    before { get edit_student_path(student) }
+    it { is_expected. to (response).to have_http_status(:ok) }
   end
 end

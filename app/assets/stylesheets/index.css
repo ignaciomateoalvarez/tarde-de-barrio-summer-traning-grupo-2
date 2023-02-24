@@ -5,10 +5,8 @@
 }
 
 .home-container {
-	min-height: 42em;
-	min-width: 62.5rem;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	background-color: white;
 	display: flex;
 	flex-direction: column;

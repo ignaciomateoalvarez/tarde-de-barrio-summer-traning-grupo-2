@@ -9,6 +9,5 @@ FactoryBot.define do
     attends { Faker::Boolean.boolean }
     school_grade { 'inicial' }
     association :user, factory: :user, strategy: :create 
-    
   end
 end

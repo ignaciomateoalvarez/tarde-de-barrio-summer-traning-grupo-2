@@ -2,7 +2,7 @@
   <%= tag.div data: { controller: "turbo-delete-modal", turbo_delete_modal_target: "delete-modal", action: 
     "turbo:submit-end->turbo-delete-modal#submitEnd" } do %>
     <div class= 'close-delete-student'>
-      <%= button_tag 'X', data: { action: "turbo-delete-modal#closeModal" }, type: "button"%>
+      <%= button_tag 'X', data: { action: "turbo-delete-modal#closeModal" }, type: "button", class: "close-modal"%>
     </div>
     
     <div class = "buttons-delete-modal">

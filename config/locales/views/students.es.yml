@@ -20,7 +20,7 @@ es:
       log-out: Cerrar Sesión
     student: 
       yes_: Sí
-      no_: No
+      no_: 'No'
     new:
       name: Nombre
       last_name: Apellido
@@ -31,7 +31,7 @@ es:
       student_new: Registrar estudiante
       new_student: Nuevo estudiante
       yes_: Sí
-      no_: No
+      no_: 'No'
     create:
       created: Created Student successfully
       not_created: Could not create Student

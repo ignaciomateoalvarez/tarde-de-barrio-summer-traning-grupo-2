@@ -6,8 +6,8 @@
     </div>
     
     <div class = "buttons-delete-modal">
-    <h2 class = "h2_delete_modal">¿Seguro que deseas eliminar este estudiante?</h2>
-    <%= button_to "Eliminar",student_path(@student.id),method: :delete,  class:"button-delete-student"%>
+    <h2 class = "h2_delete_modal"><%= t('.delete_modal') %></h2>
+    <%= button_to t('.delete'),student_path(@student.id),method: :delete,  class:"button-delete-student"%>
     </div>
 
   <% end %>

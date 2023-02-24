@@ -53,6 +53,9 @@ es:
       stand-out: Destacar
       post-comment: Publicar
       comments: Comentarios
+    delete_modal:
+      delete_modal: ¿Seguro que deseas eliminar este estudiante?
+      delete: Eliminar
     edit:
       name: Nombre
       last_name: Apellido

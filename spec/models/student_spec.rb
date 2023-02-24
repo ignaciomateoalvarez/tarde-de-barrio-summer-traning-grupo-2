@@ -13,7 +13,7 @@ RSpec.describe Student, type: :model do
       it { is_expected.to validate_presence_of(:address) }
       it { should define_enum_for(:school_grade).with_values([:inicial, :primaria, :secundaria]) }
       it "Doesn't allow future dates" do
-        student = build(:student, birth_date: Date.tomorrow)
+        student = create(:student, birth_date: Faker::Date.forward(days:2))
         expect(student).to_not be_valid
         expect(student.errors[:birth_date]).to include("No se pudo crear el estudiante")
       end
@@ -28,6 +28,14 @@ RSpec.describe Student, type: :model do
       it { is_expected.to belong_to(:user) }
     end
     #hasta acá 
+
+    describe 'Associations' do
+      it { should have_many (:comments) }
+    end
+
+    describe 'Associations' do
+      it { should have_many (:comments) }
+    end
 
     describe 'Length' do
       it { is_expected.to validate_length_of(:first_name).is_at_least(3) }

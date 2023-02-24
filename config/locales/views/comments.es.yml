@@ -1,0 +1,5 @@
+es:
+  comments:
+    create:
+      created: Se creo el comentario con exito
+      not_created: No se pudo crear el comentario

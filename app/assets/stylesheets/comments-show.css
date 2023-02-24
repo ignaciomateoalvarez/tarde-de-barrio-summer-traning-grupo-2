@@ -59,6 +59,7 @@
   text-align: center;
   font-size: 16px;
   font-family: 'Roboto';
+  justify-content: center;
 }
 
 .left-bottom-comment {
@@ -70,4 +71,9 @@
   display: flex;
   align-self: center;
 
+}
+.date-h3{
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
 }

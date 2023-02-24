@@ -6,9 +6,8 @@
 .side-bar {
   float: left;
   height: 100%;
-  width: 20%;
-  margin: auto;
-  margin-left: 0px;
+  width: 30%;
+  margin: 0px auto auto 0px;
 }
 .student-links{
 	color: black;
@@ -76,4 +75,8 @@
 .show-h2 {
 
   color: #0090AF;
+}
+
+.show-student-body{
+  height: 100%;
 }

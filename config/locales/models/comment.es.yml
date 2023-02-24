@@ -1,0 +1,5 @@
+es:
+  comments:
+    create:
+      created:  Comentario publicado
+      not_created: Comentario no publicado 

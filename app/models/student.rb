@@ -3,6 +3,7 @@ require 'date'
 class Student < ApplicationRecord
 
   belongs_to :user 
+  has_many :comments, dependent: :destroy 
 
   validates :first_name, :last_name, length: { minimum: 3 }, presence: true,
                                      format: { with: /\A[a-zA-Z\ñÑ\u00C0-\u017F\']+[\s?[a-zA-Z\ñÑ\u00C0-\u017F\']*]*\z/ }
@@ -12,8 +13,7 @@ class Student < ApplicationRecord
   validates :school_grade, presence: true
 
   validate :cant_be_future
-  #validates :active_student, inclusion: { in: [true, false] }
-
+  
   enum school_grade: %i[inicial primaria secundaria]
 
   def age

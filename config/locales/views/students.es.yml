@@ -49,10 +49,12 @@ es:
       objectives: Objetivos
       learn-alfabet: Aprender el alfabeto
       learn-tables: Aprender las tablas
+      today: Hoy
     post_comment:
-      stand-out: Destacar
+      highlight: Destacar
       post-comment: Publicar
       comments: Comentarios
+      post-placeholder: ¿Qué deseas publicar?. Puedes utilizar '@' para mencionar personas.
     delete_modal:
       delete_modal: ¿Seguro que deseas eliminar este estudiante?
       delete: Eliminar
@@ -72,6 +74,8 @@ es:
     destroy:  
       deleted: Estudiante borrado correctamente
       not_deleted: No se pudo borrar correctamente al estudiante 
+
+
 
     activerecord:
       attributes:

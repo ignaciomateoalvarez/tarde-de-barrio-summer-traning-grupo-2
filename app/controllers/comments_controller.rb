@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
-  include Pundit::Authorization
+  include Pundit::Authorization 
+
   def create
+    authorize Comment
     @comment = Comment.new(comment_params)
     if @comment.save
       redirect_to student_path(comment_params[:student_id]), success: t('.created')

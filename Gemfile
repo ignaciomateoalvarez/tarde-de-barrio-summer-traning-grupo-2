@@ -93,3 +93,5 @@ end
 
 gem 'pundit', '~> 2.3'
 gem 'rails-i18n', '~> 7.0.0'
+
+gem "dockerfile-rails", ">= 1.2", :group => :development

@@ -1,4 +1,4 @@
-body {
+.container-session {
 	font-family: Roboto, sans-serif;
 	background-color: #0090af;
 	display: flex;
@@ -6,6 +6,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 55rem;
+	height: 100%;
 }
 
 .main-box {

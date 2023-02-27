@@ -1,0 +1,43 @@
+.table-container{
+  display: flex;
+  justify-content: center;
+}
+
+.table-class {
+  width: 100%;
+  table-layout: fixed;
+  margin: 0 3.75rem 2.5rem 3.75rem;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+}
+
+.table-data {
+  padding: 10px;
+  text-align: center;
+}
+
+.table-button-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tr-row-data {
+  height: 3rem;
+  outline: 0.0625rem solid #cccccc;
+  border-radius: 0.625rem;
+
+}
+
+.tr-row-data:hover{
+  outline: 0.2rem solid #0090af;
+}
+
+.table-head{
+  color: #0090af;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  text-align: center;
+}

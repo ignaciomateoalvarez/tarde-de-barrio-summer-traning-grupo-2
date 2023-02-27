@@ -74,6 +74,7 @@ en:
     destroy:  
       delete: Student deleted successfully
       not_deleted: Student cant be deleted  
+      notice: You cannot delete this student
 
 
 

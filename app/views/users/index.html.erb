@@ -29,56 +29,61 @@
           </div>
       </div>
     <%end%>
-  </div> 
-  <table class= 'user-container'>
-    <thead>
-      <tr class='user-th'>
-        <th> <%= t('.users')%> </th> 
-        <th> <%= t('.email')%> </th>
-        <th> <%= t('.role') %> </th>
-        <th> <%= t('.active') %> </th>
-        <th> <%= t('.edit') %> </th>
-        <th> <%= t('.menu') %> </th>
-        <th> <%= t('.delete') %> </th>
-      <tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td colspan="2">
-          <% @users.each do |user| %>
-            <tr class='user'>
-              <td class='name'> <%= user.first_name %> <%= user.last_name %> </td>
-              <td class='email-users'> <%= user.email %> </td>
-              <td class='role'>
-                <%= user.role %>
-              </td>         
-              <%# Activate switch %>  
-              <td class='toggle-button'>
-                <%= form_with(model: user, url: user_toggle_active_path(user), method: :put) do |form| %>
+  </div>
+  <div class='table-container'> 
+    <table class='table-class'>
+      <thead>
+        <tr>
+          <th class='table-head'> <%= t('.users')%> </th> 
+          <th class='table-head'> <%= t('.email')%> </th>
+          <th class='table-head'> <%= t('.role') %> </th>
+          <th class='table-head'> <%= t('.active') %> </th>
+          <th class='table-head'> <%= t('.edit') %> </th>
+          <th class='table-head'> <%= t('.menu') %> </th>
+          <th class='table-head'> <%= t('.delete') %> </th>
+        <tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr class='tr-row-data'>
+            <td class='table-data'> <%= user.first_name %> <%= user.last_name %> </td>
+            <td class='table-data'> <%= user.email %> </td>
+            <td class='table-data'>
+              <%= user.role %>
+            </td>         
+            <%# Activate switch %>  
+            <td>
+            <div class='table-button-center'>
+              <%= form_with(model: user, url: user_toggle_active_path(user), method: :put) do |form| %>
                 <div class="toggle-button" data-controller="users">
                   <%= form.check_box :active, data:{users_target:"checkbox", action:"users#toggleActive"} ,id:user.id   %>
                   <label class="" for=<%=user.id%>><%= form.submit %></label>
                 </div>
-                <% end %>
-              </td>
-              <td> <%= link_to edit_user_path(user), data: { turbo_frame: 'modal' } do%>
-                <div class="edit-icon">
-                </div>
-              <% end %> 
-              </td>
-              <td>
+              <% end %>
+            </div>
+            </td>
+            <td> 
+              <div class='table-button-center'>
+                <%= link_to edit_user_path(user), data: { turbo_frame: 'modal' } do%>
+                  <div class="edit-icon"></div>
+                <% end %> 
+              </div>
+            </td>
+            <td>
+              <div class='table-button-center'>
                 <div class="menu-modal-icon"></div>
-              </td>
-              <td>
+              </div>
+            </td>
+            <td>
+              <div class='table-button-center'>
                 <div class="delete-icon"></div>
-              </td>
-            </tr>
-          <% end %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
   <div class='pagination-var'>
     <%== pagy_nav(@pagy) %>
   </div>

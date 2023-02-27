@@ -30,25 +30,23 @@
       </div>
     <% end %>
   </div> 
-  <table class= 'user-container'>
-    <thead>
-      <tr class='user-th'>
-        <th> <%= t('.students')%> </th> 
-        <th> <%= t('.age') %> </th>
-        <th> <%= t('.school_grade') %> </th>
-        <th> <%= t('.attendance') %> </th>
-        <th> <%= t('.edit') %> </th>
-        <th> <%= t('.delete') %> </th>
-      <tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td colspan="2">
-          <%= render partial: "student", collection: @presenter.students %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class='table-container'>
+    <table class='table-class'>
+      <thead>
+        <tr>
+          <th class='table-head'> <%= t('.students')%> </th> 
+          <th class='table-head'> <%= t('.age') %> </th>
+          <th class='table-head'> <%= t('.school_grade') %> </th>
+          <th class='table-head'> <%= t('.attendance') %> </th>
+          <th class='table-head'> <%= t('.edit') %> </th>
+          <th class='table-head'> <%= t('.delete') %> </th>
+        <tr>
+      </thead>
+      <tbody>
+        <%= render partial: "student", collection: @presenter.students %>
+      </tbody>
+    </table>
+  </div> 
   <div class='pagination-var'>
     <%== pagy_nav(@presenter.pagynate) %>
   </div>

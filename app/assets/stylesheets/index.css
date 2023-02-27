@@ -112,35 +112,6 @@
 	font-size: 0.5rem;
 }
 
-.user-th {
-	display: flex;
-	justify-content: space-between;
-	color: #0090af;
-	padding: 0.3125rem;
-}
-
-.user {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	border-radius: 0.3125rem;
-	border: 0.0625rem solid #dadada;
-	padding: 1.5rem;
-	height: 0.5rem;
-}
-
-.user:hover {
-	border: 0.0625rem solid #0090af;
-}
-
-.name {
-	max-width: 0;
-}
-
-.email-users {
-	max-width: 3%;
-}
-
 .filter {
 	width: 23rem;
 	height: 2.5rem;
@@ -186,14 +157,6 @@
 	margin: 0 0.625rem;
 }
 
-a {
-
-	text-decoration: none;
-	color : black;
-}
-
-
-
 .menu-modal-icon {
 	background: url("ellipsis-vertical-solid.svg");
 	background-size: cover;
@@ -214,18 +177,13 @@ a {
 	width: 30rem;
 	word-break: break-word;
 	border-radius: 0.5rem;
-	top: 100px;
-	left: 666px;
   background-color: #0090af;
 }
 
-.role {
-	max-width: 0;
-	margin-right: 2%;
-}
 /* Toggle */
-.toggle-button {
-	margin-bottom: 0.5rem;
+.toggle-button{
+  display: flex;
+  align-items: center;
 }
 
 .toggle-button input[type="checkbox"] {

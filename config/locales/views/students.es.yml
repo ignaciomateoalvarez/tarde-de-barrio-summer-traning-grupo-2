@@ -74,6 +74,7 @@ es:
     destroy:  
       deleted: Estudiante borrado correctamente
       not_deleted: No se pudo borrar correctamente al estudiante 
+      notice: No podes eliminar este estudiante
 
 
 

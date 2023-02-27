@@ -13,6 +13,10 @@
 	color: black;
   font-size: 1rem;
 }
+.student-links:hover{
+	color: #0090af;
+  font-size: 1rem;
+}
 .student-links:nth-child(3){
   color: #0090AF;
   font-size: 20px;

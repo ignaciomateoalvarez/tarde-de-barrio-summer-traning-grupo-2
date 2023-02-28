@@ -10,6 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <% if logged_in? %>
+      <%= render 'partial/navbar' %>
+    <% end %>
     <% flash.each do |type, msg| %>
     <% case type when "warning" %>
       <div class="warning"  data-controller="flash">

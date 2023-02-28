@@ -1,9 +1,9 @@
 <%= turbo_frame_tag "modal" do %>
+  <div class="container-modal">
   <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "modal", action: 
     "turbo:submit-end->turbo-modal#submitEnd 
     keyup@window->turbo-modal#closeWithKeyboard 
     click@window->turbo-modal#closeBackground" } do %>
-    <%= button_tag 'X', class: 'close', data: { action: "turbo-modal#closeModal" }, type: "button"%>
     <h1 class='m-title'><%= t('.edit_student') %></h1>
     <%= form_with url: student_path(@student), scope: :student, method: :put do |form| %>
       <div class="m-login-form">
@@ -25,7 +25,7 @@
         </div>
         <div class='m-item'>
           <%= form.label :school_grade, t('.school_grade'), class: 'school-grade-form' %>
-          <%= form.select :school_grade, Student.school_grades.keys, class: 'input-form' %>
+          <%= form.select :school_grade, Student.school_grades.keys, {} ,{ class: "input-form" } %>
         </div>
         <div class="school-attendance-form">
           <%= form.label :attends, t('.attendance'), class: 'label-form' %>
@@ -65,4 +65,5 @@
       </div>
     <% end %>
   <% end %>
+  </div>
 <% end %>

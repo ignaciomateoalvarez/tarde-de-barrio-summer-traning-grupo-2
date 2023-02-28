@@ -3,7 +3,6 @@
     "turbo:submit-end->turbo-modal#submitEnd 
     keyup@window->turbo-modal#closeWithKeyboard 
     click@window->turbo-modal#closeBackground" } do %>
-    <%= button_tag 'X', class: 'close', data: { action: "turbo-modal#closeModal" }, type: "button"%>
     <h1 class='m-title'><%= t('.new_student') %></h1>
     <%= form_with url: students_path, scope: :student, method: :post do |form| %>
       <div class="m-login-form">

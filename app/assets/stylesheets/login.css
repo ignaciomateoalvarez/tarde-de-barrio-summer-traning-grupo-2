@@ -1,5 +1,4 @@
 .container-session {
-	font-family: Roboto, sans-serif;
 	background-color: #0090af;
 	display: flex;
 	box-sizing: border-box;
@@ -57,7 +56,6 @@
 }
 
 .remember-me {
-	font-family: Inter, sans-serif;
 	align-self: flex-start;
 }
 

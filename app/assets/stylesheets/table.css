@@ -4,18 +4,29 @@
 }
 
 .table-class {
-  width: 100%;
-  table-layout: fixed;
+  width: 80%;
   margin: 0 3.75rem 2.5rem 3.75rem;
   display: table;
   border-collapse: collapse;
   border-spacing: 0;
-
 }
 
 .table-data {
-  padding: 10px;
+  padding: 0.625rem;
   text-align: center;
+}
+
+.table-class tr th:first-child{
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.table-class tr td:first-child{
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #474747;
 }
 
 .table-button-center{
@@ -38,6 +49,16 @@
 .table-head{
   color: #0090af;
   text-transform: uppercase;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   text-align: center;
+}
+
+.delete-button {
+  position: relative;
+}
+
+.delete-icon {
+  position: absolute;
+  left: 10px;
+  top: -13px;
 }

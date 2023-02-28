@@ -13,7 +13,7 @@ class Student < ApplicationRecord
   validates :school_grade, presence: true
 
   validate :cant_be_future
-  
+
   enum school_grade: %i[inicial primaria secundaria]
 
   def age
@@ -27,5 +27,4 @@ class Student < ApplicationRecord
       true
     end
   end
-
 end

@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 class UserSessionsController < ApplicationController
-
   skip_before_action :require_login, only: [:new, :create]
 
-  def new; end
+  def new
+    redirect_to students_path if current_user
+  end
 
   #User login
   def create

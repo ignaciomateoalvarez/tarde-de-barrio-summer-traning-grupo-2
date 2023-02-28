@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class UserRegistrationsController < ApplicationController
-
   skip_before_action :require_login, only: [:new, :create]
   def new
+    redirect_to students_path if current_user
     @user = User.new
   end
 

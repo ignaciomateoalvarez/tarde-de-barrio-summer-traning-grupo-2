@@ -39,4 +39,8 @@ class UserPolicy
   def destroy?
     false
   end
+
+  def logged?
+    user.is_logged?
+  end
 end

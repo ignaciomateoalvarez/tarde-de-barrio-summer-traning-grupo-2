@@ -1,5 +1,5 @@
 .vl {
-  border-right: 3px solid lightgray;
+  border-right: 0.1875rem solid lightgray;
   height: 90%;
 }
 
@@ -7,15 +7,22 @@
   float: left;
   height: 100%;
   width: 30%;
-  margin: 0px auto auto 0px;
+  margin: 0 auto auto 0;
 }
 
 .student-links{
   text-align: left;
 	color: black;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+}
+
+.profile-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
+  color: #474747;
 }
 
 .student-links:hover{
@@ -31,7 +38,7 @@
   margin-left: 1.7%;
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .student-info {
@@ -39,7 +46,7 @@
   padding: 5%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875rem;
   padding-top: 0%;
 }
 .obj-title {
@@ -47,18 +54,18 @@
   justify-content: space-between;
 }
 .student-description {
-  gap: 10px;
+  gap: 0.625rem;
   display: flex;
   flex-direction: column;
 }
 
 .student-show-label {
-  gap: 10px;
+  gap: 0.625rem;
   display: flex;
-  padding: 5px;
-  margin: 5px;
+  padding: 0.3125rem;
+  margin: 0.3125rem;
   width: 100%;
-  margin-left: 0px;
+  margin-left: 0rem;
 }
 
 .show-container {
@@ -69,18 +76,35 @@
 .school-subjects {
   background-color: #9729EE;
   color: white;
-  border-radius: 18px;
+  border-radius: 1.125rem;
   width: fit-content;
-  padding: 3px;
+  padding: 0.1875rem;
 }
 
 .school-subjects-edit {
   display: flex;
-  gap: 10px
+  gap: 0.625rem;
 }
 
 .show-h2 {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #0090AF;
+}
+
+.title-info {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #474747;
+}
+
+.field-info {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #474747;
 }
 
 .show-student-body{

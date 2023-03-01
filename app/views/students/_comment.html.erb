@@ -1,6 +1,4 @@
 <section class='comments-main-section'>
-
-
   <div class='today-comments'>
     <div class='comment-nd'>
       <div class= "name-date"> 
@@ -8,12 +6,28 @@
         <p class='comment-time'><%= comment.hour %></p>
       </div>
       <div class= "likes">
-        <p>99</p>
+        <p>1</p>
         <%= image_submit_tag("Vector.svg", class: 'comment-svg')%>
-
       </div>
     </div>
     <p class = "comment-p"><%= comment.user_comment %> </p>
+    <details>
+      <summary></summary>
+      <% comment.answers.each do |answer| %>
+        <div class="answer">
+          <div class="comment-nd">
+            <div class= "name-date"> 
+              <h2 class='comment-name'><%= answer.user.first_name %></h2>
+              <p class='comment-time'><%= answer.created_at.to_fs(:time) %></p>
+            </div>
+          </div>
+          <p><%= answer.body %> </p>
+        </div>
+      <% end %>
+      <%= form_with url:student_comment_answers_path(student, comment.id), method: :post do |form| %>
+        <%= form.text_area :body, class: 'comment-area answer-input', placeholder: t('.post-placeholder') %>
+        <%= form.submit %>
+      <% end %>
+    </details>
   </div>
-
 </section>

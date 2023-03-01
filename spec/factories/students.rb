@@ -8,6 +8,6 @@ FactoryBot.define do
     address { Faker::Address.city }
     attends { Faker::Boolean.boolean }
     school_grade { 'inicial' }
-    association :user, factory: :user, strategy: :create 
+    user
   end
 end

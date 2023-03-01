@@ -1,5 +1,5 @@
 <body class="show-student-body">
-  <div class='home-container' id='modal-background'>
+  <div class='home-container-student' id='modal-background'>
     <div class='bread-crum-nav'>
       <%= link_to t('.students'), students_path, class: 'student-links' %>
       <p><strong>&nbsp;>&nbsp;</strong></p>
@@ -8,20 +8,20 @@
     <div class='show-container'>
       <aside left class='side-bar'>
       <section class='student-info vl'>
-        <h1><%= @student.full_name %></h1>
+        <h1 class="profile-name"><%= @student.full_name %></h1>
         <div class='student-description'>
           <h2 class= "show-h2"><%= t('.student-data') %> </h2>
-          <h3><%= t('.birth_date')%> </h3>
-          <p><%= @student.birth_date %> </p>
-          <h3><%= t('.address')%> </h3>
-          <p><%= @student.address %></p>
-          <h3><%= t('.grade')%></h3>
-          <p><%= @student.grade %></p>
-          <h3><%= t('.attendance')%></h3>
-          <p><%= @student.attendance %></p>
-          <h3><%= t('.favorite-subjects')%></h3>
+          <h3 class="title-info"><%= t('.birth_date')%> </h3>
+          <p class="field-info"><%= @student.birth_date %> </p>
+          <h3 class="title-info"><%= t('.address')%> </h3>
+          <p class="field-info"><%= @student.address %></p>
+          <h3 class="title-info"><%= t('.grade')%></h3>
+          <p class="field-info"><%= @student.grade %></p>
+          <h3 class="title-info"><%= t('.attendance')%></h3>
+          <p class="field-info"><%= @student.attendance %></p>
+          <h3 class="title-info"><%= t('.favorite-subjects')%></h3>
           <p class= "school-subjects"><%= t('.subject1')%></p>
-          <h3><%= t('.most-dificult-subject')%></h3>
+          <h3 class="title-info"><%= t('.most-dificult-subject')%></h3>
           <p class= "school-subjects"><%= t('.subject2')%></p>
         </div>
         <div class='student-objectives'>
@@ -45,11 +45,11 @@
       </section>
     </aside>
     <section class='comments-container'>
-      <%= render partial: "post_comment", locals: {student: @student} %>
-      <% @comments.each do |key, comments| %>
-        <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : key.to_date %> </h3>
-        <%= render partial: "comment" , collection: comments %>
-      <% end %>
+        <%= render partial: "post_comment", locals: {student: @student} %>
+        <% @comments.each do |key, comments| %>
+          <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : key.to_date %> </h3>
+          <%= render partial: "comment" , collection: comments, locals: { student: @student } %>
+        <% end %>
     </section>
   </div>
 </body>

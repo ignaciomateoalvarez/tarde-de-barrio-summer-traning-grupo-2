@@ -55,6 +55,8 @@ es:
       post-comment: Publicar
       comments: Comentarios
       post-placeholder: ¿Qué deseas publicar?. Puedes utilizar '@' para mencionar personas.
+    comment:
+      post-placeholder: ¿Qué deseas publicar?. Puedes utilizar '@' para mencionar personas.
     delete_modal:
       delete_modal: ¿Seguro que deseas eliminar este estudiante?
       delete: Eliminar

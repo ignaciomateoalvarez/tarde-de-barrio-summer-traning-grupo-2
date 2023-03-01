@@ -19,14 +19,13 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timezone: 'America/Argentina/Buenos_Aires'
+  url: <%= ENV.fetch("DATABASE_URL") %>
 
 development:
-  <<: default
-  url: postgres://lautaro:root@localhost/product_dev
+  <<: *default
 
 test:
-  <<: default
-  url: postgres://lautaro:root@localhost/product_test
+  <<: *default
 
 production:
   <<: *default

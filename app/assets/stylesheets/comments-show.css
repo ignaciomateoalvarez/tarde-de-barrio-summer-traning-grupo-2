@@ -6,6 +6,7 @@
   resize: none;
   border-radius: 0.2159rem;
   border: none;
+  padding: 1rem;
 }
 
 .post-comment-container {
@@ -23,24 +24,25 @@
 }
 
 .highlight-checkbox {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .highlight-text {
   font-size: 1rem;
   align-self: center;
-  margin-left: 15px;
+  margin-left: 0.9375rem;
 }
 
 .comment-container-bottom {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .post-comment-svg {
-  height: 2.1875rem;
-  width: 2.1875rem;
+  height: 1.5625rem;
+  width: 1.5625rem;
+  margin-right: 1rem;
 }
 
 .post-comment-button {
@@ -53,20 +55,25 @@
   border-radius: 0.2159rem;
   border: none;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   justify-content: center;
+}
+
+.post-comment-button:hover {
+  cursor:pointer;
+  border: 0.1875rem solid #0a6b81;
 }
 
 .left-bottom-comment {
   display: flex;
   justify-content: space-around;
-  width: 20%;
+  align-items: center;
 }
 .highlight-comment {
   display: flex;
   align-self: center;
-
 }
+
 .date-h3{
   text-align: center;
   margin: 5px;

@@ -9,24 +9,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 User.create(first_name: "Gianlucas", last_name: "Galati", email: "gianlucas@gmail.com",password:'123', active: true, role: 1)
-User.create(first_name: "Carla", last_name: "Ibel", email: "carla@gmail.com",password:'123', active: true, role: 0)
-User.create(first_name: "Juan", last_name: "Bottassi", email: "juan@gmail.com",password:'123', active: true, role: 0)
 
-30.times do
-  User.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.unique.email,
-    password: 'asdasd'
-  )
-end
-30.times do
-  Student.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    birth_date: Faker::Date.birthday(min_age: 2, max_age: 30),
-    address: Faker::Address.full_address,
-    attends: Faker::Boolean.boolean,
-    user: User.create(first_name: "ignacio", last_name: "Bottassi", email: "juanb@gmail.com",password:'123', active: true, role: 0)
-  )
-end
+user = User.create(first_name: "Juan", last_name: "Bottassi", email: "juan@gmail.com",password:'123', active: true, role: 0)
+
+FactoryBot.create_list(:student, 30, user: user)

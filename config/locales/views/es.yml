@@ -16,7 +16,6 @@ es:
       remember-me: Recordame
       recover-password: Olvidé mi contraseña
       google-login: Ingresar con Google
-
     register:
       title: App
       login: Sesión

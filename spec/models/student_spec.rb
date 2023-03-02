@@ -22,7 +22,7 @@ RSpec.describe Student, type: :model do
     describe 'Associations' do
       it { should belong_to(:user) }
     end
-      
+
     #revisar
     describe 'Associations' do
       it { is_expected.to belong_to(:user) }
@@ -54,5 +54,4 @@ RSpec.describe Student, type: :model do
       it { is_expected.not_to allow_value('Juan!').for(:first_name) }
       it { is_expected.not_to allow_value('Ju!an').for(:first_name) }
     end
-
 end

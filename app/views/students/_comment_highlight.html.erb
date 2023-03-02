@@ -1,5 +1,5 @@
 <section class='comments-main-section'>
-  <div class='today-comments'>
+  <div class='today-comments highlight-container'>
     <div class='comment-nd'>
       <div class= "name-date"> 
         <h2 class='comment-name'><%= comment.name %></h2>
@@ -25,8 +25,8 @@
         </div>
       <% end %>
       <%= form_with url:student_comment_answers_path(student, comment.id), method: :post do |form| %>
-        <%= form.text_area :body, class: 'comment-area answer-input', placeholder: t('.post-placeholder') %>
-          <%= image_submit_tag 'send.svg', class:'send-img' %>
+        <%= form.text_area :body, class: 'comment-area answer-input', placeholder: t('students.comment.post-placeholder') %>
+        <%= image_submit_tag 'send.svg', class:'send-img' %>
       <% end %>
     </details>
   </div>

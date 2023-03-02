@@ -46,8 +46,12 @@
     </aside>
     <section class='comments-container'>
         <%= render partial: "post_comment", locals: {student: @student} %>
-        <% @comments.each do |key, comments| %>
-          <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : key.to_date %> </h3>
+        <% @presenter.highlighted.each do |comment| %>
+          <h3 class= "date-h3"> <%= (comment.created_at.to_date == Date.today ) ? t('.today') : comment.format_date %> </h3>
+          <%= render partial: "comment_highlight" , locals: { student: @student, comment: comment } %>
+        <% end %>
+        <% @presenter.not_highlighted.each do |key, comments| %>
+          <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : comments.first.format_date %> </h3>
           <%= render partial: "comment" , collection: comments, locals: { student: @student } %>
         <% end %>
     </section>

@@ -10,11 +10,8 @@ class StudentsController < ApplicationController
 
   def show
     authorize Student
-
-    @student = StudentPresenter.new(params).student
-    @comments = @student.comments.decorate
-                                  .order(created_at: :desc)
-                                  .group_by{ |c| c.created_at.to_date }
+    @presenter = StudentPresenter.new(params)
+    @student = @presenter.student
   end
 
   def new; end

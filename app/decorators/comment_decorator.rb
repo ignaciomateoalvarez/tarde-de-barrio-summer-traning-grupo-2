@@ -7,7 +7,10 @@ class CommentDecorator <  Draper::Decorator
 
   def hour
     created_at.to_fs(:time)
-    #created_at.in_time_zone('America/Buenos_Aires').to_fs(:time)
+  end
+
+  def format_date
+    I18n.l(created_at, format: '%A %d de %B')
   end
 
   def user_comment

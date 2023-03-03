@@ -1,11 +1,12 @@
-<%= form_with url: student_comments_path(@student), scope: :comment, method: :post do |form| %>
+
+<%= form_with url: student_comments_path(@student), scope: :comment, method: :post, data: { controller:"emoji-picker"} do |form| %>
   <div class="post-comment-container">
     <%= form.label :comment, t('.comments'), class: 'title-comments' %>
-    <%= form.text_area :comment, size: "70x10", class:'comment-area', placeholder: t('.post-placeholder')%>
+    <%= form.text_area :comment, size: "70x10", class:'comment-area', placeholder: t('.post-placeholder'), data: { emoji_picker_target: "input" } %>
     <div class='comment-container-bottom'>
       <div class='left-bottom-comment'>
-        <%= image_submit_tag("smile.svg", class: 'post-comment-svg')%>
-        <%= image_submit_tag("image.svg", class: 'post-comment-svg')%>
+        <%= image_tag("smile.svg", class: 'post-comment-svg', data: { action: "click->emoji-picker#toggle", emoji_picker_target: "button" }) %>
+        <%= image_tag("image.svg", class: 'post-comment-svg')%>
         <div class= "highlight-comment">
           <%= form.check_box :highlight , class: 'highlight-checkbox' %>
           <%= form.label t('.highlight'), class: 'highlight-text' %>

@@ -27,7 +27,9 @@ class StudentPresenter
   end
 
   def setup_comments!
-    @highlighted = @student.comments.where(highlight: true).decorate
+    @highlighted = @student.comments.where(highlight: true)
+                                    .decorate
+                                    .group_by{ |c| c.created_at.to_date }
     @not_highlighted = @student.comments.where(highlight: false)
                                         .order(created_at: :desc)
                                         .decorate

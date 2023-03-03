@@ -1,5 +1,5 @@
 <section class='comments-main-section'>
-  <div class='today-comments'>
+  <div class='today-comments <%= comment[:highlight] ? 'highlight-container' : '' %> '>
     <div class='comment-nd'>
       <div class= "name-date"> 
         <h2 class='comment-name'><%= comment.name %></h2>
@@ -10,7 +10,7 @@
         <%= image_submit_tag("Vector.svg", class: 'comment-svg')%>
       </div>
     </div>
-    <p class = "comment-p"><%= comment.user_comment %> </p>
+    <p class ="comment-p"><%= comment.user_comment %> </p>
     <details>
       <summary></summary>
       <% comment.answers.each do |answer| %>

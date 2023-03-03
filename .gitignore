@@ -12,6 +12,8 @@
 /public/uploads/
 /files/
 /log/
+/node_modules
+/node_modules/*
 
 # Ignore all logfiles and tempfiles.
 /log/*.log

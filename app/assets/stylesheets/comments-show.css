@@ -69,6 +69,11 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.left-bottom-comment img{
+  cursor: pointer;
+}
+
 .highlight-comment {
   display: flex;
   align-self: center;

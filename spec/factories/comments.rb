@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :comment do
     comment { "MyText" }
-    association :student
+    user
+    student
   end
 end

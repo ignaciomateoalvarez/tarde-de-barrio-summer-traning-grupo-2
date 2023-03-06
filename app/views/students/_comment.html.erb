@@ -6,8 +6,12 @@
         <p class='comment-time'><%= comment.hour %></p>
       </div>
       <div class= "likes">
-        <p>1</p>
-        <%= image_submit_tag("Vector.svg", class: 'comment-svg')%>
+        <p> <%= comment.likes.count %> </p>
+        <%= button_to student_comment_toggle_like_path(comment.student, comment) do %>
+          <div class='<%= comment.likes.where(user_id: current_user.id).exists? ? 'liked' : '' %> '>
+            <%= image_tag "Vector.svg", class:'comment-svg' %>
+          </div>
+        <% end %>
       </div>
     </div>
     <p class ="comment-p"><%= comment.user_comment %> </p>

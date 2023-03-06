@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     get 'delete_modal', to: 'students#delete_modal'
     resources :comments, only: [:create] do
       resources :answers, only: [:create]
+      post 'toggle_like' => 'likes#toggle_like'
     end
   end
 end

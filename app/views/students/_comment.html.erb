@@ -15,6 +15,11 @@
       </div>
     </div>
     <p class ="comment-p"><%= comment.user_comment %> </p>
+    <div class="files">
+      <% comment.files.each do |doc| %>
+        <%= link_to doc.identifier, doc.url %>
+      <% end %>
+    </div>
     <details>
       <summary></summary>
       <% comment.answers.each do |answer| %>

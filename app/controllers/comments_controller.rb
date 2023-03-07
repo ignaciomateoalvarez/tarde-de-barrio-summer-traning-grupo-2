@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  include Pundit::Authorization 
+  include Pundit::Authorization
 
   def create
     authorize Comment
@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:comment, :highlight)
+    params.require(:comment).permit(:comment, :highlight, { files: [] }, { files_cache: [] }, { remove_file: [] })
                             .merge(user: current_user, student_id: params[:student_id])
   end
 end

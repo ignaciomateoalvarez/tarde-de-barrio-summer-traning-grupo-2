@@ -79,8 +79,43 @@
   align-self: center;
 }
 
-.date-h3{
+.date-h3 {
   text-align: center;
   margin: 5px;
   padding: 5px;
+}
+
+.files {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name {
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  background-color: #ebebeb;
+}
+
+.label-files {
+  margin-top: 0.3rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.files a{
+  width: fit-content;
+  border: 1px solid #CACACA;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin: 0.2rem;
+  color: #474747;
+}
+
+.files a:hover{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24),0 2px 4px 0 rgba(0,0,0,0.19);
 }

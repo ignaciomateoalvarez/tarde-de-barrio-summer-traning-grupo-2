@@ -1,0 +1,23 @@
+<%= form_with url:posts_path(), scope: :comment, method: :post, data: { controller:"emoji-picker"} do |form| %>
+  <div class="post-comment-container" data-controller='file'>
+    <%= form.label :comment, t('.comments'), class: 'title-comments' %>
+    <%= form.text_area :comment, size: "70x10", class:'comment-area', placeholder: t('students.post_comment.post-placeholder'), data: { emoji_picker_target: "input" } %>
+    <div class='comment-container-bottom'>
+      <div class='left-bottom-comment'>
+        <%= image_tag("smile.svg", class: 'post-comment-svg', data: { action: "click->emoji-picker#toggle", emoji_picker_target: "button" }) %>        
+        <%= form.label :files, class: 'label-files' do %>
+          <%= image_tag("image.svg", class: 'post-comment-svg')%>
+        <% end %>
+        <%= form.file_field :files, data:{ file_target: 'files', action:'input->file#show' }, multiple: true%>
+        <%= form.hidden_field :files_cache %>
+        <div class= "highlight-comment">
+          <%= form.check_box :highlight , class: 'highlight-checkbox' %>
+          <%= form.label t('students.post_comment.highlight'), class: 'highlight-text' %>
+        </div>
+      </div>
+      <%= form.submit t('students.post_comment.post-comment'), class:'post-comment-button '%>
+    </div>
+    <div data-file-target='fileName'>
+    </div>
+  </div>
+<% end %>

@@ -1,4 +1,4 @@
-class CommentDecorator <  Draper::Decorator
+class PublicationDecorator < Draper::Decorator
   delegate_all
   include Draper::LazyHelpers
   def name
@@ -14,6 +14,10 @@ class CommentDecorator <  Draper::Decorator
   end
 
   def user_comment
-    comment.comment
+    publication.comment
+  end
+
+  def like?
+    publication.likes.where(user_id: current_user.id).exists?
   end
 end

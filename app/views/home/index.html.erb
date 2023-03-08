@@ -1,0 +1,32 @@
+<div class='show-container'>
+  <div class='comments-container'>
+    <section class='comment-main-section'>
+      <%= render partial: "submit_post", locals: {} %>
+      <% @presenter.highlighted.each do |key, posts| %>
+        <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : posts.first.format_date %> </h3>
+        <%= render partial: "post" , collection: posts %>
+      <% end %>
+      <% @presenter.not_highlighted.each do |key, posts| %>
+        <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : posts.first.format_date %> </h3>
+        <%= render partial: "post" , collection: posts %>
+      <% end %>
+  </div>
+  <aside left class='side-bar'>
+    <section class='student-info'>
+      <h1 class="profile-name"></h1>
+      <div class='student-description'>
+      </div>
+      <div class='student-objectives'>
+        <div class="obj-title">
+          <h2><%= t('.objectives')%></h2>
+          <div class="image">
+            <%= image_tag 'plus-circle.png' %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <p></p>
+    </section>
+  </aside>
+</div>

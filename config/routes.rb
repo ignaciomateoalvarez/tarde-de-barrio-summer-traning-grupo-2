@@ -22,4 +22,11 @@ Rails.application.routes.draw do
       post 'toggle_like' => 'likes#toggle_like'
     end
   end
+
+  resources :posts, only: [:create] do
+    post 'answer' => 'answers#create_post_answer'
+    post 'toggle_like' => 'likes#toggle_post_like'
+  end
+
+  get 'home', to: 'home#index'
 end

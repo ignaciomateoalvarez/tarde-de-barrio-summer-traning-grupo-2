@@ -11,7 +11,7 @@ class StudentPresenter
     setup_comments!
     @student
   end
-  
+
   def students
     paginate unless @pagy.present?
     @students.decorate

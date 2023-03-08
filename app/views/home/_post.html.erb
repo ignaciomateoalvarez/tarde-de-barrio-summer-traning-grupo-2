@@ -1,28 +1,28 @@
 <section class='comments-main-section'>
-  <div class='today-comments <%= comment[:highlight] ? 'highlight-container' : '' %> '>
+  <div class='today-comments <%= post[:highlight] ? 'highlight-container' : '' %> '>
     <div class='comment-nd'>
       <div class= "name-date"> 
-        <h2 class='comment-name'><%= comment.name %></h2>
-        <p class='comment-time'><%= comment.hour %></p>
+        <h2 class='comment-name'><%= post.name %></h2>
+        <p class='comment-time'><%= post.hour %></p>
       </div>
       <div class= "likes">
-        <p> <%= comment.likes.count %> </p>
-        <%= button_to student_comment_toggle_like_path(comment.student, comment) do %>
-          <div class='<%= 'liked' if comment.decorate.like? %> '>
+        <p> <%= post.likes.count %> </p>
+        <%= button_to post_toggle_like_path(post) do %>
+          <div class='<%= 'liked' if post.decorate.like? %>'>
             <%= image_tag "Vector.svg", class:'comment-svg' %>
           </div>
         <% end %>
       </div>
     </div>
-    <p class ="comment-p"><%= comment.user_comment %> </p>
+    <p class ="comment-p"><%= post.user_comment %></p>
     <div class="files">
-      <% comment.files.each do |doc| %>
+      <% post.files.each do |doc| %>
         <%= link_to doc.identifier, doc.url %>
       <% end %>
     </div>
     <details>
       <summary></summary>
-      <% comment.answers.each do |answer| %>
+      <% post.answers.each do |answer| %>
         <div class="answer">
           <div class="comment-nd">
             <div class= "name-date"> 
@@ -33,7 +33,7 @@
           <p><%= answer.body %> </p>
         </div>
       <% end %>
-      <%= form_with url:student_comment_answers_path(student, comment.id), method: :post do |form| %>
+      <%= form_with url: post_answer_path(post), method: :post do |form| %>
         <%= form.text_area :body, class: 'comment-area answer-input', placeholder: t('.post-placeholder') %>
           <%= image_submit_tag 'send.svg', class:'send-img' %>
       <% end %>

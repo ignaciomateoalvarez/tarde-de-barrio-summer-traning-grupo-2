@@ -3,9 +3,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to home_path, success: t('.created')
+      redirect_to home_path, success: t('comments.create.created')
     else
-      redirect_to home_path, warning: t('.not_created')
+      redirect_to home_path, warning: t('comments.create.not_created')
     end
   end
 

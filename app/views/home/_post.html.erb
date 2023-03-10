@@ -34,7 +34,7 @@
         </div>
       <% end %>
       <%= form_with url: post_answer_path(post), method: :post do |form| %>
-        <%= form.text_area :body, class: 'comment-area answer-input', placeholder: t('.post-placeholder') %>
+        <%= form.text_area :body, class: 'comment-area answer-input', placeholder: t('students.post_comment.post-placeholder') %>
           <%= image_submit_tag 'send.svg', class:'send-img' %>
       <% end %>
     </details>

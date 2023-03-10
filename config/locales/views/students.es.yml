@@ -33,8 +33,8 @@ es:
       yes_: Sí
       no_: 'No'
     create:
-      created: Created Student successfully
-      not_created: Could not create Student
+      created: Estudiante creado correctamente
+      not_created: No se puedo crear al estudiante
     show:
       students: Estudiantes
       student-data: Detalle de estudiante

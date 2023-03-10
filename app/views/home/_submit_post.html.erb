@@ -1,6 +1,6 @@
 <%= form_with url:posts_path(), scope: :comment, method: :post, data: { controller:"emoji-picker"} do |form| %>
   <div class="post-comment-container" data-controller='file'>
-    <%= form.label :comment, t('.comments'), class: 'title-comments' %>
+    <%= form.label :comment, t('.news'), class: 'title-comments' %>
     <%= form.text_area :comment, size: "70x10", class:'comment-area', placeholder: t('students.post_comment.post-placeholder'), data: { emoji_picker_target: "input" } %>
     <div class='comment-container-bottom'>
       <div class='left-bottom-comment'>

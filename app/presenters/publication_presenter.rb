@@ -11,8 +11,8 @@ class PublicationPresenter
                        .decorate
                        .group_by { |c| c.created_at.to_date }
     @not_highlighted = Post.where(highlight: false)
-                       .order(created_at: :desc)
-                       .decorate
-                       .group_by { |c| c.created_at.to_date }
+                           .order(created_at: :desc)
+                           .decorate
+                           .group_by { |c| c.created_at.to_date }
   end
 end

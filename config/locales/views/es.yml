@@ -26,3 +26,14 @@ es:
       confirm-password: Confirmar contraseña
       register: Registrarme
       google-login: Registrarme con Google
+    submit_post:
+      news: Novedades
+    index:
+      assists: Asistencias
+      student: Alumnos
+      present students: Alumnos que estan presentes
+      absent students: Alumnos que estan ausentes
+      retired students: Alumnos que se retiraron
+      asist: Asistencia
+      highlighted: Destacados
+      equipment: Equipo

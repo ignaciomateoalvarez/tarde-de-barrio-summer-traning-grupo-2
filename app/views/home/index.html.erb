@@ -1,5 +1,5 @@
 <div class='show-container'>
-  <div class='comments-container'>
+  <div class='comments-container home-box'>
     <section class='comment-main-section'>
       <%= render partial: "submit_post", locals: {} %>
       <% @presenter.highlighted.each do |key, posts| %>
@@ -12,21 +12,67 @@
       <% end %>
   </div>
   <aside left class='side-bar'>
-    <section class='student-info'>
-      <h1 class="profile-name"></h1>
-      <div class='student-description'>
-      </div>
-      <div class='student-objectives'>
-        <div class="obj-title">
-          <h2><%= t('.objectives')%></h2>
-          <div class="image">
-            <%= image_tag 'plus-circle.png' %>
+    <section class='home-box asist-container'>
+      <h2 class="asist-title"><%=t('.assists')%></h2>
+      <details>
+        <summary></summary>
+        <table>
+          <thead>
+            <th class="asist-header" ><%=t('.student')%></th>
+            <th class="asist-header">
+              <div class="tooltip"> 
+                P <span class="tooltip-text present"><%=t('.present students')%></span>
+              </div>
+            </th>
+            <th class="asist-header">
+              <div class="tooltip">
+                A <span class="tooltip-text ausent"><%=t('.absent students')%></span>
+              </div>
+            </th>
+            <th class="asist-header">
+              <div class="tooltip">
+                R <span class="tooltip-text retired"><%=t('.retired students')%></span>
+              </div>
+            </th>
+          </thead>
+          <tbody>
+            <%= render partial:'student_asist', collection: @students %>
+          </tbody>
+        </table>
+      </details>
+    </section>
+    <section class='home-box asist-container count-asist-container'>
+      <details>
+        <summary> </summary>
+        <div class="asist-count">
+          <div class="subtitle">
+            <h3 class="asist-subtitle"><%=t('.asist')%></h3>
+          </div>
+          <div class="content-asist">
+            <span class="circle green-line">4</span>
+            <span class="circle orange-line">3</span>
+            <span class="circle yellow-line">1</span>
           </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <p></p>
+        <div class="asist-count highlight-count">
+          <div class="subtitle">
+            <h3 class="asist-subtitle"><%=t('.highlighted')%></h3>
+          </div>
+          <div class="content-asist">
+            <span class="square orange-line text-orange">3</span>
+          </div>
+        </div>
+        <div class="asist-count highlight-count last-row">
+          <div class="subtitle">
+            <h3 class="asist-subtitle"><%=t('.equipment')%></h3>
+          </div>
+          <div class="content-asist">
+            <p>Agustina Chirino</p>
+            <p>Nicolas Garcia</p>
+            <p>Eugenia Alonso</p>
+          </div>
+        </div>
+      </details>
     </section>
   </aside>
 </div>

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :like do
-    comment
+    publication
     user
   end
 end

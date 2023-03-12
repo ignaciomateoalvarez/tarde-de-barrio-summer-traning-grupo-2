@@ -1,8 +1,9 @@
 class PublicationPresenter
-  attr_reader :params, :highlighted, :not_highlighted
+  attr_reader :params, :highlighted, :not_highlighted, :asists
 
   def initialize(params)
     @params = params
+    @asists = AsistsManager.new.call
     setup_posts
   end
 

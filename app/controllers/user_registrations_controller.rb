@@ -10,9 +10,10 @@ class UserRegistrationsController < ApplicationController
   # Register a new user
   def create
     @user = User.new(register_params)
+    @user.role = :colaborador
     if @user.save
       auto_login(@user)
-      redirect_to users_path, notice: t('.welcome')
+      redirect_to root_path, notice: t('.welcome')
     else
       redirect_to register_path, warning: t('.error')
     end

@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  include Pundit
+  include Pundit::Authorization
   before_action :set_student, only: %i[edit update destroy]
 
   def index

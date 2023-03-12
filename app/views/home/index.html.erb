@@ -1,78 +1,87 @@
-<div class='show-container'>
-  <div class='comments-container home-box'>
-    <section class='comment-main-section'>
-      <%= render partial: "submit_post", locals: {} %>
-      <% @presenter.highlighted.each do |key, posts| %>
-        <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : posts.first.format_date %> </h3>
-        <%= render partial: "post" , collection: posts %>
-      <% end %>
-      <% @presenter.not_highlighted.each do |key, posts| %>
-        <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : posts.first.format_date %> </h3>
-        <%= render partial: "post" , collection: posts %>
-      <% end %>
+<div class="home-date-container">
+  <div class="date">
+    <h3><%= I18n.l(Date.today,format:'%B %Y') %></h3>
+    <h1><%= I18n.l(Date.today,format:'%A %d') %></h1>
   </div>
-  <aside left class='side-bar'>
-    <section class='home-box asist-container'>
-      <h2 class="asist-title"><%=t('.assists')%></h2>
-      <details>
-        <summary></summary>
-        <table>
-          <thead>
-            <th class="asist-header" ><%=t('.student')%></th>
-            <th class="asist-header">
-              <div class="tooltip"> 
-                P <span class="tooltip-text present"><%=t('.present students')%></span>
+  <details open>
+    <summary class="news"></summary>
+    <div class='show-container'>
+      <div class='comments-container home-box'>
+        <section class='comment-main-section'>
+          <%= render partial: "submit_post", locals: {} %>
+          <% @presenter.highlighted.each do |key, posts| %>
+            <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : posts.first.format_date %> </h3>
+            <%= render partial: "post" , collection: posts %>
+          <% end %>
+          <% @presenter.not_highlighted.each do |key, posts| %>
+            <h3 class= "date-h3"> <%= (key.to_date == Date.today ) ? t('.today') : posts.first.format_date %> </h3>
+            <%= render partial: "post" , collection: posts %>
+          <% end %>
+      </div>
+      <aside left class='side-bar'>
+        <section class='home-box asist-container'>
+          <h2 class="asist-title"><%=t('.assists')%></h2>
+          <details open>
+            <summary></summary>
+            <table>
+              <thead>
+                <th class="asist-header" ><%=t('.student')%></th>
+                <th class="asist-header">
+                  <div class="tooltip"> 
+                    P <span class="tooltip-text present"><%=t('.present students')%></span>
+                  </div>
+                </th>
+                <th class="asist-header">
+                  <div class="tooltip">
+                    A <span class="tooltip-text ausent"><%=t('.absent students')%></span>
+                  </div>
+                </th>
+                <th class="asist-header">
+                  <div class="tooltip">
+                    R <span class="tooltip-text retired"><%=t('.retired students')%></span>
+                  </div>
+                </th>
+              </thead>
+              <tbody>
+                <%= render partial:'student_asist', collection: @presenter.asists %>
+              </tbody>
+            </table>
+          </details>
+        </section>
+        <section class='home-box asist-container count-asist-container'>
+          <details open>
+            <summary></summary>
+            <div class="asist-count">
+              <div class="subtitle">
+                <h3 class="asist-subtitle"><%=t('.asist')%></h3>
               </div>
-            </th>
-            <th class="asist-header">
-              <div class="tooltip">
-                A <span class="tooltip-text ausent"><%=t('.absent students')%></span>
+              <div class="content-asist">
+                <span class="circle green-line"><%= Asist.count_asists_type('present') %></span>
+                <span class="circle orange-line"><%= Asist.count_asists_type('absent') %></span>
+                <span class="circle yellow-line"><%= Asist.count_asists_type('retired') %></span>
               </div>
-            </th>
-            <th class="asist-header">
-              <div class="tooltip">
-                R <span class="tooltip-text retired"><%=t('.retired students')%></span>
+            </div>
+            <div class="asist-count highlight-count">
+              <div class="subtitle">
+                <h3 class="asist-subtitle"><%=t('.highlighted')%></h3>
               </div>
-            </th>
-          </thead>
-          <tbody>
-            <%= render partial:'student_asist', collection: @students %>
-          </tbody>
-        </table>
-      </details>
-    </section>
-    <section class='home-box asist-container count-asist-container'>
-      <details>
-        <summary> </summary>
-        <div class="asist-count">
-          <div class="subtitle">
-            <h3 class="asist-subtitle"><%=t('.asist')%></h3>
-          </div>
-          <div class="content-asist">
-            <span class="circle green-line">4</span>
-            <span class="circle orange-line">3</span>
-            <span class="circle yellow-line">1</span>
-          </div>
-        </div>
-        <div class="asist-count highlight-count">
-          <div class="subtitle">
-            <h3 class="asist-subtitle"><%=t('.highlighted')%></h3>
-          </div>
-          <div class="content-asist">
-            <span class="square orange-line text-orange">3</span>
-          </div>
-        </div>
-        <div class="asist-count highlight-count last-row">
-          <div class="subtitle">
-            <h3 class="asist-subtitle"><%=t('.equipment')%></h3>
-          </div>
-          <div class="content-asist">
-            <p>Agustina Chirino</p>
-            <p>Nicolas Garcia</p>
-            <p>Eugenia Alonso</p>
-          </div>
-        </div>
-      </details>
-    </section>
-  </aside>
+              <div class="content-asist">
+                <span class="square orange-line text-orange">3</span>
+              </div>
+            </div>
+            <div class="asist-count highlight-count last-row">
+              <div class="subtitle">
+                <h3 class="asist-subtitle"><%=t('.equipment')%></h3>
+              </div>
+              <div class="content-asist">
+                <p>Agustina Chirino</p>
+                <p>Nicolas Garcia</p>
+                <p>Eugenia Alonso</p>
+              </div>
+            </div>
+          </details>
+        </section>
+      </aside>
+    </div>
+  </details>
 </div>

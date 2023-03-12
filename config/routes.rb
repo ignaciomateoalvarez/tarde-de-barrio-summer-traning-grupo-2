@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   
-  root 'user_sessions#new'
+  root 'home#index'
 
   get 'login' => 'user_sessions#new', :as => :login
   get 'register' => 'user_registrations#new', :as => :new
@@ -16,12 +16,14 @@ Rails.application.routes.draw do
   end
 
   resources :students do
+    put 'asist', to: 'asists#update'
     get 'delete_modal', to: 'students#delete_modal'
     resources :comments, only: [:create] do
       resources :answers, only: [:create]
       post 'toggle_like' => 'likes#toggle_like'
     end
   end
+
 
   resources :posts, only: [:create] do
     post 'answer' => 'answers#create_post_answer'

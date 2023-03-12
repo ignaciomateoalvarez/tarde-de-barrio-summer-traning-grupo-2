@@ -1,6 +1,24 @@
-<tr>
-  <td><%= student_asist.decorate.full_name%> </td>
-  <td><span class="dot green"></span></td>
-  <td><span class="dot orange"></span></td>
-  <td><span class="dot yellow"></span></td>
+<tr data-controller='asist' data-asist-url-value='<%= student_asist_path(student_asist.student) %>'>
+  <td><%= student_asist.student.decorate.full_name%> </td>
+  <td>
+    <label class="radio-style">
+      <span id="presente" class="dot"> 
+        <%= radio_button_tag student_asist.id, :present, student_asist.present?,  data: {action: 'click->asist#change'}, class: 'radio-present' %>
+      </span>
+    </label>
+  </td>
+  <td>
+    <label class="radio-style">
+      <span class="dot">
+        <%= radio_button_tag student_asist.id, :absent, student_asist.absent?,  data: {action: 'click->asist#change'}, class: 'radio-absent' %>
+      </span>
+    </label>
+  </td>
+  <td>
+    <label class="radio-style">
+      <span class="dot">
+        <%= radio_button_tag student_asist.id, :retired, student_asist.retired?,  data: {action: 'click->asist#change'}, class: 'radio-retired'  %>
+      </span>
+    </label>
+  </td>
 </tr>

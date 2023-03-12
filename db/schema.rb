@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_07_153718) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_09_141230) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_153718) do
     t.bigint "publication_id"
     t.index ["publication_id"], name: "index_answers_on_publication_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
+  end
+
+  create_table "asists", force: :cascade do |t|
+    t.bigint "student_id", null: false
+    t.integer "asist", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id"], name: "index_asists_on_student_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -73,6 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_153718) do
     t.index ["role"], name: "index_users_on_role"
   end
 
+  add_foreign_key "asists", "students"
   add_foreign_key "likes", "publications"
   add_foreign_key "likes", "users"
 end

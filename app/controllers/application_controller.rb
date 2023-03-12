@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def not_authorized
     if current_user.colaborador?
-      redirect_back(fallback_location: students_path)
+      redirect_back(fallback_location: root_path)
       flash[:notice] = t('.notice')
     else
       redirect_back(fallback_location: root_path)

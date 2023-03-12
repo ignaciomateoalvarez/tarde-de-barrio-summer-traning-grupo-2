@@ -4,6 +4,7 @@ class Student < ApplicationRecord
 
   belongs_to :user
   has_many :comments, dependent: :destroy
+  has_many :asist
 
   validates :first_name, :last_name, length: { minimum: 3 }, presence: true,
                                      format: { with: /\A[a-zA-Z\ñÑ\u00C0-\u017F\']+[\s?[a-zA-Z\ñÑ\u00C0-\u017F\']*]*\z/ }

@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :answer do
     body { "MyText" }
-    association :comment
+    association :publication
     association :user
   end
 end
